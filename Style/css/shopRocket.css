@@ -1,0 +1,104 @@
+/* MODALS */
+
+.sr-modal *, #sr-basket-widget {
+    text-shadow: none;
+}
+.sr-modal, .sr-modal-header {
+    border-radius: 0 !important;
+}
+body .sr-modal .sr-modal-header {
+    background: url("http://www.wrapitup.co.uk/wp-content/themes/wrapitup/assets/images/header.jpg");
+    background-color: none;
+}
+.sr-modal-header h3 {
+    font-size: 27px;
+    line-height: 20px;
+    padding-top: 10px;
+}
+
+.sr-modal .sr-primary-background {
+    background: #f94e1b;
+}
+
+.sr-modal .sr-primary-background * {
+    color: #fff;
+}
+
+.sr-modal .sr-primary-font {
+    color: #f94e1b;
+}
+
+.sr-modal .sr-secondary-font {
+    color: #f94e1b;
+}
+
+.sr-modal .sr-btn {
+    background: #f94e1b;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 12px;
+    text-align: center;
+    margin: 0px 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    border-radius: 0;
+    height: auto;
+    text-shadow: none;
+    font-weight: bold !important;
+}
+
+.sr-modal .sr-btn:hover {
+    background: #f94e1b;
+}
+
+body .sr-modal-header h3 {
+    background: url("http://www.wrapitup.co.uk/wp-content/themes/wrapitup/assets/images/logo.png");
+    background-size: 25%;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 0px !important;
+    padding: 15px;
+}
+
+.sr-add-text {
+    color: #fff;
+    background: #f94e1b;
+    position: absolute;
+    left: -25px;
+    top: 8px;
+    padding: 0px 6px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+
+.sr-back {
+    display: none;
+}
+
+#menu .step {
+    overflow: visible !important;
+}
+
+.reveal-modal, .reveal-modal-bg {
+    display: none !important;
+}
+
+
+/* MOBILE */
+
+@media only screen and (max-width: 650px) {
+    body .sr-item {
+        width: 100%;
+        margin-left: 5%;
+    }
+
+    #sr-location-widget {
+        display: none;
+    }
+
+    #sr-location-widget, #sr-basket-widget {
+        z-index: 1000;
+        top: 60px;
+    }
+

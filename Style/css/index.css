@@ -1,0 +1,314 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url('http://themes.googleusercontent.com/static/fonts/opensans/v5/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Cormorant', serif;
+  font-style: normal;
+}
+
+@keyframes hover-v {
+  0% {
+      transform: scaleX(0);
+      height: 5px;
+     }
+  45% {   
+      transform: scaleX(1.05);
+      height: 5px;
+     }
+  55% {height: 5px;}
+  100% {
+      transform: scaleX(1.05);
+      height: 3.8rem;
+     }
+}
+@keyframes no-hover-v {
+  0% {
+      transform: scaleX(1.05);
+      height: 3.8rem;
+     }
+  45% {height: 5px;}
+  55% {   
+      transform: scaleX(1.05);
+      height: 5px;
+      opacity: 1;
+     }
+  
+  100% {
+      transform: scaleX(0);
+      height: 5px;
+      opacity: .02;
+     }
+}
+
+body {
+    font-family: parisine-std-n4, parisine-std, "Droid Sans", "PT Sans", Lato, Arimo, Cabin, Nobile, Cantarell, Puritan, Tahoma, "Trebuchet MS", Helvetica, Arial, Verdana, sans-serif;
+}
+
+
+.banner {
+    background-color: darkorange;
+    color: white;
+    font: .5em;
+    height: 30px; 
+    text-align: center; 
+    padding: 5px; 
+    margin-top: 0px;
+    font-family: 'open sans',arial,sans-serif; 
+    letter-spacing: 2px;
+}
+
+.author-name-section {
+    text-align: center;
+    background-image: url(../img/Purple-BG.jpg);
+    padding: 10px;
+}
+
+.author-name-top {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 5em;
+    letter-spacing: 2px;
+    font-weight: bold;
+    padding-left: 130px;
+    color: white;
+}
+
+.author-name-bottom {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 6em;
+    letter-spacing: 2px;
+    margin-top: -35px;
+    color: white;
+}
+
+.author-tags {
+    padding-bottom: 40px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.author-star {
+    font-size:.5em; margin-bottom: 500px;
+}
+
+.social-media-container {
+    text-align: center;
+    margin-top: -30px;
+    margin-bottom: 20px;
+}
+
+.social-media-icons {
+    margin: 5px;
+}
+
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;    
+}
+
+.navbar .navbar-collapse {
+    text-align: center;
+}
+
+.navbar {
+    border-color: transparent;
+    background-color: transparent;
+    width: 100%;
+    left: 0;
+    right: 0;
+    padding-top: 10px;
+}
+
+.navbar-padding {
+    padding: 0px;
+}
+
+#nav-list{
+    font-size: 1.5em;
+    color: darkorange;
+    font-weight: bold;
+    text-decoration: none;
+    z-index: 1;
+    padding-bottom: 10px;
+}
+
+#nav-list:before {
+    content: "";
+    background: darkorange;
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    bottom: 0;
+    left: 0;
+    border-radius: 5px;
+    transform: scaleX(0);
+    animation: .5s forwards no-hover-v linear;
+    animation-fill-mode: forwards;
+    z-index: -1;
+}
+
+#nav-list:hover:before,
+#nav-list:focus:before {
+    animation: .3s forwards hover-v linear;
+    animation-fill-mode: forwards;
+}
+
+#nav-list:hover {
+    color: white;
+}
+
+.book-container {
+    position: relative;
+    width: 100%; 
+    height: 800px;
+}
+
+.spaceBackgroundVideo {
+    position: absolute; 
+    width: 100%; 
+    height: 1050px; 
+    z-index: -100;
+    background-size: cover;
+    overflow: hidden;
+    background-color: black;
+}
+
+.book {
+    position: absolute; 
+    height: 75%;
+    top: 12%;
+}
+
+
+.order-btn {
+    position: absolute;
+    bottom: -800px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 80px;
+}
+
+
+
+
+
+
+
+
+
+.about-bio-container{
+    margin-top: 250px; 
+    padding-bottom: 100px;
+    height: auto;
+    position: relative;
+    background: url(../img/Purple-BG.jpg) no-repeat top left fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+}
+
+.about-bio-img {
+    border-radius: 100px;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    margin-top: -100px;
+    z-index: 1;
+    left: 17%!important;
+    transform: translate(-50%,0);
+}
+
+.about-bio-container-title {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 3em;
+    color: darkorange;
+    text-align: center;
+    padding-top: 150px;
+    margin-right: 10px;
+    color: #000000;
+    font-weight: bold;
+}
+
+.about-bio-body {
+    font-size: 1.8em;
+    color: #E8E8E8;
+    font-family: 'PT Sans', sans-serif;
+    text-align: left;
+    padding: 30px;
+}
+
+
+
+
+
+
+
+.upcoming-container {
+    margin-top: 50px; 
+    height: auto;
+}
+
+.upcoming-title {
+    font-family: 'PT Sans', sans-serif;
+    color: darkorange;
+    font-size: 3em;
+    font-weight: bold;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+.upcoming-title-container {
+    margin-top: 50px; 
+    height: auto;
+}
+
+.books-container {
+    margin-top: 50px; 
+    height: auto;
+}
+
+.books-container img {
+    padding: 20px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+.upcoming-book-container p i {
+    font-family: 'PT Sans', sans-serif;
+    color: black;
+    font-size: 1.2em;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 600;
+}
+
+small {
+    text-align: center;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1em;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+small .fa-quote-left{
+    font-size: .7em;
+    color: mediumpurple;
+}
+
+small .fa-quote-right{
+    font-size: .7em;
+    color: mediumpurple;
+}
+
+
+
+.footer-section {
+    background-color: grey;
+}
