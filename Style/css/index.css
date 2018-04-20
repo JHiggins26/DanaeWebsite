@@ -45,7 +45,11 @@
 }
 
 body {
-    font-family: parisine-std-n4, parisine-std, "Droid Sans", "PT Sans", Lato, Arimo, Cabin, Nobile, Cantarell, Puritan, Tahoma, "Trebuchet MS", Helvetica, Arial, Verdana, sans-serif;
+    font-family: "PT Sans", Lato, Arimo, Cabin, Nobile, Cantarell, Puritan, Tahoma, "Trebuchet MS", Helvetica, Arial, Verdana, sans-serif;
+}
+
+a:hover {
+    text-decoration: none;
 }
 
 
@@ -133,6 +137,7 @@ body {
     text-decoration: none;
     z-index: 1;
     padding-bottom: 10px;
+    top: 20px;
 }
 
 #nav-list:before {
@@ -163,31 +168,25 @@ body {
 .book-container {
     position: relative;
     width: 100%; 
-    height: 800px;
+    height: 1050px;
 }
 
 .spaceBackgroundVideo {
-    position: absolute; 
-    width: 100%; 
-    height: 1050px; 
-    z-index: -100;
-    background-size: cover;
-    overflow: hidden;
-    background-color: black;
+    position: absolute;
+    right: 0; 
 }
 
-.book {
+.jumbotron-book {
     position: absolute; 
-    height: 75%;
+    height: 65%;
     top: 12%;
+  
 }
 
 
 .order-btn {
     position: absolute;
-    bottom: -800px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    bottom: -925px;
     padding-right: 80px;
 }
 
@@ -200,7 +199,7 @@ body {
 
 
 .about-bio-container{
-    margin-top: 250px; 
+    margin-top: 165px; 
     padding-bottom: 100px;
     height: auto;
     position: relative;
@@ -247,7 +246,7 @@ body {
 
 
 
-.upcoming-container {
+.upcoming-title-container {
     margin-top: 50px; 
     height: auto;
 }
@@ -267,45 +266,55 @@ body {
 }
 
 .books-container {
-    margin-top: 50px; 
-    height: auto;
+    margin-top: 50px;
+    text-align: center;
+    background-image: url(../img/Orange-BG.jpg);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.books-title {
+    background-image: url(../img/Blk-Granite-BG.jpg);
+    font-family: 'PT Sans', sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+    height: 55px;
+    position: absolute;
+    margin-top: -75px;
+    z-index: 1;
+    left: 17%!important;
+    transform: translate(-50%,0);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    text-align: center;
 }
 
 .books-container img {
-    padding: 20px;
-    text-align: center;
-    display: block;
-    margin: 0 auto;
+    margin-top: 40px;
+    position: relative;
+    top: 0;
+    transition: top ease 0.5s;
 }
 
-.upcoming-book-container p i {
+.books-container img:hover {
+    top: -10px;
+}
+
+.books-container p i {
     font-family: 'PT Sans', sans-serif;
-    color: black;
+    color: white;
     font-size: 1.2em;
-    display: block;
-    margin: 0 auto;
-    text-align: center;
     font-weight: 600;
+    padding-top: 10px;
+    
 }
 
-small {
-    text-align: center;
-    font-family: 'PT Sans', sans-serif;
-    font-size: 1em;
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 10px;
-}
 
-small .fa-quote-left{
-    font-size: .7em;
-    color: mediumpurple;
-}
-
-small .fa-quote-right{
-    font-size: .7em;
-    color: mediumpurple;
-}
 
 
 
