@@ -7,16 +7,13 @@
     
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    
-    <link rel="stylesheet" type="text/css" href="Style/css/bootstrap.css">
-    
+        
     <link rel="stylesheet" type="text/css" href="Style/css/index.css">
     <link rel="stylesheet" type="text/css" href="Style/css/shopRocket.css">
-    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
-    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=latin" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Cormorant:300"/>
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Chewy|Freckle+Face|Merienda+One|Permanent+Marker" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="Style/css/fadeIn_words.css">
+
 
     
     <title>Little Black Girl</title>
@@ -52,6 +49,16 @@
                         </div>
                         
                         <div class="book-container">
+                        
+                            <div class="rotator">
+                                <div class="item left">What you think</div>
+                                <div class="item right">You become</div>
+                                <div class="item left">What you feel</div>
+                                <div class="item right">You attract</div>
+                                <div class="item left">What you imagine</div>          
+                                <div class="item right">You create</div>
+                            </div>
+                            
                             <video autoplay muted loop class="spaceBackgroundVideo">
                                 <source src="../Danae_Daniels_Book/Style/img/Space-background.mov" type="video/mp4">
                             </video>
@@ -122,34 +129,61 @@
 
                 </div>
 
-
-                <div class="books-container col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="booksId"></div>
+                <div id="books-container" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="bookId">
 
                     <div class="books-title col-lg-3 col-md-3 col-sm-4 col-xs-4 col-lg-offset-4">BOOKS</div>
 
-                    <div class="col-lg-2 col-md-4 col-sm-4 col-xs-4 col-lg-offset-3">
-                        <a href="#"><img src="Style/img/SNSS-Book-Cover.jpg">
-                            <p><i>Sunny North to Sunny South</i></p>
+                    <div class="book-cover-container col-lg-2 col-md-4 col-sm-4 col-xs-4 col-lg-offset-3">
+                        <a href="#booksId" class="book-info" data-modal-title="Sunny North to Sunny South" data-modal-description="The best teacher in life is life. Life in East Baltimore taught teenage Sunny how to do all the wrong things the right way. Learning life's lessons made Sunny too grown too fast. Read how Sunny uses her skills to create a life that is all good until it catches up with her. As doors of depression starts to open, Sunny struggles to carve a new life out of the hell she created."><img src="Style/img/SNSS-Book-Cover.jpg" id="img">
+                            <p>Sunny North to Sunny South</p>
                         </a>
                     </div>
 
-                    <div class="col-lg-2 col-md-4 col-sm-4 col-xs-4">
-                        <a href="#"><img src="Style/img/SNSS-Book-Cover.jpg">
-                        <p><i>Universal Goddess</i></p>
+                    <div class="book-cover-container col-lg-2 col-md-4 col-sm-4 col-xs-4">
+                        <a href="#booksId" class="book-info" data-modal-title="Universal Goddess" data-modal-description="This book is about..."><img src="Style/img/coming_soon_book_cover.jpg">
+                        <p>Universal Goddess</p>
                         </a>
                     </div>
 
-                    <div class="col-lg-2 col-md-4 col-sm-4 col-xs-4">
-                        <a href="#"><img src="Style/img/SNSS-Book-Cover.jpg">
-                        <p><i>Mood Swings</i></p>
+                    <div class="book-cover-container col-lg-2 col-md-4 col-sm-4 col-xs-4">
+                        <a href="#booksId" class="book-info" data-modal-title="Mood Swings" data-modal-description="Mood Swings aren't crazy, they're beautiful. Take a look at the first collection of poetry by Vetta Shantell and various poets. Mood Swings is a collection of sensitive, wild, loving, free and unbiased poems. They call you <q>crazy</q> because you have a normal case of mood swings. Get a taste of these poets extreme and rapid change in mood through poetry."><img src="Style/img/coming_soon_book_cover.jpg">
+                        <p>Mood Swings</p>
                         </a>
                     </div>
-
+                    
                 </div>
                 
-                <div class="upcoming-title-container col-lg-12 col-md-12 col-sm-12 col-xs-12">    
-                        <p class="upcoming-title">UPCOMING CONTENT</p>
+                
+                <div class="contact-container col-lg-12 col-md-12 col-sm-12 col-xs-12">    
+                    <div class="contact-title  col-lg-3 col-md-3 col-sm-4 col-xs-4 col-lg-offset-4">REACH OUT</div>
+
+                    <p>Do you have a story?</p>
+                    
+                    <p>Do you want to get your work recognized?</p>  
+
+                    <p>Do you need exposure or need to add to your portfolio? 
+
+                    <p>Are you an illustrator, writer, editor, photographer, or videographer?</p> 
+
+                    <p>Let’s work! Feel Free to contact us at:</p> 
+
+                    <a href="#"><img src="Style/img/yahoo.png" class="social-media-icons"></a>
+                    
+                    <a href="#"><p>Writeitoutpublishingllc@yahoo.com</p></a>
+
+                    <a href="#"><img src="Style/img/instagram.png" class="social-media-icons"></a>
+                    
+                    <a href="#"><p>@Vettas_writeitoutpublishing</p></a> 
+
+                    <a href="#"><p>@Danaebaby</p></a> 
+
+                    <p>Check out our news and upcoming events and see what’s next.</p> 
+
+
+                    
                     </div>
+                
                 
             </div>
         </div>
@@ -159,6 +193,7 @@
         
              
         <!--Footer-->
+<!--
         <div class="container-fluid">
              <div class="row">
                  <div class="footer-section">
@@ -199,17 +234,19 @@
                         </div>
                     </div>
                  </div>
-            </div><!--row-->
-        </div><!--container-fluid-->
-    <!--Footer-Closed-->
+            </div>
+        </div>
+-->
+   
             
         
-        
-
     
-        
         <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="JS/fadeIn_words.js"></script>
+        <script src="JS/book_modal.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
+    
         
     </body>
 </html>

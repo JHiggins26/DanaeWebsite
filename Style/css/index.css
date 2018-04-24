@@ -204,10 +204,10 @@ a:hover {
     height: auto;
     position: relative;
     background: url(../img/Purple-BG.jpg) no-repeat top left fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .about-bio-img {
@@ -224,7 +224,6 @@ a:hover {
 .about-bio-container-title {
     font-family: 'PT Sans', sans-serif;
     font-size: 3em;
-    color: darkorange;
     text-align: center;
     padding-top: 150px;
     margin-right: 10px;
@@ -234,7 +233,7 @@ a:hover {
 
 .about-bio-body {
     font-size: 1.8em;
-    color: #E8E8E8;
+    color: #ffffff;
     font-family: 'PT Sans', sans-serif;
     text-align: left;
     padding: 30px;
@@ -243,29 +242,7 @@ a:hover {
 
 
 
-
-
-
-.upcoming-title-container {
-    margin-top: 50px; 
-    height: auto;
-}
-
-.upcoming-title {
-    font-family: 'PT Sans', sans-serif;
-    color: darkorange;
-    font-size: 3em;
-    font-weight: bold;
-    padding-bottom: 40px;
-    text-align: center;
-}
-
-.upcoming-title-container {
-    margin-top: 50px; 
-    height: auto;
-}
-
-.books-container {
+#books-container {
     margin-top: 50px;
     text-align: center;
     background-image: url(../img/Orange-BG.jpg);
@@ -279,6 +256,7 @@ a:hover {
 
 .books-title {
     background-image: url(../img/Blk-Granite-BG.jpg);
+    background-attachment: fixed;
     font-family: 'PT Sans', sans-serif;
     font-weight: bold;
     font-size: 2em;
@@ -294,26 +272,97 @@ a:hover {
     text-align: center;
 }
 
-.books-container img {
+#books-container img {
     margin-top: 40px;
     position: relative;
     top: 0;
     transition: top ease 0.5s;
 }
 
-.books-container img:hover {
+#books-container img:hover {
     top: -10px;
 }
 
-.books-container p i {
+#books-container p {
     font-family: 'PT Sans', sans-serif;
     color: white;
     font-size: 1.2em;
     font-weight: 600;
-    padding-top: 10px;
+    padding-top: 10px; 
+}
+
+#modal-books .modal-header .close {
+    position: absolute;
+    top: 15px;
+    right: 15px;font-size: 3em
     
 }
 
+#modal-books {
+    font-family: 'PT Sans', sans-serif;
+}
+
+#modal-books .modal-title {
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    font-size: 1.7em;
+}
+
+#modal-books .modal-desc {
+    padding-right: 20px;
+    padding-left: 20px;
+    
+    font-size: 1.3em;
+}
+
+.modal-title li a{
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+    width: 100%;
+    max-width: 300px;
+}
+
+	
+
+
+
+.contact-container {
+    margin-top: 50px;
+    text-align: center;
+    background-image: url(../img/Orange-BG.jpg);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.contact-container p {
+    color: black;
+    font-size: 1.7em;
+}
+
+.contact-title {
+    background-image: url(../img/Blk-Granite-BG.jpg);
+    background-attachment: fixed;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+    height: 55px;
+    position: absolute;
+    margin-top: -75px;
+    z-index: 1;
+    left: 17%!important;
+    transform: translate(-50%,0);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    text-align: center;
+}
 
 
 

@@ -1,0 +1,99 @@
+.rotator {
+    position: absolute;
+    font-size: 3em;
+    height: 100%;
+    width: 90%;
+    margin-left: 5%;
+}
+
+.rotator .item {
+    z-index: 1;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    color: #ca3dc8;
+/*    font-family: 'Permanent Marker', cursive;*/
+/*    font-family: 'Chewy', cursive;*/
+    font-family: 'Freckle Face', cursive;
+/*    font-family: 'Merienda One', cursive;*/
+
+}
+
+.rotator .item.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.rotator .item span {
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s all ease-in-out;
+}
+
+.rotator .item span.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.left {
+    margin-top: 130px;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    height: auto;
+}
+
+.right {
+    margin-top: 240px;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+}
+
+
+
+
+
+
+
+@media (max-width: 1200px) {
+    
+    .rotator {
+    font-size: 2.5em;
+
+    }
+}
+
+@media (max-width: 1200px) {
+    
+    .rotator {
+    font-size: 2.5em;
+
+    }
+}
+
+@media (max-width: 1200px) {
+    
+    .rotator {
+    font-size: 2.5em;
+
+    }
+}
+
+@media (max-width: 1200px) {
+    
+    .rotator {
+    font-size: 2.5em;
+
+    }
+}
+
+@media (max-width: 1200px) {
+    
+    .rotator {
+    font-size: 2.5em;
+
+    }
+}
