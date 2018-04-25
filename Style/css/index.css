@@ -165,6 +165,18 @@ a:hover {
     color: white;
 }
 
+#nav-list:focus {
+    color: white;
+/*    background: none !important;*/
+
+}
+
+#nav-list:focus::before {
+    color: white;
+/*    background: none !important;*/
+
+}
+
 .book-container {
     position: relative;
     width: 100%; 
@@ -291,15 +303,23 @@ a:hover {
     padding-top: 10px; 
 }
 
-#modal-books .modal-header .close {
-    position: absolute;
-    top: 15px;
-    right: 15px;font-size: 3em
-    
-}
 
 #modal-books {
     font-family: 'PT Sans', sans-serif;
+    max-height: calc(100% - 100px);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#modal-books .modal-header .close {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    font-size: 4em;
+    color: red;
+    
 }
 
 #modal-books .modal-title {
@@ -312,7 +332,7 @@ a:hover {
 #modal-books .modal-desc {
     padding-right: 20px;
     padding-left: 20px;
-    
+    text-align: left;
     font-size: 1.3em;
 }
 

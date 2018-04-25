@@ -9,8 +9,6 @@ $(document).ready(function(){
 
         var bookModalDescription = e.find('.book-info').data("modal-description");
         
-        var bookModalImg = document.getElementById('img').src;
-
         var html = ' ';
         var shareUrl = window.location.href;
         
