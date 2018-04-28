@@ -14,6 +14,7 @@
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Chewy|Freckle+Face|Merienda+One|Permanent+Marker" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="Style/css/fadeIn_words.css">
+    <link rel="stylesheet" type="text/css" href="Style/css/events.css">
 
 
     
@@ -65,9 +66,7 @@
                             </video>
                             <img class="jumbotron-book col-lg-4 col-md-6 col-sm-6 col-xs-10 col-lg-offset-4 col-md-offset-3 col-sm-offset-3 col-xs-offset-1" src="Style/img/LBG-Book-Cover.png">
                             
-                        
-                            
-                            
+                    
                             
                             <div class="collapse navbar-collapse" id="navbar-collapse-1">
                                
@@ -92,7 +91,7 @@
                                        <ul class="nav navbar-nav">
                                            <li class="navbar-padding"><a href="#" id="nav-list">ABOUT VETTA</a></li>
                                            <li class="navbar-padding"><a href="#" id="nav-list">BOOKS</a>
-                                           <li class="navbar-padding"><a href="#" id="nav-list">NEWS</a></li>
+                                           <li class="navbar-padding"><a href="#" id="nav-list">EVENTS</a></li>
                                            <li class="navbar-padding"><a href="#" id="nav-list">CONTACT</a></li>
 
                                         </ul><!--navbar nav-->
@@ -142,17 +141,52 @@
                     </div>
 
                     <div class="book-cover-container col-lg-2 col-md-4 col-sm-4 col-xs-4">
-                        <a href="#booksId" class="book-info" data-modal-title="Universal Goddess" data-modal-description="They've only had each other as friends. There was never a reason to depart, but branching out is a part of growth. They both grew up looking at the world the same. Coming from a royal family, being homeschooled, wealthy and conscious. What happens when it's time to make a name for themselves. Read about how Kebechet and Monifa live their lives in different cities with the same agenda, using the same knowledge to get there, but utilizing it in different ways. They both want to find themselves and create a life and a lane of their own, but who is going about it the right way? Kebechet wants to stay home in Tampa to learn the ropes of her family business that keeps them living sumptuous and Monifa wants to leave home to do her own thing, while using her family's money. However,they must both remeber that <q>Your reality is determined by the decisions and choices that you make. Whatever you decide, make sure that you're ready to deal with the consequences that come with it.</q>"><img src="Style/img/coming_soon_book_cover.jpg">
+                        <a href="#booksId" class="book-info" data-modal-title="Universal Goddess" data-modal-description="They've only had each other as friends. There was never a reason to depart, but branching out is a part of growth. They both grew up looking at the world the same. Coming from a royal family, being homeschooled, wealthy and conscious. What happens when it's time to make a name for themselves. Read about how Kebechet and Monifa live their lives in different cities with the same agenda, using the same knowledge to get there, but utilizing it in different ways. They both want to find themselves and create a life and a lane of their own, but who is going about it the right way? Kebechet wants to stay home in Tampa to learn the ropes of her family business that keeps them living sumptuous and Monifa wants to leave home to do her own thing, while using her family's money. However,they must both remeber that <q>Your reality is determined by the decisions and choices that you make. Whatever you decide, make sure that you're ready to deal with the consequences that come with it.</q>"><img src="Style/img/coming_soon_book_cover.jpg" style="opacity:0.8">
                         <p>Universal Goddess</p>
                         </a>
                     </div>
 
                     <div class="book-cover-container col-lg-2 col-md-4 col-sm-4 col-xs-4">
-                        <a href="#booksId" class="book-info" data-modal-title="Mood Swings" data-modal-description="Mood Swings aren't crazy, they're beautiful. Take a look at the first collection of poetry by Vetta Shantell and various poets. Mood Swings is a collection of sensitive, wild, loving, free and unbiased poems. They call you <q>crazy</q> because you have a normal case of mood swings. Get a taste of these poets extreme and rapid change in mood through poetry."><img src="Style/img/coming_soon_book_cover.jpg">
+                        <a href="#booksId" class="book-info" data-modal-title="Mood Swings" data-modal-description="Mood Swings aren't crazy, they're beautiful. Take a look at the first collection of poetry by Vetta Shantell and various poets. Mood Swings is a collection of sensitive, wild, loving, free and unbiased poems. They call you <q>crazy</q> because you have a normal case of mood swings. Get a taste of these poets extreme and rapid change in mood through poetry."><img src="Style/img/coming_soon_book_cover.jpg" style="opacity:0.8">
                         <p>Mood Swings</p>
                         </a>
                     </div>
+                </div>
+                
+                <div class="events-container col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
                     
+                    <div class="events-title  col-lg-3 col-md-3 col-sm-4 col-xs-4 col-lg-offset-4">UPCOMING EVENTS</div>
+                    <div class="cal col-lg-6 col-md-6 col-sm-6 col-xs-12 col-lg-offset-3 col-md-offset-3 col-sm-offset-3" ng-app="calApp" ng-controller="calCtrl">
+
+                        <div class="cal-event" ng-repeat="event in getEvents() ">
+                            <div class="cal-event-tile">
+                                <div class="cal-event-tile-date">{{ event.day }}</div>
+                                <div class="cal-event-tile-month">{{ event.month }}</div>
+                            </div>
+                            <div class="cal-event-desc col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="cal-event-title">
+                                {{ event.title }} 
+                                </div>
+                                <div class="cal-event-time">
+                                    <icon>&#xf017;</icon> {{ event.time }} {{ event.month }} {{ event.day }} {{ event.year }}
+                                </div>
+                                <div class="cal-event-location">
+                                    <icon>&#xf041;</icon>
+                                    <div class="cal-event-location-content">
+                                    {{event.location}}  
+                                    </div>
+                                </div>
+                                <a class="cal-event-map" href="{{getMap(event)}}" target="_blank"> View Map</a>
+                            </div> 
+                        </div>
+
+                        <div class="cal-hidden-events" ng-click="showHidden()" ng-if="hiddenEvents() > 0">
+                        {{ hiddenEvents()}} Event<span ng-if="hiddenEvents() >1">s</span> Hidden
+                        </div>
+                        <div ng-if="hiddenEvents() == 0 && events.length > 3" class="cal-hidden-events" ng-click="hideEvents()">
+                        Hide Events
+                        </div>
+                    </div>
                 </div>
                 
                 
@@ -179,55 +213,37 @@
 
                     <a href="#"><p>@Danaebaby</p></a> 
 
-                    <p>Check out our news and upcoming events and see what’s next.</p> 
-
-
+                    <p>Check out our upcoming events and see what’s next.</p>
                     
-                    </div>
+                    <img class="contact-publishing-img" src="Style/img/Publishing-Logo.png">
+                    
+                </div>
+                
                 
                 
             </div>
         </div>
      
 
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        
         
              
         <!--Footer-->
-<!--
         <div class="container-fluid">
              <div class="row">
                  <div class="footer-section">
                      <div class="container">
                          <div class="row">
-                             <p class="footer-contact col-md-7 col-sm-6 col-xs-12"><span style="color:#ffffff">5014 Stone Mountain Hwy 78 East Suite A <br>Lilburn, GA 30047<br>Telephone: (770) 972-8010<br>
-                             Fax: (770) 972-5030</span></p>
-                             <p class="footer-hours col-lg-4 col-md-4 col-sm-4 col-xs-12"><span style="color:#ffffff">HOURS:<br>Monday-Friday: 9-5pm<br>Saturday: 10-2pm<br>Sunday: Closed<br>
-                                 <i>&#42;Or by Appointment</i></span></p>
+                             <div class="social-media-footer-container ">
+                            <a href="#"><img class="social-media-icons" src="Style/img/facebook.png"></a>
+                            <a href="#"><img src="Style/img/instagram.png" class="social-media-icons"></a>
+                            <a href="#"><img src="Style/img/twitter.png" class="social-media-icons"></a>
+                            <a href="#"><img src="Style/img/google-plus.png" class="social-media-icons"></a>
                         </div>
-                        <br>
-                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                               <div class="social-media-content">
-                                   <a href="https://www.facebook.com/granada5014/" target="_blank">
-                                       <img class="social-media" src="Style/Icons/facebook.png">
-                                   </a>
-                                   <a href="https://www.linkedin.com/in/granada-higgins-a99ab323" target="_blank">
-                                       <img class="social-media" src="Style/Icons/linkedin.png">
-                                   </a>
-                                   <a href="https://www.yelp.com/biz/express-taxes-and-insurance-lilburn" target="_blank">
-                                       <img class="social-media" src="Style/Icons/yelp.png">
-                                   </a>
-                                   <a href="mailto:ExpressTaxes@bellsouth.net" target="_blank">
-                                       <img class="social-media" src="Style/Icons/mail.png">
-                                   </a>
-                                   <a href="https://www.instagram.com/expresstaxes1/?hl=en" target="_blank">
-                                       <img class="social-media" src="Style/Icons/instagram.png">
-                                   </a>
-                               </div>
                         </div>
                          
                          <div class="content-rights col-lg-6 col-md-6 col-sm-8 col-xs-12">
-                             <p>All contents &copy; 2017 <a href="http://Expresstaxlady.com" style="text-decoration:none;">ExpressTaxLady.com</a>. All rights reserved.</p>
+                             <p>&copy; 2018 Writeitoutpublishing.com</p>
                         </div>
                         <div class="content-rights col-lg-6 col-md-6 col-sm-4 col-xs-12">
                             <p class="link-list col-lg-3 col-md-4 col-sm-6 col-xs-6"><a href="Terms-of-Use.html">Terms of Use</a></p>
@@ -237,7 +253,7 @@
                  </div>
             </div>
         </div>
--->
+
    
             
         
@@ -247,7 +263,10 @@
         <script src="JS/fadeIn_words.js"></script>
         <script src="JS/book_modal.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
-    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js"></script>
+        <script src="https://code.angularjs.org/1.3.13/angular-animate.js"></script>
+        <script src="JS/events.js"></script>
+
         
     </body>
 </html>

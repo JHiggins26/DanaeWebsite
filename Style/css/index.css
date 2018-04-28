@@ -95,7 +95,10 @@ a:hover {
 }
 
 .author-star {
-    font-size:.5em; margin-bottom: 500px;
+    font-size:.5em; 
+    color: white;
+    position: relative;
+    top: -4px;
 }
 
 .social-media-container {
@@ -106,6 +109,13 @@ a:hover {
 
 .social-media-icons {
     margin: 5px;
+    position: relative;
+    top: 0;
+    transition: top ease 0.5s;
+}
+
+.social-media-icons:hover {
+    top: -10px;
 }
 
 .navbar .navbar-nav {
@@ -244,7 +254,7 @@ a:hover {
 }
 
 .about-bio-body {
-    font-size: 1.8em;
+    font-size: 1.5em;
     color: #ffffff;
     font-family: 'PT Sans', sans-serif;
     text-align: left;
@@ -384,9 +394,28 @@ a:hover {
     text-align: center;
 }
 
+.contact-publishing-img {
+    display: block;
+    margin: 0 auto;
+}
+
 
 
 
 .footer-section {
-    background-color: grey;
+    background-image: url(../img/Blk-Granite-BG.jpg);
+    background-attachment: fixed;
 }
+
+.social-media-footer-container {
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.content
+
+
+
+
+
