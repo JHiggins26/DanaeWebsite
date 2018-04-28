@@ -264,7 +264,7 @@ a:hover {
 
 
 
-#books-container {
+.books-container {
     margin-top: 50px;
     text-align: center;
     background-image: url(../img/Orange-BG.jpg);
@@ -373,7 +373,7 @@ a:hover {
 
 .contact-container p {
     color: black;
-    font-size: 1.5em;
+    font-size: 1.7em;
 }
 
 .contact-title {

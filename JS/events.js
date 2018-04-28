@@ -2,7 +2,7 @@ var calApp;
 calApp = angular.module('calApp', ['ngAnimate'])
 calApp.controller('calCtrl',  function($scope, $sce) {
   
-  $scope.eventsVisible = 1; // How many events should be shown?
+  $scope.eventsVisible = 3; // How many events should be shown?
   
   $scope.events = [
     {
@@ -13,7 +13,7 @@ calApp.controller('calCtrl',  function($scope, $sce) {
       time     : "02:30 PM",
       location : "4975 Stone Mountain Hwy, 30047 Lilburn",
     }
-    /*,{
+    ,{
       title    : "Book Signing Event @ Nia Rae Salon",
       month    : "Jan",
       day      : "01",
@@ -27,7 +27,7 @@ calApp.controller('calCtrl',  function($scope, $sce) {
       time     : "12:30 AM",
       location : "4975 Stone Mountain Hwy, 30047 Lilburn",
     },
-    {
+   /* {
       title    : "Book Signing Event @ Nia Rae Salon",
       month    : "Jan",
       day      : "01",
