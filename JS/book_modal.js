@@ -12,16 +12,17 @@ $(document).ready(function(){
         var html = ' ';
         var shareUrl = window.location.href;
         
-        html += '<div class="modal fade in text-center" id="modal-books" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">'+
+       
+        html += '<div class="modal fade in text-center col-lg-6 col-md-4 col-sm-4 col-xs-4 col-lg-offset-0" id="modal-books" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">'+
         '<div class="modal-dialog">'+
             '<div class="modal-content">'+
                 '<div class="modal-header">'+
 
-                    '<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>'+
+                    '<button type="button" class="close" data-dismiss="modal" aria-label="Close" data-spy="affix" data-offset="0"><span aria-hidden="true">×</span></button>'+
 
                     '<h3 class="modal-title" id="title"></h3>'+
             
-                    '<img id="imgId" src=" " height="200px">'+
+                    '<img id="imgId" height="200px">'+
 
                 '</div>'+
                 '<div class="modal-body">'+
@@ -34,25 +35,26 @@ $(document).ready(function(){
         '</div>';
         
         $("body").append(html);
-        
+                
         //Set title
-        $("body").append(document.getElementById('title').innerHTML = bookModalTitle);
+        document.getElementById('title').innerHTML = bookModalTitle;
 
         
         //Set Book cover
         if(bookModalTitle === 'Sunny North to Sunny South') {
-            $("body").append(document.getElementById('imgId').src="Style/img/SNSS-Book-Cover.jpg");
+            
+            document.getElementById('imgId').src="Style/img/SNSS-Book-Cover.jpg";
         }
         else if (bookModalTitle === 'Universal Goddess') {
-            $("body").append(document.getElementById('imgId').src="Style/img/coming_soon_book_cover.jpg");
+            document.getElementById('imgId').src="Style/img/coming_soon_book_cover.jpg";
         }
         else { 
-            $("body").append(document.getElementById('imgId').src="Style/img/coming_soon_book_cover.jpg");
+            document.getElementById('imgId').src="Style/img/coming_soon_book_cover.jpg";
         }
         
         
         //Set body
-        $("body").append(document.getElementById('desc').innerHTML = bookModalDescription);
+        document.getElementById('desc').innerHTML = bookModalDescription;
 
         $('#modal-books').modal();
   });
