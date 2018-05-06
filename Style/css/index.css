@@ -210,14 +210,18 @@ a, a:hover, a:active, a:visited, a:focus {
 }
 
 
-.order-btn {
-    position: absolute;
-    bottom: -925px;
+.order-btn-container {
+    bottom: -800px;
+    position: relative;
 }
 
+.order-btn {
+    display: block;
+    margin: 0 auto;
+}
 
-.order-btn:active {
-    bottom: -915px;
+.order-btn-container:active {
+    bottom: -785px;
 }
 
 
@@ -346,7 +350,7 @@ a, a:hover, a:active, a:visited, a:focus {
     -o-filter: blur(5px);
     -ms-filter: blur(5px);
     filter: blur(5px);
-    opacity: 1;
+    opacity: ;
 
 }
 
