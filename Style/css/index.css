@@ -321,21 +321,41 @@ a, a:hover, a:active, a:visited, a:focus {
 #modal-books {
     font-family: 'PT Sans', sans-serif;
     max-height: calc(100% - 100px);
-   position: relative;
+    position: ;
     padding: 0;
-    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background-color: #FEE3FF;
+    padding: 0px;
 }
 
-.modal-dialog {
-    width: auto;
-    height: auto;
+.modal-header-container {
+    position: relative;
+}
+
+#modal-backdrop-img {
+
     position: absolute;
+    display: block; 
+  min-width: 100%;
+    height: 100%;
+
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+    opacity: 1;
+
 }
 
-#modal-books .modal-header .close {
+.modal-header-info {
+    position: relative;
+    
+}
+
+#modal-books .modal-header-container .close {
     position: fixed;
     top: 0px;
     right: 10px;
@@ -348,7 +368,15 @@ a, a:hover, a:active, a:visited, a:focus {
     padding-right: 20px;
     padding-left: 20px;
     padding-bottom: 20px;
-    font-size: 1.7em;
+    padding-top: 20px;
+    font-size: 2em;
+    color: white;
+    font-weight: bold;
+}
+
+.modal-price {
+    color: white;
+    padding-bottom: 20px;
 }
 
 #modal-books .modal-desc {
