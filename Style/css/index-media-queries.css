@@ -1,0 +1,57 @@
+/*MOBILE/SMALL DEVICES*/
+
+@media only screen and (max-width: 767px) {
+
+    .navbar-header .navbar-toggle,
+    .navbar-header .navbar-toggle:hover,
+    .navbar-header .navbar-toggle:focus {
+        border: none;
+        padding: 0;
+        background-color: transparent;
+        z-index: 2;
+    }
+
+    .navbar-header .navbar-toggle .icon-bar {
+        /*    border: 3px solid #b637ff;*/
+        border: 3px solid darkorange;
+        background-color: transparent;
+        width: 45px;
+        height: 6px;
+        margin-bottom: 7px;
+        z-index: 2;
+    }
+
+    .navbar-default .navbar-collapse,
+    .navbar-default .navbar-form {
+        position: absolute;
+        border-color: transparent;
+        background-image: url(../img/Purple-BG.jpg);
+        z-index: 1;
+        padding-bottom: 30px;
+        padding-top: 70px;
+        margin-top: -79px;
+        width: 100%;
+    }
+
+    .navbar-collapse .navbar-nav {
+        margin-top: 0px;
+        width: 100%;
+    }
+
+    .jumbotron-book {
+        position: absolute;
+        height: 45%;
+        padding: 0;
+    }
+
+    .order-btn-container {
+        bottom: 300px;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .order-btn {
+        width: 250px;
+    }
+
+}

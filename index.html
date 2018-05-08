@@ -1,314 +1,348 @@
 <!Doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
-    
-    
+
+
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" type="text/css" href="Style/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    
+
     <link rel="stylesheet" type="text/css" href="Style/css/index.css">
-    
+    <link rel="stylesheet" type="text/css" href="Style/css/index-media-queries.css">
+
     <link rel="stylesheet" type="text/css" href="Style/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    
+
     <link href="https://fonts.googleapis.com/css?family=Chewy|Freckle+Face|Merienda+One|Permanent+Marker" rel="stylesheet">
-    
+
     <link rel="stylesheet" type="text/css" href="Style/css/fadeIn_words.css">
     <link rel="stylesheet" type="text/css" href="Style/css/events.css">
-    
+
     <title>Little Black Girl</title>
-    
-    </head>
-    
-    <body>
-        <header>
-            <!--Header Section-->
-            
-            <div class="container-fluid">
-                <div class="row">
-                    
-                    <div class="banner">
-                        
-                    <marquee direction="right" loop="1000"  behavior="scroll" width="100%">ORDER <i>"Little Black Girl"</i> TODAY!!! &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; ORDER <i>"Little Black Girl"</i> TODAY!!! &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; ORDER <i>"Little Black Girl"</i> TODAY!!!</marquee>
-                 
+
+</head>
+
+<body>
+    <header>
+        <!--Header Section-->
+
+        <div class="container-fluid">
+            <div class="row">
+
+                <div class="banner">
+
+                    <marquee direction="right" loop="10000" behavior="scroll" width="100%">
+                        <div id="marqueeWords"></div>
+
+                        <script type="text/javascript">
+                            var words = [];
+                            var trimWords = [];
+
+                            for (var i = 0; i < 1000; i++) {
+                                words[i] = 'ORDER Little Black Girl TODAY!!!' + '&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;';
+
+                                trimWords[i] = words[i].substring(0, words.length);
+                            }
+                            document.getElementById('marqueeWords').innerHTML = trimWords.join("");
+
+                        </script>
+
+                    </marquee>
+
+                </div>
+
+                <div class="author-name-section">
+                    <h1 class="author-name-top">Vetta</h1>
+                    <h1 class="author-name-bottom">Shantell</h1>
+                    <p class="author-tags">Author<span class="author-star">&#9733;</span> Publisher <span class="author-star">&#9733;</span> Entrepreneur</p>
+
+                    <div class="social-media-container">
+                        <a href="#"><img class="social-media-icons" src="Style/img/facebook.png"></a>
+                        <a href="#"><img src="Style/img/instagram.png" class="social-media-icons"></a>
+                        <a href="#"><img src="Style/img/twitter.png" class="social-media-icons"></a>
+                        <a href="#"><img src="Style/img/google-plus.png" class="social-media-icons"></a>
                     </div>
-                                        
-                        <div class="author-name-section">
-                            <h1 class="author-name-top">Vetta</h1>
-                            <h1 class="author-name-bottom">Shantell</h1>
-                            <p class="author-tags">Author <span class="author-star">&#9733;</span> Publisher <span class="author-star">&#9733;</span> Entrepreneur</p>
-                        
-                        <div class="social-media-container">
-                            <a href="#"><img class="social-media-icons" src="Style/img/facebook.png"></a>
-                            <a href="#"><img src="Style/img/instagram.png" class="social-media-icons"></a>
-                            <a href="#"><img src="Style/img/twitter.png" class="social-media-icons"></a>
-                            <a href="#"><img src="Style/img/google-plus.png" class="social-media-icons"></a>
-                        </div>
-                            
-                        </div>
-                        
-                        <div class="book-container">
-                        
-                            <div class="rotator">
-                                <div class="item left">What you think</div>
-                                <div class="item right">You become</div>
-                                <div class="item left">What you feel</div>
-                                <div class="item right">You attract</div>
-                                <div class="item left">What you imagine</div>          
-                                <div class="item right">You create</div>
-                            </div>
-                            
-                            <video autoplay muted loop class="spaceBackgroundVideo">
+
+                </div>
+
+                <div class="book-container">
+
+                    <div class="rotator">
+                        <div class="item left">What you think</div>
+                        <div class="item right">You become</div>
+                        <div class="item left">What you feel</div>
+                        <div class="item right">You attract</div>
+                        <div class="item left">What you imagine</div>
+                        <div class="item right">You create</div>
+                    </div>
+
+                    <video autoplay muted loop class="spaceBackgroundVideo">
                                 <source src="Style/img/Space-Background.mov" type="video/mp4">
                             </video>
-                            <img class="jumbotron-book col-lg-4 col-md-6 col-sm-6 col-xs-10 col-lg-offset-4 col-md-offset-3 col-sm-offset-3 col-xs-offset-1" src="Style/img/LBG-Book-Cover.png">
-                            
-                    
-                            
-                            <div class="collapse navbar-collapse" id="navbar-collapse-1">
-                               
-                            </div>
-                
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">           
-                                
-                                <nav class="navbar navbar-default" role="navigation">
-                                   <div class="container">
-                                       <div class="navbar-header">
-                                          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse" aria-expanded="false">
+                    <img class="jumbotron-book col-lg-4 col-md-6 col-sm-6 col-xs-7 col-lg-offset-4 col-md-offset-3 col-sm-offset-3 col-xs-offset-3" src="Style/img/LBG-Book-Cover.png">
+
+
+
+                    <div class="collapse navbar-collapse" id="navbar-collapse-1">
+
+                    </div>
+
+                    <!--                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">-->
+                    <nav class="navbar navbar-default" role="navigation">
+                        <div class="container">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse" aria-expanded="false">
                                               <span class="sr-only">Toggle navigation</span>
                                               <span class="icon-bar"></span>
                                               <span class="icon-bar"></span>
                                               <span class="icon-bar"></span>
                                               <span class="icon-bar"></span>
-                                          </button><span class="menu navbar-toggle collapsed" style="border:none; background-color: transparent;">Menu</span>
-                                    </div><!--navbar header-->
+                                          </button>
+                            </div>
+                            <!--navbar header-->
 
-                                    <!--What's Collapsed Below-->
-                                   <div class="collapse navbar-collapse" id="collapse">
-                                       <ul class="nav navbar-nav">
-                                           <li class="navbar-padding"><a class="scroll" data-speed="1000" href="#bioId" id="nav-list">ABOUT VETTA</a></li>
-                                           <li class="navbar-padding"><a class="scroll" data-speed="1000" href="#booksId" id="nav-list">BOOKS</a>
-                                           <li class="navbar-padding"><a class="scroll" data-speed="1000" href="#eventsId" id="nav-list">EVENTS</a></li>
-                                           <li class="navbar-padding"><a class="scroll" data-speed="1000" href="#contactId" id="nav-list">CONTACT</a></li>
+                            <!--What's Collapsed Below-->
+                            <div class="collapse navbar-collapse" id="collapse">
+                                <ul class="nav navbar-nav">
+                                    <li class="navbar-padding"><a class="scroll" data-speed="1000" href="#bioId" id="nav-list">ABOUT VETTA</a></li>
+                                    <li class="navbar-padding"><a class="scroll" data-speed="1000" href="#booksId" id="nav-list">BOOKS</a>
+                                        <li class="navbar-padding"><a class="scroll" data-speed="1000" href="#eventsId" id="nav-list">EVENTS</a></li>
+                                        <li class="navbar-padding"><a class="scroll" data-speed="1000" href="#contactId" id="nav-list">CONTACT</a></li>
 
-                                        </ul><!--navbar nav-->
-                                    </div><!--navbar collapse-->
+                                </ul>
+                                <!--navbar nav-->
+                            </div>
+                            <!--navbar collapse-->
 
-                                   </div><!--container-->
-                               </nav><!--nav-bar default-->
-                                
-                                <div class="col-lg-12 col-md-12 order-btn-container">
-                                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-                                        <input type="hidden" name="cmd" value="_s-xclick">
-                                        <input type="hidden" name="hosted_button_id" value="DE5JHEDHV4TB2">
-                                        <input class="order-btn" type="image" src="Style/img/Buy-Now-Btn.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-
-                                    </form>
-                                </div>
-                            </div><!--col span-->
                         </div>
-                </div><!--row-->
-            </div>
-        </header><!--header end-->
+                        <!--container-->
+                    </nav>
+                    <!--nav-bar default-->
 
-        <div class="container-fluid" id="bioId">
-            <div class="row">
-                    
-                <div class="about-bio-container col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                    <div class="col-lg-12 col-md-12 order-btn-container">
+                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                            <input type="hidden" name="cmd" value="_s-xclick">
+                            <input type="hidden" name="hosted_button_id" value="DE5JHEDHV4TB2">
+                            <input class="order-btn" type="image" src="Style/img/Buy-Now-Btn.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
 
-                    <img class="about-bio-img col-lg-offset-4" src="Style/img/Danae.jpg">
-
-                    <p class="about-bio-container-title col-lg-12 col-md-12 col-sm-12 col-xs-12">About Vetta</p>
-
-                    <div class="container">
-                    <p class="about-bio-body col-lg-12 col-md-8 col-sm-10 col-xs-12 col-lg-offset-0 col-md-offset-0 col-sm-offset-0 col-xs-offset-0">Founder and CEO of Write It Out Publishing LLC est. 2017, Danae Daniels. Author name Vetta Shantell who was raised in East Baltimore, born Dec 23 and currently resides in Atlanta, Georgia.<br><br>
-
-                    Writing has always been her scape goat and looked at as just a hobby. Growing up she had many diaries, written poems, short stories, and her parents had her constantly doing book reports outside of school. If it involved a pen and some paper, she was down for the writing.  With that being said, while on this journey of becoming an author, Vetta decided to self-publish and create her own publishing company that will create opportunities for not just her, but others as well.<br><br>
-
-                    She didn’t finish her first book until 2012, which hasn’t yet been published. Instead, she decided for her first book to be a children’s book for all ages titled, “Little Black Girl.” Choosing this book to be her first book was made so that ones interested in write it out publishing’s work and ideas will always know and understand her mindset regardless off what she puts out. Also, more books that are specifically for little black girls are needed.<br><br>
-
-                    Even though her mother says growing up she spoke of being a successful author, to her remembrance, she never thought of publishing anything and it made her nervous just to think about it until now. So, after all the anxiety, she felt confident enough that others may relate to her and the movement while also encouraging others to trust their process as well.</p>
+                        </form>
                     </div>
+                    <!--</div>-->
+                    <!--col span-->
+                </div>
+            </div>
+            <!--row-->
+        </div>
+    </header>
+    <!--header end-->
 
+    <div class="container-fluid" id="bioId">
+        <div class="row">
+
+            <div class="about-bio-container col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                <img class="about-bio-img col-lg-offset-4" src="Style/img/Danae.jpg">
+
+                <p class="about-bio-container-title col-lg-12 col-md-12 col-sm-12 col-xs-12">About Vetta</p>
+
+                <div class="container">
+                    <p class="about-bio-body col-lg-12 col-md-8 col-sm-10 col-xs-12 col-lg-offset-0 col-md-offset-0 col-sm-offset-0 col-xs-offset-0">Founder and CEO of Write It Out Publishing LLC est. 2017, Danae Daniels. Author name Vetta Shantell who was raised in East Baltimore, born Dec 23 and currently resides in Atlanta, Georgia.<br><br> Writing has always been her scape goat and looked at as just a hobby. Growing up she had many diaries, written poems, short stories, and her parents had her constantly doing book reports outside of school. If it involved a pen and some paper, she was down for the writing. With that being said, while on this journey of becoming an author, Vetta decided to self-publish and create her own publishing company that will create opportunities for not just her, but others as well.<br><br> She didn’t finish her first book until 2012, which hasn’t yet been published. Instead, she decided for her first book to be a children’s book for all ages titled, “Little Black Girl.” Choosing this book to be her first book was made so that ones interested in write it out publishing’s work and ideas will always know and understand her mindset regardless off what she puts out. Also, more books that are specifically for little black girls are needed.<br><br> Even though her mother says growing up she spoke of being a successful author, to her remembrance, she never thought of publishing anything and it made her nervous just to think about it until now. So, after all the anxiety, she felt confident enough that others may relate to her and the movement while also encouraging others to trust their process as well.</p>
                 </div>
 
+            </div>
 
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="booksId"></div>
-                <div class="books-container col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
-                    <div class="books-title col-lg-3 col-md-3 col-sm-4 col-xs-4 col-lg-offset-4">BOOKS</div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="booksId"></div>
+            <div class="books-container col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
-                    <div class="book-cover-container col-lg-2 col-md-4 col-sm-4 col-xs-4 col-lg-offset-2">
-                        <a href="#booksId" class="book-info" data-modal-title="Sunny North to Sunny South" data-modal-description="The best teacher in life is life. Life in East Baltimore taught teenage Sunny how to do all the wrong things the right way. Learning life's lessons made Sunny too grown too fast. Read how Sunny uses her skills to create a life that is all good until it catches up with her. As doors of depression starts to open, Sunny struggles to carve a new life out of the hell she created."><img src="Style/img/SNSS-Book-Cover.jpg">
+                <div class="books-title col-lg-3 col-md-3 col-sm-4 col-xs-4 col-lg-offset-4">BOOKS</div>
+
+                <div class="book-cover-container col-lg-2 col-md-4 col-sm-4 col-xs-2 col-lg-offset-2 col-md-offset-0 col-sm-offset-0 col-xs-offset-0">
+                    <a href="#booksId" class="book-info" data-modal-title="Sunny North to Sunny South" data-modal-description="The best teacher in life is life. Life in East Baltimore taught teenage Sunny how to do all the wrong things the right way. Learning life's lessons made Sunny too grown too fast. Read how Sunny uses her skills to create a life that is all good until it catches up with her. As doors of depression starts to open, Sunny struggles to carve a new life out of the hell she created."><img src="Style/img/SNSS-Book-Cover.jpg">
                             <p>Sunny North to Sunny South</p>
                         </a>
-                    </div>
-                    
-                    <div class="book-cover-container col-lg-2 col-md-4 col-sm-4 col-xs-4">
-                        <a href="#booksId" class="book-info" data-modal-title="Little Black Boy" data-modal-description="The best teacher in life is life. Life in East Baltimore taught teenage Sunny how to do all the wrong things the right way. Learning life's lessons made Sunny too grown too fast. Read how Sunny uses her skills to create a life that is all good until it catches up with her. As doors of depression starts to open, Sunny struggles to carve a new life out of the hell she created."><img src="Style/img/coming_soon_book_cover.jpg" style="opacity:0.8">
+                </div>
+
+                <div class="book-cover-container col-lg-2 col-md-4 col-sm-4 col-xs-2">
+                    <a href="#booksId" class="book-info" data-modal-title="Little Black Boy" data-modal-description="The best teacher in life is life. Life in East Baltimore taught teenage Sunny how to do all the wrong things the right way. Learning life's lessons made Sunny too grown too fast. Read how Sunny uses her skills to create a life that is all good until it catches up with her. As doors of depression starts to open, Sunny struggles to carve a new life out of the hell she created."><img src="Style/img/coming_soon_book_cover.jpg" style="opacity:0.8">
                         <p>Little Black Boy</p>
                         </a>
-                    </div>
+                </div>
 
-                    <div class="book-cover-container col-lg-2 col-md-4 col-sm-4 col-xs-4">
-                        <a href="#booksId" class="book-info" data-modal-title="Universal Goddess" data-modal-description="They've only had each other as friends. There was never a reason to depart, but branching out is a part of growth. They both grew up looking at the world the same. Coming from a royal family, being homeschooled, wealthy and conscious. What happens when it's time to make a name for themselves. Read about how Kebechet and Monifa live their lives in different cities with the same agenda, using the same knowledge to get there, but utilizing it in different ways. They both want to find themselves and create a life and a lane of their own, but who is going about it the right way? Kebechet wants to stay home in Tampa to learn the ropes of her family business that keeps them living sumptuous and Monifa wants to leave home to do her own thing, while using her family's money. However,they must both remeber that <q>Your reality is determined by the decisions and choices that you make. Whatever you decide, make sure that you're ready to deal with the consequences that come with it.</q>"><img src="Style/img/coming_soon_book_cover.jpg" style="opacity:0.8">
+                <div class="book-cover-container col-lg-2 col-md-4 col-sm-4 col-xs-2">
+                    <a href="#booksId" class="book-info" data-modal-title="Universal Goddess" data-modal-description="They've only had each other as friends. There was never a reason to depart, but branching out is a part of growth. They both grew up looking at the world the same. Coming from a royal family, being homeschooled, wealthy and conscious. What happens when it's time to make a name for themselves. Read about how Kebechet and Monifa live their lives in different cities with the same agenda, using the same knowledge to get there, but utilizing it in different ways. They both want to find themselves and create a life and a lane of their own, but who is going about it the right way? Kebechet wants to stay home in Tampa to learn the ropes of her family business that keeps them living sumptuous and Monifa wants to leave home to do her own thing, while using her family's money. However,they must both remeber that <q>Your reality is determined by the decisions and choices that you make. Whatever you decide, make sure that you're ready to deal with the consequences that come with it.</q>"><img src="Style/img/coming_soon_book_cover.jpg" style="opacity:0.8">
                         <p>Universal Goddess</p>
                         </a>
-                    </div>
+                </div>
 
-                    <div class="book-cover-container col-lg-2 col-md-4 col-sm-4 col-xs-4">
-                        <a href="#booksId" class="book-info" data-modal-title="Mood Swings" data-modal-description="Mood Swings aren't crazy, they're beautiful. Take a look at the first collection of poetry by Vetta Shantell and various poets. Mood Swings is a collection of sensitive, wild, loving, free and unbiased poems. They call you <q>crazy</q> because you have a normal case of mood swings. Get a taste of these poets extreme and rapid change in mood through poetry."><img src="Style/img/coming_soon_book_cover.jpg" style="opacity:0.8">
+                <div class="book-cover-container col-lg-2 col-md-4 col-sm-4 col-xs-2">
+                    <a href="#booksId" class="book-info" data-modal-title="Mood Swings" data-modal-description="Mood Swings aren't crazy, they're beautiful. Take a look at the first collection of poetry by Vetta Shantell and various poets. Mood Swings is a collection of sensitive, wild, loving, free and unbiased poems. They call you <q>crazy</q> because you have a normal case of mood swings. Get a taste of these poets extreme and rapid change in mood through poetry."><img src="Style/img/coming_soon_book_cover.jpg" style="opacity:0.8">
                         <p>Mood Swings</p>
                         </a>
-                    </div>
                 </div>
-                
-                
-                <div class="events-container col-lg-12 col-md-12 col-sm-12 col-xs-12" id="eventsId"> 
-                    <div class="events-title  col-lg-3 col-md-3 col-sm-4 col-xs-4 col-lg-offset-4">UPCOMING EVENTS</div>
-                    <div class="cal col-lg-6 col-md-6 col-sm-6 col-xs-12 col-lg-offset-3 col-md-offset-3 col-sm-offset-3" ng-app="calApp" ng-controller="calCtrl">
+            </div>
 
-                        <div class="cal-event" ng-repeat="event in getEvents() ">
-                            <div class="cal-event-tile">
-                                <div class="cal-event-tile-date">{{ event.day }}</div>
-                                <div class="cal-event-tile-month">{{ event.month }}</div>
+
+            <div class="events-container col-lg-12 col-md-12 col-sm-12 col-xs-12" id="eventsId">
+                <div class="events-title  col-lg-3 col-md-3 col-sm-4 col-xs-4 col-lg-offset-4">UPCOMING EVENTS</div>
+                <div class="cal col-lg-6 col-md-6 col-sm-6 col-xs-12 col-lg-offset-3 col-md-offset-3 col-sm-offset-3" ng-app="calApp" ng-controller="calCtrl">
+
+                    <div class="cal-event" ng-repeat="event in getEvents() ">
+                        <div class="cal-event-tile">
+                            <div class="cal-event-tile-date">{{ event.day }}</div>
+                            <div class="cal-event-tile-month">{{ event.month }}</div>
+                        </div>
+                        <div class="cal-event-desc col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="cal-event-title">
+                                {{ event.title }}
                             </div>
-                            <div class="cal-event-desc col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <div class="cal-event-title">
-                                {{ event.title }} 
+                            <div class="cal-event-time">
+                                <icon>&#xf017;</icon> {{ event.time }} {{ event.month }} {{ event.day }} {{ event.year }}
+                            </div>
+                            <div class="cal-event-location">
+                                <icon>&#xf041;</icon>
+                                <div class="cal-event-location-content">
+                                    {{event.location}}
                                 </div>
-                                <div class="cal-event-time">
-                                    <icon>&#xf017;</icon> {{ event.time }} {{ event.month }} {{ event.day }} {{ event.year }}
-                                </div>
-                                <div class="cal-event-location">
-                                    <icon>&#xf041;</icon>
-                                    <div class="cal-event-location-content">
-                                    {{event.location}}  
-                                    </div>
-                                </div>
-                                <a class="cal-event-map" href="{{getMap(event)}}" target="_blank"> View Map</a>
-                            </div> 
-                        </div>
-
-                        <div class="cal-hidden-events" ng-click="showHidden()" ng-if="hiddenEvents() > 0">
-                        {{ hiddenEvents()}} Event<span ng-if="hiddenEvents() >1">s</span> Hidden
-                        </div>
-                        <div ng-if="hiddenEvents() == 0 && events.length > 3" class="cal-hidden-events" ng-click="hideEvents()">
-                        Hide Events
+                            </div>
+                            <a class="cal-event-map" href="{{getMap(event)}}" target="_blank"> View Map</a>
                         </div>
                     </div>
+
+                    <div class="cal-hidden-events" ng-click="showHidden()" ng-if="hiddenEvents() > 0">
+                        {{ hiddenEvents()}} Event<span ng-if="hiddenEvents() >1">s</span> Hidden
+                    </div>
+                    <div ng-if="hiddenEvents() == 0 && events.length > 3" class="cal-hidden-events" ng-click="hideEvents()">
+                        Hide Events
+                    </div>
                 </div>
-                
-  
-                <div class="contact-container col-lg-12 col-md-12 col-sm-12 col-xs-12" id="contactId">    
-                    <div class="contact-title  col-lg-3 col-md-3 col-sm-4 col-xs-4 col-lg-offset-4">REACH OUT</div>
+            </div>
 
-                    <p>Do you have a story?</p>
-                    
-                    <p>Do you want to get your work recognized?</p>  
 
-                    <p>Do you need exposure or need to add to your portfolio? 
+            <div class="contact-container col-lg-12 col-md-12 col-sm-12 col-xs-12" id="contactId">
+                <div class="contact-title  col-lg-3 col-md-3 col-sm-4 col-xs-4 col-lg-offset-4">REACH OUT</div>
 
-                    <p>Are you an illustrator, writer, editor, photographer, or videographer?</p> 
+                <p>Do you have a story?</p>
 
-                    <p>Let’s work! Feel Free to contact us at:</p> 
+                <p>Do you want to get your work recognized?</p>
+
+                <p>Do you need exposure or need to add to your portfolio?
+
+                    <p>Are you an illustrator, writer, editor, photographer, or videographer?</p>
+
+                    <p>Let’s work! Feel Free to contact us at:</p>
 
                     <a href="#"><img src="Style/img/yahoo.png" class="social-media-icons"></a>
-                    
-                    <a href="#"><p>Writeitoutpublishingllc@yahoo.com</p></a>
+
+                    <a href="#">
+                        <p>Writeitoutpublishingllc@yahoo.com</p>
+                    </a>
 
                     <a href="#"><img src="Style/img/instagram.png" class="social-media-icons"></a>
-                    
-                    <a href="#"><p>@Vettas_writeitoutpublishing</p></a> 
 
-                    <a href="#"><p>@Danaebaby</p></a> 
+                    <a href="#">
+                        <p>@Vettas_writeitoutpublishing</p>
+                    </a>
+
+                    <a href="#">
+                        <p>@Danaebaby</p>
+                    </a>
 
                     <p>Check out our upcoming events and see what’s next.</p>
-                    
+
                     <img class="contact-publishing-img" src="Style/img/Publishing-Logo.png">
-                    
-                </div>
-                
-                
-                
-            </div>
-        </div>
-     
 
-        
-        
-             
-        <!--Footer-->
-        <div class="container-fluid">
-             <div class="row">
-                 <div class="footer-section">
-                     <div class="container">
-                         <div class="row">
-                            
-                            <div class="social-media-footer-container col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                                <a href="#"><img class="social-media-icons" src="Style/img/facebook.png"></a>
-                                <a href="#"><img src="Style/img/instagram.png" class="social-media-icons"></a>
-                                <a href="#"><img src="Style/img/twitter.png" class="social-media-icons"></a>
-                                <a href="#"><img src="Style/img/google-plus.png" class="social-media-icons"></a>
-                            </div>
-                             
-                             <ul class="footer-links col-lg-2 col-md-2 col-sm-2 col-xs-3">
-                                 <a href="#"><li class="scroll" data-speed="1000" href="#bioId">ABOUT VETTA</li></a>
-                                 <a href="#"><li class="scroll" data-speed="1000" href="#booksId">BOOKS</li></a>
-                                 <a href="#"><li class="scroll" data-speed="1000" href="#eventsId">EVENTS</li></a>
-                                 <a href="#"><li class="scroll" data-speed="1000" href="#contactId">CONTACT</li></a>
-                                 </ul>
-                        
-                             <div class="web-designer col-lg-3 col-md-3 col-sm-3 col-xs-3 col-lg-offset-3">Site Designed by Jawan Higgins</div>
-                             
-                             <div class="copy-rights col-lg-12 col-md-12 col-sm-12 col-xs-12">&copy; 2018 Writeitoutpublishing.com</div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+    <!--Footer-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="footer-section">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="social-media-footer-container col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                            <a href="#"><img class="social-media-icons" src="Style/img/facebook.png"></a>
+                            <a href="#"><img src="Style/img/instagram.png" class="social-media-icons"></a>
+                            <a href="#"><img src="Style/img/twitter.png" class="social-media-icons"></a>
+                            <a href="#"><img src="Style/img/google-plus.png" class="social-media-icons"></a>
                         </div>
+
+                        <ul class="footer-links col-lg-2 col-md-2 col-sm-2 col-xs-3">
+                            <a href="#">
+                                <li class="scroll" data-speed="1000" href="#bioId">ABOUT VETTA</li>
+                            </a>
+                            <a href="#">
+                                <li class="scroll" data-speed="1000" href="#booksId">BOOKS</li>
+                            </a>
+                            <a href="#">
+                                <li class="scroll" data-speed="1000" href="#eventsId">EVENTS</li>
+                            </a>
+                            <a href="#">
+                                <li class="scroll" data-speed="1000" href="#contactId">CONTACT</li>
+                            </a>
+                        </ul>
+
+                        <div class="web-designer col-lg-3 col-md-3 col-sm-3 col-xs-3 col-lg-offset-3">Site Designed by Jawan Higgins</div>
+
+                        <div class="copy-rights col-lg-12 col-md-12 col-sm-12 col-xs-12">&copy; 2018 Writeitoutpublishing.com</div>
                     </div>
-                 </div>
-                 
-                
+                </div>
             </div>
+
+
         </div>
+    </div>
 
-        
-        
 
-          
-        
-        
-   
-            
-        
-<!--        <script src="JS/jquery-3.3.1.min.js"></script>-->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-        
-        <script src="JS/bootstrap.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-        <script src="JS/fadeIn_words.js"></script>
-        <script src="JS/book_modal.js"></script>
-        
-        
-<!--        <script src="JS/jquery.lettering.min.js"></script>-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
 
-        
-<!--        <script src="JS/angular.min.js"></script>-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js"></script>
-        
-<!--        <script src="JS/angular-animate.js"></script>-->
-        <script src="https://code.angularjs.org/1.3.13/angular-animate.js"></script>
 
-        
-        <script src="JS/events.js"></script>
-        <script src="JS/scroll.js"></script>        
-        
 
-    </body>
+
+
+
+    <!--        <script src="JS/jquery-3.3.1.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+    <script src="JS/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="JS/fadeIn_words.js"></script>
+    <script src="JS/book_modal.js"></script>
+
+
+    <!--        <script src="JS/jquery.lettering.min.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
+
+
+    <!--        <script src="JS/angular.min.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js"></script>
+
+    <!--        <script src="JS/angular-animate.js"></script>-->
+    <script src="https://code.angularjs.org/1.3.13/angular-animate.js"></script>
+
+
+    <script src="JS/events.js"></script>
+    <script src="JS/scroll.js"></script>
+
+
+</body>
+
 </html>
