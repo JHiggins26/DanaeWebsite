@@ -16,10 +16,8 @@
     visibility: hidden;
     opacity: 0;
     color: #ca3dc8;
-/*    font-family: 'Permanent Marker', cursive;*/
-/*    font-family: 'Chewy', cursive;*/
     font-family: 'Freckle Face', cursive;
-/*    font-family: 'Merienda One', cursive;*/
+
 
 }
 
@@ -58,42 +56,26 @@
 
 
 
-@media (max-width: 1200px) {
-    
-    .rotator {
-    font-size: 2.5em;
+@media only screen and (max-width: 767px) {
 
+    .rotator {
+        width: 100%;
+        margin-left: 0%;
+    }
+
+    .rotator .item {
+        font-size: .7em;
+    }
+
+    .right {
+        margin-top: 180px;
     }
 }
 
-@media (max-width: 1200px) {
-    
-    .rotator {
-    font-size: 2.5em;
+@media only screen and (max-width: 450px) {
 
+    .rotator .item {
+        font-size: .5em;
     }
-}
 
-@media (max-width: 1200px) {
-    
-    .rotator {
-    font-size: 2.5em;
-
-    }
-}
-
-@media (max-width: 1200px) {
-    
-    .rotator {
-    font-size: 2.5em;
-
-    }
-}
-
-@media (max-width: 1200px) {
-    
-    .rotator {
-    font-size: 2.5em;
-
-    }
 }
