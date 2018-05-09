@@ -275,6 +275,34 @@ a:focus {
     padding: 30px;
 }
 
+.arrow {
+    animation: arr 2s infinite;
+    position: relative;
+    margin-left: 50%;
+}
+
+.arrow:before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-top: 10px solid black;
+    border-right: 10px solid black;
+    transform: rotate(135deg);
+}
+
+@keyframes arr {
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(50px);
+    }
+}
+
+}
+
 
 
 
