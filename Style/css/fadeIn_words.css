@@ -39,20 +39,26 @@
 
 .left {
     margin-top: 130px;
-    writing-mode: vertical-lr;
+
+    /*
+    writing-mode: vertical-rl;
     text-orientation: upright;
-    height: auto;
+*/
+    width: 1px !important;
+    word-wrap: break-word;
+    margin-left: 10%
 }
 
 .right {
     margin-top: 240px;
+    /*
     writing-mode: vertical-rl;
     text-orientation: upright;
+*/
+    width: 1px !important;
+    word-wrap: break-word;
+    margin-left: 90%
 }
-
-
-
-
 
 
 
@@ -75,7 +81,9 @@
 @media only screen and (max-width: 450px) {
 
     .rotator .item {
-        font-size: .5em;
+        margin-top: px;
+        font-size: 0.5em;
+        letter-spacing: 15px;
     }
 
 }

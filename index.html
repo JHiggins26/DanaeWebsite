@@ -11,9 +11,6 @@
     <link rel="stylesheet" type="text/css" href="Style/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-    <link rel="stylesheet" type="text/css" href="Style/css/index.css">
-    <link rel="stylesheet" type="text/css" href="Style/css/index-media-queries.css">
-
     <!--<link rel="stylesheet" type="text/css" href="Style/css/font-awesome.min.css">-->
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -21,8 +18,13 @@
 
     <link href="https://fonts.googleapis.com/css?family=Chewy|Freckle+Face|Merienda+One|Permanent+Marker" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="Style/css/fadeIn_words.css">
     <link rel="stylesheet" type="text/css" href="Style/css/events.css">
+    <link rel="stylesheet" type="text/css" href="Style/css/book_slideshow.css">
+
+    <link rel="stylesheet" type="text/css" href="Style/css/index.css">
+    <link rel="stylesheet" type="text/css" href="Style/css/index-media-queries.css">
+    <link rel="stylesheet" type="text/css" href="Style/css/fadeIn_words.css">
+
 
     <title>Little Black Girl</title>
 
@@ -37,17 +39,23 @@
 
                 <div class="banner">
 
-                    <marquee direction="right" loop="10000" behavior="scroll" width="100%">
+                    <marquee class="marq" direction="right" loop="10000" behavior="scroll" width="100%">
                         <div id="marqueeWords"></div>
 
+<!--
                         <script type="text/javascript">
                             var words = [];
 
-                            for (var i = 0; i < 1000; i++) {
+                            for (var i = 0; i < 500; i++) {
                                 words[i] = 'ORDER Little Black Girl TODAY!!!' + '&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;';
                             }
                             document.getElementById('marqueeWords').innerHTML = words.join("");
-
+                        </script>
+-->
+                        
+                        <script>
+                            $('marquee').marquee('marq');
+                        
                         </script>
 
                     </marquee>
@@ -60,30 +68,31 @@
                     <p class="author-tags">Author<span class="author-star">&#9733;</span> Publisher <span class="author-star">&#9733;</span> Entrepreneur</p>
 
                     <div class="social-media-container">
-                        <a href="#"><img class="social-media-icons" src="Style/img/facebook.png"></a>
-                        <a href="#"><img src="Style/img/instagram.png" class="social-media-icons"></a>
-                        <a href="#"><img src="Style/img/twitter.png" class="social-media-icons"></a>
-                        <a href="#"><img src="Style/img/google-plus.png" class="social-media-icons"></a>
+                        <a href="https://www.instagram.com/vettas_writeitoutpublishing/" target="_blank"><img src="Style/img/instagram.png" class="social-media-icons"></a>
+                        <a href="https://twitter.com/danaebaby?lang=en" target="_blank"><img src="Style/img/twitter.png" class="social-media-icons"></a>
+                        <a href="mailto:Writeitoutpublishingllc@yahoo.com" target="_blank"><img src="Style/img/yahoo.png" class="social-media-icons"></a>
                     </div>
 
                 </div>
 
                 <div class="book-container">
                     <div class="rotator">
-                        <div class="item left">What you think</div>
-                        <div class="item right">You become</div>
-                        <div class="item left">What you feel</div>
-                        <div class="item right">You attract</div>
-                        <div class="item left">What you imagine</div>
-                        <div class="item right">You create</div>
+                        <div class="item left">What you THINK</div>
+                        <div class="item right">You BECOME</div>
+                        <div class="item left">What you FEEL</div>
+                        <div class="item right">You ATTRACT</div>
+                        <div class="item left">What you IMAGINE</div>
+                        <div class="item right">You CREATE</div>
                     </div>
 
-                    <video autoplay muted loop class="spaceBackgroundVideo">
-                                <source src="Style/img/Space-Background.mov" type="video/mp4">
-                            </video>
+                    
+                    <video autoplay="true" muted loop controls class="spaceBackgroundVideo" src="Style/img/Space-Background.mp4" type="video/mp4" id="svId" type="video/mp4">
+                        <source src="Style/img/Space-Background.mp4" type="video/mp4">
+                    </video>
+
+
+
                     <img class="jumbotron-book col-lg-4 col-md-6 col-sm-6 col-xs-7 col-lg-offset-4 col-md-offset-3 col-sm-offset-3 col-xs-offset-3" src="Style/img/LBG-Book-Cover.png">
-
-
 
                     <div class="collapse navbar-collapse" id="navbar-collapse-1">
 
@@ -143,12 +152,21 @@
                 <p class="about-bio-container-title col-lg-12 col-md-12 col-sm-12 col-xs-12">About Vetta</p>
 
                 <div class="container">
-                    <p class="about-bio-body col-lg-12 col-md-12 col-sm-12 col-xs-12 col-lg-offset-0 col-md-offset-0 col-sm-offset-0 col-xs-offset-0">Founder and CEO of Write It Out Publishing LLC est. 2017, Danae Daniels. Author name Vetta Shantell who was raised in East Baltimore, born Dec 23 and currently resides in Atlanta, Georgia.<br><br> Writing has always been her scape goat and looked at as just a hobby. Growing up she had many diaries, written poems, short stories, and her parents had her constantly doing book reports outside of school. If it involved a pen and some paper, she was down for the writing. With that being said, while on this journey of becoming an author, Vetta decided to self-publish and create her own publishing company that will create opportunities for not just her, but others as well.<br><br> She didn’t finish her first book until 2012, which hasn’t yet been published. Instead, she decided for her first book to be a children’s book for all ages titled, “Little Black Girl.” Choosing this book to be her first book was made so that ones interested in write it out publishing’s work and ideas will always know and understand her mindset regardless off what she puts out. Also, more books that are specifically for little black girls are needed.<br><br> Even though her mother says growing up she spoke of being a successful author, to her remembrance, she never thought of publishing anything and it made her nervous just to think about it until now. So, after all the anxiety, she felt confident enough that others may relate to her and the movement while also encouraging others to trust their process as well.</p>
+                    <p class="about-bio-body col-lg-12 col-md-12 col-sm-12 col-xs-12 col-lg-offset-0 col-md-offset-0 col-sm-offset-0 col-xs-offset-0">
+                        Founder and CEO of Write It Out Publishing LLC est. 2017<br> <b class="about-bio-headings">Where are you from?</b><br> My mother went into labor in Arizona, December 23, 1990 and raised me in East Baltimore City.<br> <b class="about-bio-headings">When did you know you wanted to be an Author?</b><br> Well, let my mom tell it, when I was eleven years old, I wrote on a piece of paper that I was going to be an author and my books will go all around the world. She says that she still has that piece of paper until this day. However, I do not remember this memory. Writing has always been my scape goat. It didn’t matter what I was writing, it’ll just always relax me. My Dad says I would write my name everywhere, on the walls, on his leather seats, etc. My parents also made me do book reports that were due to them, but it was something I didn’t mind doing because if it involved a pen and paper I was down for it. With that being said, it wasn’t until high school when my mom put me into counseling and the counselor suggested that I should write down my feelings and experiences down. That’s when I started to keep a journal and the real life stories began. In 2011, I was working in an inbound call center that barely received inbound calls, so 90 percent of the time I wasn’t doing anything. We also couldn’t have pen and paper at the desk so I started to write my life in story form on paper towels and would transfer it to paper on breaks and at home, but as a girl named Sunny, Which is now a book titled “Sunny North to Sunny South.”
+                        <br><span class="about-bio-hide"><b class="about-bio-headings">Where did your Author name come from?</b><br> My Dad gave me this name. He named me. Vetta has her own way of things and so does Shantell.<br><b class="about-bio-headings">Not only are you an author, but you have a publishing company?</b><br> Yes, write it out publishing is a publishing company that I decided to create for the simple fact that I wanted to self-publish. In the mist of that, I started to grow more ideas and wanted to be a stepping stone and create opportunities for others as well that may want to write, illustrate, etc.<br><b class="about-bio-headings">What will be Write It Out Publishing’s first book? And what is it about?</b><br> “Little Black Girl” is our first book that is published under our company. It’s a book of affirmations, positivity, and creation.<br> <b class="about-bio-headings">Is it a children’s book?</b><br> It is for all ages. I’ll like to say it’s a book for families that speaks on esoteric knowledge and spirituality.<br><b class="about-bio-headings">Where did the inspiration come from?</b><br> I woke up at like three in the morning one night, it was an outer-body experience, and I say that because it was a blurr. Like a day or two later I remembered that I wrote something and read it. It was initially a poem and I was talking to my younger self and informing myself of the true history and what must be unlearned and relearned. I put it in Children’s book form because I wanted everyone including a six year old to understand and comprehend the message.<br> <b class="about-bio-headings">How would you explain the process to get to this point?</b><br> All I can say is, trust your process and learn to go with your first instinct. I would have bad anxiety and sometimes I still do and it will have me very indecisive, I would also get so nervous with the thought of releasing anything. But, with the help of meditation, meditation music, affirmations, positive thinking, practicing law of attraction, and all of my “you are confident speeches” to myself I was able to get to this point and I still have more fighting and learning to do.<br> <b class="about-bio-headings">Can we expect more from Author Vetta Shantell?</b><br> Yes, Little Black Boy, The Universal Goddess, Sunny North to Sunny South, Mood swings which is poetry, will all be coming out soon, plus more.<br> <b class="about-bio-headings">Is there anything you would like to add?</b><br> Yes, special shout out to my illustrator Alexis Nelson. She did the cover to Sunny North to Sunny South and she was able to bring Little Black Girl to life with the help of another amazing artist Jalia E. Also, a special shout-out to everyone who has supported me by giving me advice, encouraging words, motivation when I was ready to give up, those who let me cry on their shoulders while having an emotional break down, and those who’ve supported me by sharing my posts, buying books, and passing it on by word-of-mouth. I thank you all.
+                    </span></p>
                 </div>
 
-                <div class="arrow col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <a href=""></a>
-                </div>
+
+                <div id="about-bio-id"></div>
+                <a class="arrow-down col-lg-12 col-md-12 col-sm-12 col-xs-12" style="cursor: pointer;">
+                    <span class="arrow-down-caption">Read More</span>
+                </a>
+
+                <a class="arrow-up scroll col-lg-12 col-md-12 col-sm-12 col-xs-12" style="cursor: pointer;" data-speed="100" href="#about-bio-id">
+                    <span class="arrow-up-caption">Show Less</span>
+                </a>
 
             </div>
 
@@ -156,36 +174,55 @@
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="booksId"></div>
             <div class="books-container col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
-                <div class="books-title col-lg-3 col-md-3 col-sm-4 col-xs-4 col-lg-offset-4">BOOKS</div>
+                <div class="books-title col-lg-3 col-md-3 col-sm-3 col-xs-6 col-lg-offset-4 col-md-offset-4 col-sm-offset-4 col-xs-offset-4">BOOKS</div>
 
-                <div class="book-cover-container col-lg-2 col-md-4 col-sm-4 col-xs-1 col-lg-offset-2 col-md-offset-0 col-sm-offset-0 col-xs-offset-0">
-                    <a href="#booksId" class="book-info" data-modal-title="Sunny North to Sunny South" data-modal-description="The best teacher in life is life. Life in East Baltimore taught teenage Sunny how to do all the wrong things the right way. Learning life's lessons made Sunny too grown too fast. Read how Sunny uses her skills to create a life that is all good until it catches up with her. As doors of depression starts to open, Sunny struggles to carve a new life out of the hell she created."><img src="Style/img/SNSS-Book-Cover.jpg">
+                <div id="carousel">m
+                    <figure id="spinner">
+
+                        <div class="book-cover-container ">
+                            <a href="#booksId" class="book-info" data-modal-title="Sunny North to Sunny South" data-modal-description="The best teacher in life is life. Life in East Baltimore taught teenage Sunny how to do all the wrong things the right way. Learning life's lessons made Sunny too grown too fast. Read how Sunny uses her skills to create a life that is all good until it catches up with her. As doors of depression starts to open, Sunny struggles to carve a new life out of the hell she created."><img src="Style/img/SNSS-Book-Cover.jpg">
                             <p>Sunny North to Sunny South</p>
-                        </a>
+                            </a>
+                        </div>
+
+                        <div class="book-cover-container ">
+                            <a href="#booksId" class="book-info" data-modal-title="Little Black Boy" data-modal-description="The best teacher in life is life. Life in East Baltimore taught teenage Sunny how to do all the wrong things the right way. Learning life's lessons made Sunny too grown too fast. Read how Sunny uses her skills to create a life that is all good until it catches up with her. As doors of depression starts to open, Sunny struggles to carve a new life out of the hell she created."><img src="Style/img/coming_soon_book_cover.jpg" style="opacity:0.8">
+                            <p>Little Black Boy</p>
+                            </a>
+                        </div>
+
+                        <!--                                        <div class="hidden-lg hidden-md hidden-sm col-xs-12"></div>-->
+
+                        <div class="book-cover-container">
+                            <a href="#booksId" class="book-info" data-modal-title="Universal Goddess" data-modal-description="They've only had each other as friends. There was never a reason to depart, but branching out is a part of growth. They both grew up looking at the world the same. Coming from a royal family, being homeschooled, wealthy and conscious. What happens when it's time to make a name for themselves. Read about how Kebechet and Monifa live their lives in different cities with the same agenda, using the same knowledge to get there, but utilizing it in different ways. They both want to find themselves and create a life and a lane of their own, but who is going about it the right way? Kebechet wants to stay home in Tampa to learn the ropes of her family business that keeps them living sumptuous and Monifa wants to leave home to do her own thing, while using her family's money. However,they must both remeber that <q>Your reality is determined by the decisions and choices that you make. Whatever you decide, make sure that you're ready to deal with the consequences that come with it.</q>"><img src="Style/img/coming_soon_book_cover.jpg" style="opacity:0.8">
+                            <p>Universal Goddess</p>
+                            </a>
+                        </div>
+
+                        <div class="book-cover-container ">
+                            <a href="#booksId" class="book-info" data-modal-title="Mood Swings" data-modal-description="Mood Swings aren't crazy, they're beautiful. Take a look at the first collection of poetry by Vetta Shantell and various poets. Mood Swings is a collection of sensitive, wild, loving, free and unbiased poems. They call you <q>crazy</q> because you have a normal case of mood swings. Get a taste of these poets extreme and rapid change in mood through poetry."><img src="Style/img/coming_soon_book_cover.jpg" style="opacity:0.8">
+                            <p>Mood Swings</p>
+                            </a>
+                        </div>
+
+                        <div class="book-cover-container ">
+                            <a href="#booksId" class="book-info" data-modal-title="Little Black Girl" data-modal-description="The best teacher in life is life. Life in East Baltimore taught teenage Sunny how to do all the wrong things the right way. Learning life's lessons made Sunny too grown too fast. Read how Sunny uses her skills to create a life that is all good until it catches up with her. As doors of depression starts to open, Sunny struggles to carve a new life out of the hell she created."><img src="Style/img/LBG-Book-Cover.png">
+                            <p>Little Black Girl</p>
+                            </a>
+                        </div>
+
+                    </figure>
                 </div>
 
-                <div class="book-cover-container col-lg-2 col-md-4 col-sm-4 col-xs-2">
-                    <a href="#booksId" class="book-info" data-modal-title="Little Black Boy" data-modal-description="The best teacher in life is life. Life in East Baltimore taught teenage Sunny how to do all the wrong things the right way. Learning life's lessons made Sunny too grown too fast. Read how Sunny uses her skills to create a life that is all good until it catches up with her. As doors of depression starts to open, Sunny struggles to carve a new life out of the hell she created."><img src="Style/img/coming_soon_book_cover.jpg" style="opacity:0.8">
-                        <p>Little Black Boy</p>
-                        </a>
-                </div>
+                <span style="float:left" class="ss-icon" id="leftArrowId">&lt;</span>
+                <span style="float:right" class="ss-icon" id="rightArrowId">&gt;</span>
 
-                <div class="book-cover-container col-lg-2 col-md-4 col-sm-4 col-xs-2">
-                    <a href="#booksId" class="book-info" data-modal-title="Universal Goddess" data-modal-description="They've only had each other as friends. There was never a reason to depart, but branching out is a part of growth. They both grew up looking at the world the same. Coming from a royal family, being homeschooled, wealthy and conscious. What happens when it's time to make a name for themselves. Read about how Kebechet and Monifa live their lives in different cities with the same agenda, using the same knowledge to get there, but utilizing it in different ways. They both want to find themselves and create a life and a lane of their own, but who is going about it the right way? Kebechet wants to stay home in Tampa to learn the ropes of her family business that keeps them living sumptuous and Monifa wants to leave home to do her own thing, while using her family's money. However,they must both remeber that <q>Your reality is determined by the decisions and choices that you make. Whatever you decide, make sure that you're ready to deal with the consequences that come with it.</q>"><img src="Style/img/coming_soon_book_cover.jpg" style="opacity:0.8">
-                        <p>Universal Goddess</p>
-                        </a>
-                </div>
-
-                <div class="book-cover-container col-lg-2 col-md-4 col-sm-4 col-xs-2">
-                    <a href="#booksId" class="book-info" data-modal-title="Mood Swings" data-modal-description="Mood Swings aren't crazy, they're beautiful. Take a look at the first collection of poetry by Vetta Shantell and various poets. Mood Swings is a collection of sensitive, wild, loving, free and unbiased poems. They call you <q>crazy</q> because you have a normal case of mood swings. Get a taste of these poets extreme and rapid change in mood through poetry."><img src="Style/img/coming_soon_book_cover.jpg" style="opacity:0.8">
-                        <p>Mood Swings</p>
-                        </a>
-                </div>
             </div>
 
 
             <div class="events-container col-lg-12 col-md-12 col-sm-12 col-xs-12" id="eventsId">
-                <div class="events-title  col-lg-3 col-md-3 col-sm-4 col-xs-4 col-lg-offset-4">UPCOMING EVENTS</div>
+                <div class="events-title  col-lg-3 col-md-3 col-sm-3 col-xs-6 col-lg-offset-4 col-md-offset-4 col-sm-offset-4 col-xs-offset-4">EVENTS</div>
+
                 <div class="cal col-lg-6 col-md-6 col-sm-6 col-xs-12 col-lg-offset-3 col-md-offset-3 col-sm-offset-3" ng-app="calApp" ng-controller="calCtrl">
 
                     <div class="cal-event" ng-repeat="event in getEvents() ">
@@ -221,35 +258,31 @@
 
 
             <div class="contact-container col-lg-12 col-md-12 col-sm-12 col-xs-12" id="contactId">
-                <div class="contact-title  col-lg-3 col-md-3 col-sm-4 col-xs-4 col-lg-offset-4">REACH OUT</div>
+                <div class="contact-title  col-lg-3 col-md-3 col-sm-3 col-xs-6 col-lg-offset-4 col-md-offset-4 col-sm-offset-4 col-xs-offset-4">REACH OUT</div>
 
-                <p>Do you have a story?</p>
+                <p class="">Do you have a story?</p>
 
-                <p>Do you want to get your work recognized?</p>
+                <p class="">Do you want to get your work recognized?</p>
 
-                <p>Do you need exposure or need to add to your portfolio?
+                <p class="">Do you need exposure or need to add to your portfolio?
 
-                    <p>Are you an illustrator, writer, editor, photographer, or videographer?</p>
+                    <p class="">Are you an illustrator, writer, editor, photographer, or videographer?</p>
 
-                    <p>Let’s work! Feel Free to contact us at:</p>
+                    <p class="">Let’s work! Feel Free to contact us at:</p>
 
-                    <a href="#"><img src="Style/img/yahoo.png" class="social-media-icons"></a>
-
-                    <a href="#">
-                        <p>Writeitoutpublishingllc@yahoo.com</p>
+                    <a href="mailto:Writeitoutpublishingllc@yahoo.com" target="_blank">
+                        <p class="col-xs-12"><img src="Style/img/yahoo.png" class="social-media-icons "><i>Writeitoutpublishingllc@yahoo.com</i></p>
                     </a>
 
-                    <a href="#"><img src="Style/img/instagram.png" class="social-media-icons"></a>
-
-                    <a href="#">
-                        <p>@Vettas_writeitoutpublishing</p>
+                    <a href="https://www.instagram.com/vettas_writeitoutpublishing/" target="_blank">
+                        <p class="col-xs-12"><img src="Style/img/instagram.png" class="social-media-icons"><i>@Vettas_writeitoutpublishing</i></p>
                     </a>
 
-                    <a href="#">
-                        <p>@Danaebaby</p>
+                    <a href="https://twitter.com/danaebaby?lang=en" target="_blank">
+                        <p class="col-xs-12"><img src="Style/img/twitter.png" class="social-media-icons"><i>@Danaebaby</i></p>
                     </a>
 
-                    <p>Check out our upcoming events and see what’s next.</p>
+                    <p class="col-xs-12">Check out our upcoming events and see what’s next.</p>
 
                     <img class="contact-publishing-img" src="Style/img/Publishing-Logo.png">
 
@@ -261,46 +294,43 @@
     </div>
 
 
-
-
-
     <!--Footer-->
     <div class="container-fluid">
         <div class="row">
             <div class="footer-section">
                 <div class="container">
-                    <div class="row">
+                    <div class="social-media-footer-container col-lg-2 col-md-3 col-sm-2 col-xs-1">
+                        <a href="https://www.instagram.com/vettas_writeitoutpublishing/" target="_blank"><img src="Style/img/instagram.png" class="social-media-icons"></a>
+                        <a href="https://twitter.com/danaebaby?lang=en" target="_blank"><img src="Style/img/twitter.png" class="social-media-icons"></a>
+                        <a href="mailto:Writeitoutpublishingllc@yahoo.com" target="_blank"><img src="Style/img/yahoo.png" class="social-media-icons"></a>
+                    </div>
 
-                        <div class="social-media-footer-container col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                            <a href="#"><img class="social-media-icons" src="Style/img/facebook.png"></a>
-                            <a href="#"><img src="Style/img/instagram.png" class="social-media-icons"></a>
-                            <a href="#"><img src="Style/img/twitter.png" class="social-media-icons"></a>
-                            <a href="#"><img src="Style/img/google-plus.png" class="social-media-icons"></a>
-                        </div>
+                    <ul class="footer-links col-lg-9 col-md-9 col-sm-10 col-xs-11 col-lg-offset-1">
+                        <a href="#">
+                            <li class="scroll col-lg-3 col-md-4 col-sm-4 col-xs-11" data-speed="1000" href="#bioId">ABOUT VETTA</li>
+                        </a>
+                        <a href="#">
+                            <li class="scroll col-lg-2 col-md-2 col-sm-2 col-xs-11" data-speed="1000" href="#booksId">BOOKS</li>
+                        </a>
+                        <a href="#">
+                            <li class="scroll col-lg-2 col-md-2 col-sm-2 col-xs-11" data-speed="1000" href="#eventsId">EVENTS</li>
+                        </a>
+                        <a href="#">
+                            <li class="scroll col-lg-2 col-md-2 col-sm-2 col-xs-11" data-speed="1000" href="#contactId">CONTACT</li>
+                        </a>
+                    </ul>
 
-                        <ul class="footer-links col-lg-2 col-md-2 col-sm-2 col-xs-3">
-                            <a href="#">
-                                <li class="scroll" data-speed="1000" href="#bioId">ABOUT VETTA</li>
-                            </a>
-                            <a href="#">
-                                <li class="scroll" data-speed="1000" href="#booksId">BOOKS</li>
-                            </a>
-                            <a href="#">
-                                <li class="scroll" data-speed="1000" href="#eventsId">EVENTS</li>
-                            </a>
-                            <a href="#">
-                                <li class="scroll" data-speed="1000" href="#contactId">CONTACT</li>
-                            </a>
-                        </ul>
 
-                        <div class="web-designer col-lg-3 col-md-3 col-sm-3 col-xs-3 col-lg-offset-3">Site Designed by Jawan Higgins</div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    </div>
 
-                        <div class="copy-rights col-lg-12 col-md-12 col-sm-12 col-xs-12">&copy; 2018 Writeitoutpublishing.com</div>
+                    <div class="copy-rights col-lg-3 col-md-3 col-sm-4 col-xs-12">&copy; 2018 Writeitoutpublishing.com</div>
+
+                    <div class="web-designer col-lg-3 col-md-4 col-sm-4 col-xs-12 col-lg-offset-5 col-md-offset-5 col-sm-offset-4">
+                        <a href="mailto:Jawanhiggins@gmail.com">Site Designed by Jawan Higgins</a>
                     </div>
                 </div>
             </div>
-
-
         </div>
     </div>
 
@@ -337,6 +367,28 @@
 
     <script src="JS/events.js"></script>
     <script src="JS/scroll.js"></script>
+    <script src="JS/book_slideshow.js"></script>
+    <script src="JS/marquee.js"></script>
+
+
+
+    <script type="text/javascript">
+        $('.about-bio-hide').hide();
+        $('.arrow-up').hide();
+
+
+        $('.arrow-down').on('click', function(event) {
+            $('.about-bio-hide').show();
+            $('.arrow-down').hide();
+            $('.arrow-up').show();
+        });
+
+        $('.arrow-up').on('click', function(event) {
+            $('.about-bio-hide').hide();
+            $('.arrow-down').show();
+            $('.arrow-up').hide();
+        });
+    </script>
 
 
 </body>

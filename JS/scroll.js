@@ -1,9 +1,9 @@
-(function() {
+(function () {
 
-     'use strict';
+    'use strict';
 
     // Feature Test
-    if ( 'querySelector' in document && 'addEventListener' in window && Array.prototype.forEach ) {
+    if ('querySelector' in document && 'addEventListener' in window && Array.prototype.forEach) {
 
         // Function to animate the scroll
         var smoothScroll = function (anchor, duration) {
@@ -12,7 +12,7 @@
             var startLocation = window.pageYOffset;
             var endLocation = anchor.offsetTop;
             var distance = endLocation - startLocation;
-            var increments = distance/(duration/16);
+            var increments = distance / (duration / 16);
             var stopAnimation;
 
             // Scroll the page by an increment, and check if it's time to stop
@@ -22,11 +22,11 @@
             };
 
             // If scrolling down
-            if ( increments >= 0 ) {
+            if (increments >= 0) {
                 // Stop animation when you reach the anchor OR the bottom of the page
                 stopAnimation = function () {
                     var travelled = window.pageYOffset;
-                    if ( (travelled >= (endLocation - increments)) || ((window.innerHeight + travelled) >= document.body.offsetHeight) ) {
+                    if ((travelled >= (endLocation - increments)) || ((window.innerHeight + travelled) >= document.body.offsetHeight)) {
                         clearInterval(runAnimation);
                     }
                 };
@@ -36,7 +36,7 @@
                 // Stop animation when you reach the anchor OR the top of the page
                 stopAnimation = function () {
                     var travelled = window.pageYOffset;
-                    if ( travelled <= (endLocation || 0) ) {
+                    if (travelled <= (endLocation || 0)) {
                         clearInterval(runAnimation);
                     }
                 };
@@ -44,7 +44,7 @@
 
             // Loop the animation function
             var runAnimation = setInterval(animateScroll, 16);
-       
+
         };
 
         // Define smooth scroll links
@@ -54,7 +54,7 @@
         [].forEach.call(scrollToggle, function (toggle) {
 
             // When the smooth scroll link is clicked
-            toggle.addEventListener('click', function(e) {
+            toggle.addEventListener('click', function (e) {
 
                 // Prevent the default link behavior
                 e.preventDefault();
@@ -76,4 +76,4 @@
 
     }
 
- })();
+})();
