@@ -353,6 +353,7 @@ a:focus {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
+    height: 600px;
 }
 
 .books-title {
@@ -462,6 +463,10 @@ a:focus {
 .modal-price {
     color: #35E865;
     padding-bottom: 0px;
+}
+
+.modal-order-btn {
+    width: 200px;
 }
 
 .modal-date {

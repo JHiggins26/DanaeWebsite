@@ -1,8 +1,3 @@
-/**
- * author Remy Sharp
- * url http://remysharp.com/tag/marquee
- */
-
 (function ($) {
     $.fn.marquee = function (klass) {
         var newMarquee = [],

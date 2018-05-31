@@ -39,10 +39,26 @@
 
                 <div class="banner">
 
-                    <marquee class="marq" direction="right" loop="10000" behavior="scroll" width="100%">
+                    <marquee class="marquee" behavior="scroll" scrollamount="1" direction="right" width="100%">
                         <div id="marqueeWords"></div>
 
-<!--
+                        <script type="text/javascript">
+                            var words = [];
+
+                            for (var i = 0; i < 500; i++) {
+                                words[i] = 'ORDER Little Black Girl TODAY!!!' + '&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;';
+                            }
+                            document.getElementById('marqueeWords').innerHTML = words.join("");
+
+                        </script>
+
+                    </marquee>
+
+
+                    <!--<marquee class="marq" direction="right" loop="10000" behavior="scroll" width="100%">
+                        <div id="marqueeWords"></div>
+
+                        <!--
                         <script type="text/javascript">
                             var words = [];
 
@@ -52,13 +68,10 @@
                             document.getElementById('marqueeWords').innerHTML = words.join("");
                         </script>
 -->
-                        
-                        <script>
-                            $('marquee').marquee('marq');
-                        
-                        </script>
 
-                    </marquee>
+
+
+                    <!-- </marquee>-->
 
                 </div>
 
@@ -85,8 +98,8 @@
                         <div class="item right">You CREATE</div>
                     </div>
 
-                    
-                    <video autoplay="true" muted loop controls class="spaceBackgroundVideo" src="Style/img/Space-Background.mp4" type="video/mp4" id="svId" type="video/mp4">
+
+                    <video autoplay="true" muted loop class="spaceBackgroundVideo" src="Style/img/Space-Background.mp4" type="video/mp4" id="svId" type="video/mp4">
                         <source src="Style/img/Space-Background.mp4" type="video/mp4">
                     </video>
 
@@ -176,46 +189,57 @@
 
                 <div class="books-title col-lg-3 col-md-3 col-sm-3 col-xs-6 col-lg-offset-4 col-md-offset-4 col-sm-offset-4 col-xs-offset-4">BOOKS</div>
 
-                <div id="carousel">m
-                    <figure id="spinner">
+                <div class="carousel_wrapper">
+                    <div class="carousel">
 
-                        <div class="book-cover-container ">
-                            <a href="#booksId" class="book-info" data-modal-title="Sunny North to Sunny South" data-modal-description="The best teacher in life is life. Life in East Baltimore taught teenage Sunny how to do all the wrong things the right way. Learning life's lessons made Sunny too grown too fast. Read how Sunny uses her skills to create a life that is all good until it catches up with her. As doors of depression starts to open, Sunny struggles to carve a new life out of the hell she created."><img src="Style/img/SNSS-Book-Cover.jpg">
-                            <p>Sunny North to Sunny South</p>
-                            </a>
+                        <div class="slide one">
+                            <div class="book-cover-container ">
+                                <a href="#booksId" class="book-info" data-modal-title="Sunny North to Sunny South" data-modal-description="The best teacher in life is life. Life in East Baltimore taught teenage Sunny how to do all the wrong things the right way. Learning life's lessons made Sunny too grown too fast. Read how Sunny uses her skills to create a life that is all good until it catches up with her. As doors of depression starts to open, Sunny struggles to carve a new life out of the hell she created."><img src="Style/img/SNSS-Book-Cover.jpg">
+                                <p>Sunny North to Sunny South</p>
+                                </a>
+                            </div>
                         </div>
 
-                        <div class="book-cover-container ">
-                            <a href="#booksId" class="book-info" data-modal-title="Little Black Boy" data-modal-description="The best teacher in life is life. Life in East Baltimore taught teenage Sunny how to do all the wrong things the right way. Learning life's lessons made Sunny too grown too fast. Read how Sunny uses her skills to create a life that is all good until it catches up with her. As doors of depression starts to open, Sunny struggles to carve a new life out of the hell she created."><img src="Style/img/coming_soon_book_cover.jpg" style="opacity:0.8">
+                        <div class="slide two">
+                            <div class="book-cover-container ">
+                                <a href="#booksId" class="book-info" data-modal-title="Little Black Boy" data-modal-description="The best teacher in life is life. Life in East Baltimore taught teenage Sunny how to do all the wrong things the right way. Learning life's lessons made Sunny too grown too fast. Read how Sunny uses her skills to create a life that is all good until it catches up with her. As doors of depression starts to open, Sunny struggles to carve a new life out of the hell she created."><img src="Style/img/coming_soon_book_cover.jpg" style="opacity:0.8">
                             <p>Little Black Boy</p>
                             </a>
+                            </div>
                         </div>
-
-                        <!--                                        <div class="hidden-lg hidden-md hidden-sm col-xs-12"></div>-->
-
-                        <div class="book-cover-container">
-                            <a href="#booksId" class="book-info" data-modal-title="Universal Goddess" data-modal-description="They've only had each other as friends. There was never a reason to depart, but branching out is a part of growth. They both grew up looking at the world the same. Coming from a royal family, being homeschooled, wealthy and conscious. What happens when it's time to make a name for themselves. Read about how Kebechet and Monifa live their lives in different cities with the same agenda, using the same knowledge to get there, but utilizing it in different ways. They both want to find themselves and create a life and a lane of their own, but who is going about it the right way? Kebechet wants to stay home in Tampa to learn the ropes of her family business that keeps them living sumptuous and Monifa wants to leave home to do her own thing, while using her family's money. However,they must both remeber that <q>Your reality is determined by the decisions and choices that you make. Whatever you decide, make sure that you're ready to deal with the consequences that come with it.</q>"><img src="Style/img/coming_soon_book_cover.jpg" style="opacity:0.8">
+                        <div class="slide three">
+                            <div class="book-cover-container">
+                                <a href="#booksId" class="book-info" data-modal-title="Universal Goddess" data-modal-description="They've only had each other as friends. There was never a reason to depart, but branching out is a part of growth. They both grew up looking at the world the same. Coming from a royal family, being homeschooled, wealthy and conscious. What happens when it's time to make a name for themselves. Read about how Kebechet and Monifa live their lives in different cities with the same agenda, using the same knowledge to get there, but utilizing it in different ways. They both want to find themselves and create a life and a lane of their own, but who is going about it the right way? Kebechet wants to stay home in Tampa to learn the ropes of her family business that keeps them living sumptuous and Monifa wants to leave home to do her own thing, while using her family's money. However,they must both remeber that <q>Your reality is determined by the decisions and choices that you make. Whatever you decide, make sure that you're ready to deal with the consequences that come with it.</q>"><img src="Style/img/coming_soon_book_cover.jpg" style="opacity:0.8">
                             <p>Universal Goddess</p>
                             </a>
+                            </div>
                         </div>
-
-                        <div class="book-cover-container ">
-                            <a href="#booksId" class="book-info" data-modal-title="Mood Swings" data-modal-description="Mood Swings aren't crazy, they're beautiful. Take a look at the first collection of poetry by Vetta Shantell and various poets. Mood Swings is a collection of sensitive, wild, loving, free and unbiased poems. They call you <q>crazy</q> because you have a normal case of mood swings. Get a taste of these poets extreme and rapid change in mood through poetry."><img src="Style/img/coming_soon_book_cover.jpg" style="opacity:0.8">
+                        <div class="slide four">
+                            <div class="book-cover-container ">
+                                <a href="#booksId" class="book-info" data-modal-title="Mood Swings" data-modal-description="Mood Swings aren't crazy, they're beautiful. Take a look at the first collection of poetry by Vetta Shantell and various poets. Mood Swings is a collection of sensitive, wild, loving, free and unbiased poems. They call you <q>crazy</q> because you have a normal case of mood swings. Get a taste of these poets extreme and rapid change in mood through poetry."><img src="Style/img/coming_soon_book_cover.jpg" style="opacity:0.8">
                             <p>Mood Swings</p>
                             </a>
+                            </div>
                         </div>
-
-                        <div class="book-cover-container ">
-                            <a href="#booksId" class="book-info" data-modal-title="Little Black Girl" data-modal-description="The best teacher in life is life. Life in East Baltimore taught teenage Sunny how to do all the wrong things the right way. Learning life's lessons made Sunny too grown too fast. Read how Sunny uses her skills to create a life that is all good until it catches up with her. As doors of depression starts to open, Sunny struggles to carve a new life out of the hell she created."><img src="Style/img/LBG-Book-Cover.png">
+                        <div class="slide five">
+                            <div class="book-cover-container ">
+                                <a href="#booksId" class="book-info" data-modal-title="Little Black Girl" data-modal-description="The best teacher in life is life. Life in East Baltimore taught teenage Sunny how to do all the wrong things the right way. Learning life's lessons made Sunny too grown too fast. Read how Sunny uses her skills to create a life that is all good until it catches up with her. As doors of depression starts to open, Sunny struggles to carve a new life out of the hell she created."><img src="Style/img/LBG-Book-Cover.png">
                             <p>Little Black Girl</p>
                             </a>
+                            </div>
                         </div>
+                        
 
-                    </figure>
+                    </div>
                 </div>
+            
+                <!--                                        <div class="hidden-lg hidden-md hidden-sm col-xs-12"></div>-->
+                <!--
+
 
                 <span style="float:left" class="ss-icon" id="leftArrowId">&lt;</span>
                 <span style="float:right" class="ss-icon" id="rightArrowId">&gt;</span>
+-->
 
             </div>
 
@@ -223,7 +247,7 @@
             <div class="events-container col-lg-12 col-md-12 col-sm-12 col-xs-12" id="eventsId">
                 <div class="events-title  col-lg-3 col-md-3 col-sm-3 col-xs-6 col-lg-offset-4 col-md-offset-4 col-sm-offset-4 col-xs-offset-4">EVENTS</div>
 
-                <div class="cal col-lg-6 col-md-6 col-sm-6 col-xs-12 col-lg-offset-3 col-md-offset-3 col-sm-offset-3" ng-app="calApp" ng-controller="calCtrl">
+                <div class="cal col-lg-6 col-md-8 col-sm-8 col-xs-12 col-lg-offset-3 col-md-offset-2 col-sm-offset-2" ng-app="calApp" ng-controller="calCtrl">
 
                     <div class="cal-event" ng-repeat="event in getEvents() ">
                         <div class="cal-event-tile">
@@ -388,6 +412,12 @@
             $('.arrow-down').show();
             $('.arrow-up').hide();
         });
+
+    </script>
+
+    <script>
+        $('marquee').marquee('marquee');
+
     </script>
 
 
