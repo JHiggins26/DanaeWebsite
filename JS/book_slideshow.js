@@ -1,21 +1,10 @@
-var angle = 0;
-
-function galleryspin(sign) {
-    var spinner = document.querySelector("#spinner");
-    if (!sign) {
-        angle = angle + 72;
-    } else {
-        angle = angle - 72;
+new Vue({
+    el: '#carousel',
+    data: {
+        slides: 7
+    },
+    components: {
+        'carousel-3d': Carousel3d.Carousel3d,
+        'slide': Carousel3d.Slide
     }
-    spinner.setAttribute("style", "-webkit-transform: rotateY(" + angle + "deg); -moz-transform: rotateY(" + angle + "deg); transform: rotateY(" + angle + "deg);");
-}
-
-document.getElementById("leftArrowId").addEventListener('click', function (e) {
-    galleryspin('-');
-
-});
-
-document.getElementById("rightArrowId").addEventListener('click', function (e) {
-    galleryspin('');
-
-});
+})
