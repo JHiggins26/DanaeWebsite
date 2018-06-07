@@ -61,16 +61,17 @@ $(document).ready(function () {
             document.getElementById('modal-backdrop-img').src = "Style/img/SNSS-Book-Cover.jpg";
             document.getElementById('imgId').src = "Style/img/SNSS-Book-Cover.jpg";
             document.getElementById('dateId').innerHTML = "Coming in 2019";
+
         } else if (bookModalTitle === 'Little Black Boy') {
 
             document.getElementById('modal-backdrop-img').src = "Style/img/LBG-Book-Cover.png";
-            document.getElementById('imgId').src = "Style/img/coming_soon_book_cover.jpg";
+            document.getElementById('imgId').src = "Style/img/coming_soon_book_cover-2.jpg";
             document.getElementById('dateId').innerHTML = 'Coming in December 2018';
 
         } else if (bookModalTitle === 'Universal Goddess') {
 
             document.getElementById('modal-backdrop-img').src = "Style/img/SNSS-Book-Cover.jpg";
-            document.getElementById('imgId').src = "Style/img/coming_soon_book_cover.jpg";
+            document.getElementById('imgId').src = "Style/img/coming_soon_book_cover-2.jpg";
             document.getElementById('dateId').innerHTML = 'Coming in December 2018';
 
         } else if (bookModalTitle === 'Little Black Girl') {
@@ -87,7 +88,7 @@ $(document).ready(function () {
 
         } else {
             document.getElementById('modal-backdrop-img').src = "Style/img/SNSS-Book-Cover.jpg";
-            document.getElementById('imgId').src = "Style/img/coming_soon_book_cover.jpg";
+            document.getElementById('imgId').src = "Style/img/coming_soon_book_cover-2.jpg";
             document.getElementById('dateId').innerHTML = 'Coming in December 2018';
         }
 
