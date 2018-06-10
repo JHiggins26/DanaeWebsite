@@ -353,7 +353,7 @@ a:focus {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-    height: 600px;
+    height: auto;
 }
 
 .books-title {
@@ -374,50 +374,77 @@ a:focus {
     text-align: center;
 }
 
-.books-container img {
-    margin-top: 0px;
-    position: relative;
-    top: 0;
-    transition: top ease 0.5s;
-    height: 250px;
+.carousel-3d {
+    height: 320px !important;
+    padding-left: 100px !important;
 }
 
-.books-container img:hover {
-    top: -10px;
+.carousel-3d-slide {
+    height: auto !important;
+    background-color: rgba(0, 0, 0, 0) !important;
+    border-style: none !important;
+    width: 280px !important;
+
 }
+
+.books-container img {
+    margin-top: 0px;
+    position: ;
+    height: 275px;
+}
+
 
 .books-container p,
 .books-container p:focus {
     font-family: 'PT Sans', sans-serif;
     color: white;
-    font-size: 1.2em;
+    font-size: 1.5em;
     font-weight: 600;
-    padding-top: 10px;
     text-decoration: none;
+    margin: 0 auto;
+    text-align: center;
 }
-
 
 #modal-books {
     font-family: 'PT Sans', sans-serif;
     max-height: calc(100% - 100px);
+    height: 500px;
     position: ;
-    padding: 0;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #FEE3FF;
     padding: 0px;
+    border-radius: 15px;
+}
+
+
+.modal-dialog {
+    width: auto;
+    height: auto;
+    border-radius: 15px;
+
+}
+
+.modal-content {
+    width: auto;
+    background-color: #FEE3FF;
+    margin-top: -30px;
+    border-radius: 15px;
 }
 
 .modal-header-container {
     position: relative;
+    border-radius: 15px;
 }
 
 #modal-backdrop-img {
     position: absolute;
     display: block;
+    margin: 0 auto;
     min-width: 100%;
     height: 100%;
+    border-radius: 15px;
 
     -webkit-filter: blur(5px);
     -moz-filter: blur(5px);
@@ -430,6 +457,7 @@ a:focus {
 
 .modal-header-info {
     position: relative;
+    border-radius: 15px;
 
 }
 
@@ -458,6 +486,7 @@ a:focus {
     font-size: 2em;
     color: white;
     font-weight: bold;
+    border-radius: 15px;
 }
 
 .modal-price {
@@ -483,17 +512,9 @@ a:focus {
     font-size: 1.3em;
 }
 
-.modal-title li a {
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    color: #fff;
-    font-weight: 700;
-    width: 100%;
-    max-width: 300px;
+body.modal-open {
+    overflow: hidden;
 }
-
-
-
 
 
 .contact-container {
@@ -561,7 +582,7 @@ a:focus {
     padding-bottom: 20px;
     font-weight: bold;
     text-align: center;
-    margin-left: 10px;
+    margin-left: 0px;
 }
 
 .footer-links li:hover {
