@@ -11,16 +11,16 @@ new Vue({
 
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 
-    // alert('dd');
-
-
-
     var carousel = document.getElementById('carousel-Id');
 
-    carousel.setAttribute(":autoplay", "false");
+    //carousel.setAttribute("autoplay-timeout", "1000");
 
+    setTimeout(function () {
 
+        carousel.pause();
 
-    //    carousel.autoplay = false;
-    //    carousel.load();
+        carousel.play();
+
+    }, 1000);
+
 }

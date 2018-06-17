@@ -8,6 +8,8 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
+    position: static;
+
 }
 
 .events-title {
@@ -20,7 +22,7 @@
     position: absolute;
     margin-top: -75px;
     z-index: 1;
-    left: 17%!important;
+    left: 17% !important;
     transform: translate(-50%, 0);
     padding-top: 10px;
     padding-bottom: 10px;
