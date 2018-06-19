@@ -1,6 +1,6 @@
 .rotator {
     position: absolute;
-    font-size: 3em;
+    font-size: 2.5em;
     height: 100%;
     width: 90%;
     margin-left: 5%;
@@ -38,23 +38,14 @@
 }
 
 .left {
-    margin-top: 130px;
-
-    /*
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-*/
+    margin-top: 120px;
     width: 1px !important;
     word-wrap: break-word;
     margin-left: 10%
 }
 
 .right {
-    margin-top: 240px;
-    /*
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-*/
+    margin-top: 200px;
     width: 1px !important;
     word-wrap: break-word;
     margin-left: 90%

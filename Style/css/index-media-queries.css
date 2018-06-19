@@ -16,6 +16,10 @@
 
 @media only screen and (max-width: 767px) {
 
+    .cart {
+        width: 30px;
+    }
+
     .navbar-default .navbar-collapse,
     .navbar-default .navbar-form {
         position: absolute;

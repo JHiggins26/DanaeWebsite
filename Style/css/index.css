@@ -77,6 +77,11 @@ a:focus {
     letter-spacing: 2px;
 }
 
+.cart {
+    float: right;
+    width: 40px;
+}
+
 .author-name-section {
     text-align: center;
     background-image: url(../img/Purple-BG.jpg);
@@ -211,14 +216,14 @@ a:focus {
 
 .jumbotron-book {
     position: absolute;
-    height: 65%;
+    height: 55%;
     top: 12%;
     padding: 0;
 }
 
 
 .order-btn-container {
-    bottom: -800px;
+    bottom: -680px;
     position: relative;
 }
 
@@ -227,13 +232,9 @@ a:focus {
     margin: 0 auto;
 }
 
-.order-btn-container:active {
-    bottom: -785px;
-}
-
 
 .about-bio-container {
-    margin-top: 165px;
+    margin-top: 50px;
     padding-bottom: 100px;
     height: auto;
     position: relative;
@@ -519,11 +520,15 @@ body.modal-open {
     text-align: center;
     background-image: url(../img/Orange-BG.jpg);
     padding: 50px 0px 50px 0px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
     position: static;
+
 }
 
 .contact-title {
