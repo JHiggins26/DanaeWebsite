@@ -1,0 +1,353 @@
+/*MEDIUM SIZE DEVICES*/
+
+@media only screen and (max-width: 1199px) {
+    /**/
+}
+
+/*MOBILE/SMALL DEVICES*/
+
+@media only screen and (max-width: 991px) {
+
+    .books-container p {
+        font-size: 1.3em;
+    }
+
+    #modal-event-photos {
+        height: 700px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
+    .cart {
+        width: 30px;
+    }
+
+    .navbar-default .navbar-collapse,
+    .navbar-default .navbar-form {
+        position: absolute;
+        border-color: transparent;
+        background-image: url(../img/Purple-BG.jpg);
+        z-index: 1;
+        padding-bottom: 30px;
+        padding-top: 70px;
+        margin-top: -80px;
+        width: 100%;
+    }
+
+    .navbar-header .navbar-toggle,
+    .navbar-header .navbar-toggle:hover,
+    .navbar-header .navbar-toggle:focus {
+        border: none;
+        padding: 0;
+        background-color: transparent;
+        z-index: 2;
+    }
+
+    .navbar-header .navbar-toggle .icon-bar {
+        /*    border: 3px solid #b637ff;*/
+        border: 3px solid darkorange;
+        background-color: transparent;
+        width: 45px;
+        height: 6px;
+        margin-bottom: 7px;
+        z-index: 2;
+    }
+
+    .navbar-collapse .navbar-nav {
+        margin-top: 0px;
+        width: 100%;
+    }
+
+    .book-container {
+        height: 1000px;
+    }
+
+    .spaceBackgroundVideo {
+        height: 1000px;
+    }
+
+    .jumbotron-book {
+        height: 55%;
+    }
+
+    .order-btn-container {
+        top: 600px;
+        z-index: 1;
+    }
+
+    .order-btn {
+        width: 250px;
+    }
+
+    .about-bio-container {
+        margin-top: auto;
+    }
+
+    .about-bio-img {
+        width: 170px;
+        height: 170px;
+    }
+
+    .about-bio-container-title {
+        font-size: 2.8em;
+        padding-top: 120px;
+        padding-bottom: 20px;
+    }
+
+    .about-bio-body {
+        font-size: 1.4em;
+        padding: 0px;
+    }
+
+    .arrow-down {
+        margin-top: 20px;
+    }
+
+    .arrow-down:before {
+        width: 40px;
+        height: 40px;
+    }
+
+    .arrow-down-caption {
+        font-size: 1.3em;
+        margin-top: -15px;
+        margin-left: -20px;
+    }
+
+    .arrow-up {
+        margin-top: 20px;
+    }
+
+    .arrow-up:before {
+        width: 40px;
+        height: 40px;
+    }
+
+    .arrow-up-caption {
+        font-size: 1.3em;
+        margin-top: 30px;
+        margin-left: -20px;
+    }
+
+    .books-container {
+
+    }
+
+    .books-container img {
+
+    }
+
+    .books-container p {
+        font-size: 1.5em;
+    }
+
+    .modal-content {
+        margin: -10px;
+        width: auto;
+        height: auto;
+    }
+
+    .contact-container p {
+        font-size: 1.5em;
+    }
+
+    .contact-publishing-img {
+        width: 200px;
+    }
+
+    .copy-rights {
+        text-align: center;
+    }
+
+    .web-designer {
+        text-align: center;
+    }
+
+    .footer-links li {
+        font-size: 1.4em;
+    }
+}
+
+    /*MOBILE/SMALL DEVICES*/
+    @media only screen and (max-width: 450px) {
+
+        .author-name-top {
+            font-size: 4em;
+            padding-left: 115px;
+        }
+
+        .author-name-bottom {
+            font-size: 5em;
+            margin-top: -30px;
+        }
+
+        .author-tags {
+            font-size: 1.3em;
+        }
+
+        .social-media-icons {
+            width: 30px;
+        }
+
+        .book-container {
+            height: 825px;
+        }
+
+        .spaceBackgroundVideo {
+            height: 1000px;
+        }
+
+        .jumbotron-book {
+            height: 400px;
+        }
+
+        .order-btn-container {
+            top: 450px;
+        }
+
+        .order-btn-container:active {
+            bottom: -785px;
+        }
+
+        .order-btn {
+            width: 200px;
+        }
+
+        .about-bio-img {
+            width: 150px;
+            height: 150px;
+        }
+
+        .about-bio-container-title {
+            font-size: 2.5em;
+            padding-top: 100px;
+
+        }
+
+        .about-bio-body {
+            font-size: 1.2em;
+            padding: 0px;
+        }
+
+        .books-title {
+            font-size: 1.9em;
+        }
+
+        .carousel-3d {
+            padding-left: 0 !important;
+        }
+
+        .carousel-3d-slide {
+            width: 65% !important;
+            margin-left: 17% !important;
+        }
+
+        .books-container img {
+            width: 100% !important;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .books-container p {
+            font-size: 1.2em;
+        }
+
+        #modal-backdrop-img {
+            min-width: 100%;
+            height: 105%;
+        }
+
+        .modal-header-info img {
+            min-width: 25%;
+        }
+
+        #modal-books .modal-header-container .close {
+            font-size: 3em;
+        }
+
+        #modal-books .modal-title {
+            font-size: 1.5em;
+        }
+
+        .modal-order-btn {
+            width: 50%;
+        }
+
+        .modal-price {
+            font-size: 1.5em;
+            padding: 0;
+
+        }
+
+        #modal-books {
+            height: 400px;
+        }
+
+        #modal-books .modal-desc {
+            padding-top: 20px;
+            font-size: 1.2em;
+        }
+
+        .modal-title li a {
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            color: #fff;
+            font-weight: 700;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .cal-event-title {
+            font-size: 1.5em;
+        }
+
+        #modal-event-photos .close {
+            font-size: 2.5em;
+        }
+
+        #modal-event-photos {
+            height: 500px;
+        }
+
+        #owl .item img{
+            height: 430px;
+        }
+
+        /*.owl-carousel  {width:90%; margin: 0 auto;}*/
+        /*.owl-carousel img{width:100%;height:auto;}*/
+
+        .email-subscribe-title {
+            font-size: 1.5em;
+        }
+
+        .contact-title {
+            font-size: 1.8em;
+        }
+
+        .contact-container p i {
+            font-size: .9em;
+        }
+
+        .contact-publishing-img {
+            width: 170px;
+        }
+
+    }
+
+    /*MOBILE/EXTRA SMALL DEVICES*/
+    @media only screen and (max-width: 380px) {
+
+        .contact-container p i {
+            font-size: .8em;
+        }
+    }
+
+    /*MOBILE/TINY DEVICES*/
+    @media only screen and (max-width: 320px) {
+
+        .contact-container p i {
+            font-size: .7em;
+        }
+    }
+
