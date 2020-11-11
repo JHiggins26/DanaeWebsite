@@ -1,0 +1,532 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
+
+* {
+    outline: none;
+    box-sizing: border-box;
+}
+
+
+.book-store {
+    display: flex;
+    flex-direction: column;
+    height: 120vh;
+    margin: 0 auto;
+    margin-top: 550px;
+    overflow: hidden;
+    box-shadow: 0px 2px 50px 10px rgba(0, 0, 0, 0.21);
+    padding-bottom: 15px;
+}
+
+
+.book-slide {
+    width: 100%;
+}
+
+
+.book-cell {
+    position: relative;
+    display: flex;
+    padding: 25px 5px 5px 25px;
+    width: 45%;
+    /*    height: 300px;*/
+    height: auto;
+    text-align: left;
+}
+
+.book-cell:nth-child(1) {
+    background-color: #ca3cc8;
+}
+
+.book-cell:nth-child(2) {
+    background-color: #e40007;
+}
+
+.book-cell:nth-child(3) {
+    background-color: #ffae6f;
+}
+
+.book-cell:nth-child(4) {
+    background-color: #CBBE67;
+}
+
+.book-cell:nth-child(5) {
+    background-color: #df80a0;
+}
+
+.flickity-page-dots {
+    display: none;
+}
+
+.flickity-prev-next-button .arrow {
+    fill: #000;
+}
+
+.flickity-prev-next-button svg {
+    left: 25%;
+    top: 25%;
+    width: 50%;
+    height: 50%;
+}
+
+.flickity-prev-next-button.previous {
+    left: 15px;
+}
+
+.flickity-prev-next-button.next {
+    right: 15px;
+}
+
+.flickity-viewport {
+    overflow: visible;
+}
+
+.book-photo {
+    width: 180px;
+    /*    height: 320px;*/
+    height: 120%;
+    flex-shrink: 0;
+    bottom: -35px;
+    left: 35px;
+    border-radius: 2px;
+    box-shadow: -2px 6px 19px 0px #7f818e;
+    transition: .3s ease;
+}
+
+.book-photo:hover {
+    transform: scale(1.03);
+}
+
+.book-img {
+    flex-shrink: 0;
+}
+
+.book-title {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 22px;
+}
+
+
+.book-author {
+    margin-top: 3px;
+    font-size: 16px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.book-content {
+    padding: 0 20px;
+    color: #ffffff;
+    overflow-y: hidden;
+    font-size: 16px;
+}
+
+.book-reviews {
+    color: yellow;
+    font-size: 17px;
+    /*    margin-left: -5%;*/
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.book-reviews:hover {
+    color: blue;
+}
+
+.book-desc-btn-container {
+    width: 100%;
+}
+
+.book-sum {
+    font-size: 100%;
+    width: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+}
+
+.book-see {
+    margin-top: 2%;
+    text-align: center;
+    background-color: #fff;
+    color: #fbadaf;
+    font-weight: 600;
+    padding: 8px;
+    font-size: 14px;
+    width: 160px;
+    border-radius: 20px;
+    margin-left: 25%;
+    cursor: pointer;
+}
+
+.book-see:hover {
+    color: #ff6e72;
+}
+
+.book-info.book-red {
+    color: orangered;
+}
+
+.book-info.book-red:hover {
+    color: #e40007;
+}
+
+.book-info.book-gold {
+    color: #CBBE67;
+}
+
+.book-info.book-gold:hover {
+    color: #A4994E;
+}
+
+.book-info.book-pink {
+    color: #edb9d6;
+}
+
+.book-info.book-pink:hover {
+    color: #ff6dbe;
+}
+
+.book-info.book-yellow {
+    color: #fdca95;
+}
+
+.book-info.book-yellow:hover {
+    color: #fb9124;
+}
+
+.book-info.book-purple {
+    color: #a764ec;
+}
+
+.book-info.book-purple:hover {
+    color: #AC3CCA;
+}
+
+.main-wrapper {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-grow: 1;
+    margin-top: 8%;
+    overflow: hidden;
+    background-color: ;
+}
+
+
+.book-scroll-container {
+    flex-grow: 1;
+    /*    padding: 0 30px 50px;*/
+    overflow-y: auto;
+    /*    margin: 0px 7% 0px 7%;*/
+    background-color: white;
+}
+
+.main-menu {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    padding-bottom: 15px;
+    padding-right: 15px;
+    border-bottom: 1px solid #dcddde;
+    position: sticky;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    background-color: #f8f8ff;
+
+}
+
+.product-types {
+    margin-left: auto;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.product-types a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-size: 1.5em;
+}
+
+.product-type + .product-type {
+    margin-left: 20px;
+}
+
+.product-type {
+    position: relative;
+    transition: 0.2s;
+}
+
+.product-type.active,
+.product-type:hover {
+    -webkit-text-stroke: .3px;
+}
+
+.product-type.active:before,
+.product-type:hover:before {
+    content: "";
+    position: absolute;
+    width: 75px;
+    height: 2px;
+    bottom: -17px;
+    right: 10px;
+    background-color: #67d4ea;
+    box-shadow: 0px -1px 5px 0px #67d4ea;
+}
+
+.product-type:nth-child(2):before {
+    right: 5px;
+}
+
+.product-type:nth-child(3):before {
+    right: 10px;
+}
+
+.product-type:nth-child(4):before {
+    right: 6px;
+}
+
+.product-type:nth-child(5):before {
+    right: 0px;
+}
+
+.author + .author {
+    margin-top: 20px;
+}
+
+.author-name {
+    font-size: 14px;
+}
+
+.author:last-child {
+    margin-bottom: 40px;
+}
+
+.author-title {
+    padding: 0 0 20px;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.author-img {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-right: 16px;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+.book-card {
+    margin-top: 20px;
+    background-color: #fff;
+    height: 270px;
+    box-shadow: -1px 3px 8px -1px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 0 0 20px 20px;
+    color: var(--body-color-light);
+}
+
+.book-card-img {
+    width: 160px;
+    margin-top: 135px;
+    border-radius: 2px;
+    box-shadow: 0px 1px 7px 2px #c7c9d3;
+    border-bottom: 1px solid #dcddde;
+    object-fit: cover;
+    /*    margin-bottom: 20px;*/
+    transition: .3s ease;
+}
+
+.book-card-img:hover {
+    transform: scale(1.04);
+}
+
+.card-content {
+    color: var(--body-color);
+    padding: 30px;
+    overflow: hidden;
+    position: relative;
+    text-align: left;
+}
+
+.product-name {
+    font-weight: 500;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 22px;
+}
+
+.book-by {
+    font-size: 13px;
+    color: var(--body-color-light);
+    margin-top: 4px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.book-rate > label {
+    color: #cccccc;
+}
+
+.rate {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.book-rate > input:checked ~ label,
+.book-rate:not(:checked) > label:hover,
+.book-rate:not(:checked) > label:hover ~ label {
+    color: #ff9700;
+}
+
+.book-rate > input:checked + label:hover,
+.book-rate > input:checked ~ label:hover,
+.book-rate > label:hover ~ input:checked ~ label,
+.book-rate > input:checked ~ label:hover ~ label {
+    color: #ff9700;
+}
+
+.card-vote {
+    color: var(--body-color-light);
+}
+
+.card-sum {
+    color: var(--body-color-light);
+    font-size: 13px;
+    line-height: 1.6em;
+    -webkit-line-clamp: 4;
+    margin-top: 15px;
+}
+
+.content-wrapper {
+    display: flex;
+    border-bottom: 1px solid #ebedef;
+    position: relative;
+}
+
+.content-wrapper:before {
+    content: "";
+    position: absolute;
+    background-color: #8f98a9;
+    background-color: #aaaebc;
+    box-shadow: 0 -6px 0 0 #aaaebc, 0 6px 0 0 #aaaebc;
+    width: 4px;
+    height: 4px;
+    border: 0;
+    padding: 0;
+    right: 12px;
+    top: 17px;
+    border-radius: 50%;
+    margin-left: auto;
+}
+
+@media (max-width: 1250px) {
+    .book-cell {
+        width: 60%;
+    }
+}
+
+@media (max-width: 900px) {
+    .book-cell {
+        width: 80%;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .book-store {
+        margin-top: 80px;
+    }
+
+    .book-cell {
+        width: 85%;
+    }
+
+
+}
+
+
+@media (max-width: 600px) {
+
+    .main-wrapper {
+        margin-top: 50px;
+    }
+
+    .book-cell {
+        width: 100%;
+        /*        height: 320px;*/
+
+    }
+
+    .book-title {
+        font-size: 1.1em;
+    }
+
+    .book-photo {
+        /*        width: 210px;*/
+    }
+
+    .book-sum {
+        font-size: 90%;
+    }
+
+    .book-see {
+        width: 120px;
+        font-size: 13px;
+        /*        margin-top: 20%;*/
+    }
+}
+
+@media (max-width: 500px) {
+    .book-title {
+        font-size: 1em;
+    }
+
+    .book-photo {
+        width: 170px;
+        height: 90%
+    }
+
+
+
+}
+
+/* Cell Phone */
+@media (max-width: 450px) {
+
+    .book-store {
+        margin-top: 1px;
+    }
+
+    .book-cell {
+        /*        height: 300px;*/
+    }
+
+    .book-photo {
+        width: 140px;
+        height: 90%
+    }
+
+
+    .book-see {
+        margin-top: 40%;
+    }
+
+
+}

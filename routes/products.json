@@ -1,0 +1,234 @@
+{
+    "AllProducts": [{
+            "Sanitizers": [{
+                    "img": "./img/LBG_Sanitizer.jpg",
+                    "name": "Little Black Girl",
+                    "desc": "Readers of all ages and walks of life have drawn inspiration and empowerment from Elizabeth Gilbert’s books for years.",
+                    "price": "5.99",
+                    "colors": {
+                        "orange": "yes",
+                        "pink": "yes"
+                    },
+                    "isActive": true
+                },
+                {
+                    "img": "./img/LBB_Sanitizer.jpg",
+                    "name": "Little Black Boy",
+                    "desc": "Readers of all ages and walks of life have drawn inspiration and empowerment from Elizabeth Gilbert’s books for years.",
+                    "price": "5.99",
+                    "colors": {
+                        "orange": "yes",
+                        "pink": "yes"
+                    },
+                    "isActive": true
+                },
+                {
+                    "img": "./img/LBG_Sanitizer.jpg",
+                    "name": "Sunny North To Sunny South",
+                    "desc": "Sanitizer description",
+                    "price": "10.99",
+                    "colors": {
+                        "orange": "yes",
+                        "pink": "yes"
+                    },
+                    "isActive": true
+                },
+                {
+                    "img": "./img/LBG_Sanitizer.jpg",
+                    "name": "Mood Swings",
+                    "desc": "Sanitizer description",
+                    "price": "10.99",
+                    "colors": {
+                        "orange": "yes",
+                        "pink": "yes"
+                    },
+                    "isActive": true
+                },
+                {
+                    "img": "./img/LBG_Sanitizer.jpg",
+                    "name": "Universal Goddess",
+                    "desc": "Sanitizer description",
+                    "price": "10.99",
+                    "colors": {
+                        "orange": "yes",
+                        "pink": "yes"
+                    },
+                    "isActive": true
+                }
+            ]
+    },
+        {
+            "FaceMasks": [{
+                    "img": "./img/LBG_Mask.jpg",
+                    "name": "Little Black Girl",
+                    "desc": "Face Mask description",
+                    "price": "5.99",
+                    "colors": {
+                        "orange": "yes",
+                        "pink": "yes"
+                    },
+                    "isActive": true
+                },
+                {
+                    "img": "./img/LBB_Mask.jpg",
+                    "name": "Little Black Boy",
+                    "desc": "Face Mask description",
+                    "price": "5.99",
+                    "colors": {
+                        "orange": "yes",
+                        "pink": "yes"
+                    },
+                    "isActive": true
+                },
+                {
+                    "img": "./img/LBB_Mask.jpg",
+                    "name": "Sunny North To Sunny South",
+                    "desc": "Face Mask description",
+                    "price": "10.99",
+                    "colors": {
+                        "orange": "yes",
+                        "pink": "yes"
+                    },
+                    "isActive": true
+                },
+                {
+                    "img": "./img/LBB_Mask.jpg",
+                    "name": "Mood Swings",
+                    "desc": "Face Mask description",
+                    "price": "10.99",
+                    "colors": {
+                        "orange": "yes",
+                        "pink": "yes"
+                    },
+                    "isActive": true
+                },
+                {
+                    "img": "./img/LBB_Mask.jpg",
+                    "name": "Universal Goddess",
+                    "desc": "Face Mask description",
+                    "price": "10.99",
+                    "colors": {
+                        "orange": "yes",
+                        "pink": "yes"
+                    },
+                    "isActive": true
+                }
+            ]
+    },
+        {
+            "BookBags": [{
+                    "img": "./img/LBG_BookBag.jpg",
+                    "name": "Little Black Girl",
+                    "desc": "Book Bag description",
+                    "price": "5.99",
+                    "colors": {
+                        "orange": "yes",
+                        "pink": "yes"
+                    },
+                    "isActive": true
+                },
+                {
+                    "img": "./img/LBB_BookBag.jpg",
+                    "name": "Little Black Boy",
+                    "desc": "Book Bag description",
+                    "price": "5.99",
+                    "colors": {
+                        "orange": "yes",
+                        "pink": "yes"
+                    },
+                    "isActive": true
+                },
+                {
+                    "img": "./img/LBG_BookBag.jpg",
+                    "name": "Sunny North To Sunny South",
+                    "desc": "Book Bag description",
+                    "price": "10.99",
+                    "colors": {
+                        "orange": "yes",
+                        "pink": "yes"
+                    },
+                    "isActive": true
+                },
+                {
+                    "img": "./img/LBG_BookBag.jpg",
+                    "name": "Mood Swings",
+                    "desc": "Book Bag description",
+                    "price": "10.99",
+                    "colors": {
+                        "orange": "yes",
+                        "pink": "yes"
+                    },
+                    "isActive": true
+                },
+                {
+                    "img": "./img/LBB_BookBag.jpg",
+                    "name": "Universal Goddess",
+                    "desc": "Book Bag description",
+                    "price": "10.99",
+                    "colors": {
+                        "orange": "yes",
+                        "pink": "yes"
+                    },
+                    "isActive": true
+                }
+            ]
+    },
+        {
+            "BedSets": [{
+                    "img": "./img/LBG_BedSet.jpg",
+                    "name": "Little Black Girl",
+                    "desc": "Bed Set description",
+                    "price": "5.99",
+                    "colors": {
+                        "orange": "yes",
+                        "pink": "yes"
+                    },
+                    "isActive": true
+                },
+                {
+                    "img": "./img/LBB_BedSet.jpg",
+                    "name": "Little Black Boy",
+                    "desc": "Bed Set description",
+                    "price": "5.99",
+                    "colors": {
+                        "orange": "yes",
+                        "pink": "yes"
+                    },
+                    "isActive": true
+                },
+                {
+                    "img": "./img/LBG_BedSet.jpg",
+                    "name": "Sunny North To Sunny South",
+                    "desc": "Bed Set description",
+                    "price": "10.99",
+                    "colors": {
+                        "orange": "yes",
+                        "pink": "yes"
+                    },
+                    "isActive": true
+                },
+                {
+                    "img": "./img/LBG_BedSet.jpg",
+                    "name": "Mood Swings",
+                    "desc": "Bed Set description",
+                    "price": "10.99",
+                    "colors": {
+                        "orange": "yes",
+                        "pink": "yes"
+                    },
+                    "isActive": true
+                },
+                {
+                    "img": "./img/LBG_BedSet.jpg",
+                    "name": "Universal Goddess",
+                    "desc": "Bed Set description",
+                    "price": "10.99",
+                    "colors": {
+                        "orange": "yes",
+                        "pink": "yes"
+                    },
+                    "isActive": true
+                }
+            ]
+    }]
+}

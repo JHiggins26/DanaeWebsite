@@ -2,8 +2,10 @@
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
-    src: local('Open Sans'), local('OpenSans'), url('http://themes.googleusercontent.com/static/fonts/opensans/v5/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff') format('woff');
+    src: local('Open Sans'), local('OpenSans'), url('https://themes.googleusercontent.com/static/fonts/opensans/v5/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff') format('woff');
 }
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
 
 @font-face {
     font-family: 'Cormorant', serif;
@@ -15,13 +17,16 @@
         transform: scaleX(0);
         height: 5px;
     }
+
     45% {
         transform: scaleX(1.05);
         height: 5px;
     }
+
     55% {
         height: 5px;
     }
+
     100% {
         transform: scaleX(1.05);
         height: 3.8rem;
@@ -33,9 +38,11 @@
         transform: scaleX(1.05);
         height: 3.8rem;
     }
+
     45% {
         height: 5px;
     }
+
     55% {
         transform: scaleX(1.05);
         height: 5px;
@@ -51,6 +58,12 @@
 
 body {
     font-family: "PT Sans";
+    background-image: url(../img/Blk-Granite-BG.jpg);
+    /*    background-color: #f8f8ff;*/
+}
+
+html {
+    -webkit-font-smoothing: antialiased;
 }
 
 a,
@@ -80,40 +93,60 @@ a:focus {
 .cart {
     float: right;
     width: 40px;
+    margin-top: -15%;
 }
 
 .author-name-section {
+    color: rgba(255, 255, 255, 1);
+    height: 600;
+    padding-top: 180px;
+    padding-bottom: 0px;
+    background: linear-gradient(to bottom, transparent, black 110%), url("../img/DanaeJumboBanner-resized.jpg") no-repeat center;
+    background-position-y: 40%;
+    background-size: 100% 100%;
     text-align: center;
-    background-image: url(../img/Purple-BG.jpg);
-    padding: 10px;
+    z-index: 2;
+
 }
 
 .author-name-top {
-    font-size: 5em;
-    letter-spacing: 2px;
-    font-weight: bold;
-    padding-left: 130px;
-    color: white;
-}
-
-.author-name-bottom {
-    font-size: 6em;
-    letter-spacing: 2px;
-    margin-top: -35px;
-    color: white;
+    color: rgba(255, 255, 255, 1);
+    text-transform: uppercase;
+    font-weight: normal;
+    line-height: 1;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, .3),
+        0 3px 5px rgba(0, 0, 0, .2),
+        0 5px 10px rgba(0, 0, 0, .25),
+        0 10px 10px rgba(0, 0, 0, .2),
+        0 20px 20px rgba(0, 0, 0, .15);
+    margin-top: 80px;
+    margin-bottom: 10px;
+    letter-spacing: 15px;
+    word-spacing: 13px;
+    font: 8em 'Source Sans Pro',
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        sans-serif;
 }
 
 .author-tags {
     padding-bottom: 40px;
     font-size: 1.5em;
-    font-weight: bold;
+    color: rgba(255, 255, 255, 1);
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.8);
+    text-transform: uppercase;
+    font-weight: normal;
+    letter-spacing: 8px;
+    /*    display: flex;*/
+    justify-content: center;
 }
 
 .author-star {
     font-size: .5em;
     color: white;
     position: relative;
-    top: -4px;
+    top: -3px;
     padding-left: 5px;
     padding-right: 5px;
 
@@ -155,12 +188,12 @@ a:focus {
 }
 
 .navbar-padding {
-    padding: 0px;
+    padding: 0px 50px 0px 50px;
 }
 
 #nav-list {
     font-size: 1.5em;
-    color: darkorange;
+    color: #f4a600;
     font-weight: bold;
     text-decoration: none;
     z-index: 1;
@@ -170,7 +203,7 @@ a:focus {
 
 #nav-list:before {
     content: "";
-    background: darkorange;
+    background: #fcd12c;
     position: absolute;
     width: 100%;
     height: 5px;
@@ -206,40 +239,47 @@ a:focus {
 .book-container {
     position: relative;
     width: 100%;
-    height: 1050px;
+    height: 600px;
 }
 
 .spaceBackgroundVideo {
     position: absolute;
     right: 0;
+    z-index: 0;
+    margin-top: -24px;
 }
 
 
 .jumbotron-book {
     position: absolute;
-    height: 55%;
-    top: 12%;
+    height: 110%;
+    top: 20%;
     padding: 0;
 }
 
 
 .order-btn-container {
-    bottom: -680px;
+    bottom: -750px;
     position: relative;
 }
+
 
 .order-btn {
     display: block;
     margin: 0 auto;
 }
 
+.order-btn:focus {
+    outline: 0;
+}
 
 .about-bio-container {
     margin-top: 50px;
-    padding-bottom: 100px;
+    padding-bottom: 10px;
     height: auto;
     position: relative;
-    background: url(../img/Purple-BG.jpg);
+    background-color: #e40007;
+    /*    background: url(../img/Purple-BG.jpg);*/
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -255,6 +295,7 @@ a:focus {
     z-index: 1;
     left: 17% !important;
     transform: translate(-50%, 0);
+    border: 5px solid #E8E8E8;
 }
 
 .about-bio-container-title {
@@ -262,7 +303,7 @@ a:focus {
     font-size: 3em;
     text-align: center;
     padding-top: 150px;
-    color: #000000;
+    color: #ffffff;
     font-weight: bold;
 }
 
@@ -276,7 +317,7 @@ a:focus {
 
 .about-bio-headings {
     font-size: 1.1em;
-    color: darkorange;
+    color: black;
 }
 
 .arrow-down {
@@ -333,10 +374,12 @@ a:focus {
 }
 
 @keyframes arr {
+
     0%,
     100% {
         transform: translateY(0px);
     }
+
     50% {
         transform: translateY(30px);
     }
@@ -346,10 +389,11 @@ a:focus {
 /* Book selection slide show START*/
 
 .books-container {
-    margin-top: 50px;
+    margin-top: 0px;
     text-align: center;
-    background-image: url(../img/Orange-BG.jpg);
-    padding-top: 50px;
+    /*    background-image: url(../img/Orange-BG.jpg);*/
+    background-color: #f8f8ff;
+    padding-top: 20px;
     padding-bottom: 50px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -359,21 +403,19 @@ a:focus {
 }
 
 .books-title {
-    background-image: url(../img/Blk-Granite-BG.jpg);
-    background-attachment: fixed;
-    font-family: 'PT Sans', sans-serif;
-    font-weight: bold;
-    font-size: 2em;
-    height: 55px;
+    font-size: 3em;
     position: absolute;
-    margin-top: -75px;
+    margin-top: 470px;
     z-index: 1;
     left: 17% !important;
     transform: translate(-50%, 0);
-    padding-top: 10px;
-    padding-bottom: 10px;
-    color: white;
     text-align: center;
+    color: rgba(255, 255, 255, 1);
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.8);
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 8px;
+    justify-content: center;
 }
 
 .carousel-3d {
@@ -391,7 +433,6 @@ a:focus {
 
 .books-container img {
     margin-top: 0px;
-    /*position: ;*/
     height: 275px;
 }
 
@@ -439,7 +480,7 @@ a:focus {
     border-radius: 15px;
 }
 
-#modal-backdrop-img {
+.modal-backdrop-img {
     position: absolute;
     display: block;
     margin: 0 auto;
@@ -453,13 +494,11 @@ a:focus {
     -ms-filter: blur(5px);
     filter: blur(5px);
     /*opacity: ;*/
-
 }
 
 .modal-header-info {
     position: relative;
     border-radius: 15px;
-
 }
 
 .modal-header-info img {
@@ -485,7 +524,7 @@ a:focus {
     padding-bottom: 20px;
     padding-top: 20px;
     font-size: 2em;
-    color: white;
+    color: black;
     font-weight: bold;
     border-radius: 15px;
 }
@@ -515,7 +554,6 @@ a:focus {
 
 /* End of Book selection slide show */
 
-
 /* START of Event book selection modal image gallery */
 
 #modal-event-photos {
@@ -543,21 +581,19 @@ a:focus {
     opacity: .5;
 }
 
-#owl .item img{
+#owl .item img {
     display: block;
     width: 100%;
     height: 630px;
 }
 
-.email-container {
-
-}
+.email-container {}
 
 .email-subscribe-title {
     color: black;
     font-family: 'Convergence', sans-serif;
     font-size: 2em;
-    margin-top:5%;
+    margin-top: 5%;
 }
 
 .email-subscribe-textbox {
@@ -574,7 +610,7 @@ a:focus {
     font-size: 15px;
     font-style: italic;
     border-bottom: 2px solid #A1C3FE;
- }
+}
 
 .sub-error {
     color: red;
@@ -596,21 +632,20 @@ a:focus {
 
 .email-subscribe-btn:hover {
     cursor: pointer;
-    transform: translatey(-3px );
+    transform: translatey(-3px);
     box-shadow: 0 0 6px #a1c3fe;
 }
 
 .email-subscribe-btn:active {
-    transform: translatey(3px );
+    transform: translatey(3px);
     box-shadow: 0 0 0px #a1c3fe;
 }
 
 
 /* END of Event book selection modal image gallery */
 
-
 .contact-container {
-    margin-top: 50px;
+    margin-top: 80px;
     text-align: center;
     background-image: url(../img/Orange-BG.jpg);
     padding: 50px 0px 50px 0px;
@@ -626,21 +661,21 @@ a:focus {
 }
 
 .contact-title {
-    background-image: url(../img/Blk-Granite-BG.jpg);
-    background-attachment: fixed;
-    font-family: 'PT Sans', sans-serif;
-    font-weight: bold;
-    font-size: 2em;
-    height: 55px;
+    font-size: 3em;
     position: absolute;
-    margin-top: -75px;
+    margin-top: -135px;
     z-index: 1;
-    left: 17% !important;
-    transform: translate(-50%, 0);
     padding-top: 10px;
     padding-bottom: 10px;
-    color: white;
+    left: 17% !important;
+    transform: translate(-50%, 0);
     text-align: center;
+    color: rgba(255, 255, 255, 1);
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.8);
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 8px;
+    justify-content: center;
 }
 
 .contact-container p {
@@ -661,7 +696,6 @@ a:focus {
 
 
 .footer-section {
-    background-image: url(../img/Blk-Granite-BG.jpg);
     padding-top: 30px;
     padding-bottom: 10px;
     height: auto;

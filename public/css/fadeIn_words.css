@@ -15,10 +15,9 @@
     width: 100%;
     visibility: hidden;
     opacity: 0;
-    color: #ca3dc8;
+    color: #e40007;
+    /*    color: #ca3dc8;*/
     font-family: 'Freckle Face', cursive;
-
-
 }
 
 .rotator .item.active {

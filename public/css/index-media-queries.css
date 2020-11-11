@@ -8,6 +8,10 @@
 
 @media only screen and (max-width: 991px) {
 
+    .navbar-padding {
+        padding: 0px 20px 0px 20px;
+    }
+
     .books-container p {
         font-size: 1.3em;
     }
@@ -23,11 +27,21 @@
         width: 30px;
     }
 
+    .author-name-section {
+        padding-top: 130px;
+    }
+
+    .author-name-top {
+        margin-top: 80px;
+        font-size: 4em;
+    }
+
+
     .navbar-default .navbar-collapse,
     .navbar-default .navbar-form {
         position: absolute;
         border-color: transparent;
-        background-image: url(../img/Purple-BG.jpg);
+        background-color: #e40007;
         z-index: 1;
         padding-bottom: 30px;
         padding-top: 70px;
@@ -61,6 +75,7 @@
 
     .book-container {
         height: 1000px;
+        width: 100%;
     }
 
     .spaceBackgroundVideo {
@@ -69,10 +84,12 @@
 
     .jumbotron-book {
         height: 55%;
+        width: 50%;
+
     }
 
     .order-btn-container {
-        top: 600px;
+        top: 700px;
         z-index: 1;
     }
 
@@ -130,13 +147,13 @@
         margin-left: -20px;
     }
 
-    .books-container {
-
+    .books-title {
+        margin-top: 0px;
     }
 
-    .books-container img {
+    .books-container {}
 
-    }
+    .books-container img {}
 
     .books-container p {
         font-size: 1.5em;
@@ -169,185 +186,217 @@
     }
 }
 
-    /*MOBILE/SMALL DEVICES*/
-    @media only screen and (max-width: 450px) {
 
-        .author-name-top {
-            font-size: 4em;
-            padding-left: 115px;
-        }
 
-        .author-name-bottom {
-            font-size: 5em;
-            margin-top: -30px;
-        }
+@media only screen and (max-width: 625px) {}
 
-        .author-tags {
-            font-size: 1.3em;
-        }
 
-        .social-media-icons {
-            width: 30px;
-        }
 
-        .book-container {
-            height: 825px;
-        }
+/*MOBILE/SMALL DEVICES*/
 
-        .spaceBackgroundVideo {
-            height: 1000px;
-        }
+@media only screen and (max-width: 450px) {
 
-        .jumbotron-book {
-            height: 400px;
-        }
+    .cart {
+        margin-top: 5%
+    }
 
-        .order-btn-container {
-            top: 450px;
-        }
+    .author-name-section {
+        padding-top: 0px;
+    }
 
-        .order-btn-container:active {
-            bottom: -785px;
-        }
+    .author-name-top {
+        font-size: 3em;
+    }
 
-        .order-btn {
-            width: 200px;
-        }
+    .author-name-bottom {
+        font-size: 4em;
+        margin-top: -30px;
+    }
 
-        .about-bio-img {
-            width: 150px;
-            height: 150px;
-        }
+    .author-tags {
+        font-size: 1em;
+    }
 
-        .about-bio-container-title {
-            font-size: 2.5em;
-            padding-top: 100px;
+    .social-media-icons {
+        width: 20px;
+    }
 
-        }
+    .book-container {
+        height: 825px;
+    }
 
-        .about-bio-body {
-            font-size: 1.2em;
-            padding: 0px;
-        }
+    .spaceBackgroundVideo {
+        height: 775px;
+    }
 
-        .books-title {
-            font-size: 1.9em;
-        }
+    .jumbotron-book {
+        height: 400px;
+    }
 
-        .carousel-3d {
-            padding-left: 0 !important;
-        }
+    .order-btn-container {
+        top: 530px;
+    }
 
-        .carousel-3d-slide {
-            width: 65% !important;
-            margin-left: 17% !important;
-        }
+    .order-btn-container:active {
+        bottom: -785px;
+    }
 
-        .books-container img {
-            width: 100% !important;
-            display: block;
-            margin: 0 auto;
-        }
+    .order-btn {
+        width: 200px;
+    }
 
-        .books-container p {
-            font-size: 1.2em;
-        }
+    .about-bio-img {
+        width: 150px;
+        height: 150px;
+    }
 
-        #modal-backdrop-img {
-            min-width: 100%;
-            height: 105%;
-        }
-
-        .modal-header-info img {
-            min-width: 25%;
-        }
-
-        #modal-books .modal-header-container .close {
-            font-size: 3em;
-        }
-
-        #modal-books .modal-title {
-            font-size: 1.5em;
-        }
-
-        .modal-order-btn {
-            width: 50%;
-        }
-
-        .modal-price {
-            font-size: 1.5em;
-            padding: 0;
-
-        }
-
-        #modal-books {
-            height: 400px;
-        }
-
-        #modal-books .modal-desc {
-            padding-top: 20px;
-            font-size: 1.2em;
-        }
-
-        .modal-title li a {
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            color: #fff;
-            font-weight: 700;
-            width: 100%;
-            max-width: 300px;
-        }
-
-        .cal-event-title {
-            font-size: 1.5em;
-        }
-
-        #modal-event-photos .close {
-            font-size: 2.5em;
-        }
-
-        #modal-event-photos {
-            height: 500px;
-        }
-
-        #owl .item img{
-            height: 430px;
-        }
-
-        /*.owl-carousel  {width:90%; margin: 0 auto;}*/
-        /*.owl-carousel img{width:100%;height:auto;}*/
-
-        .email-subscribe-title {
-            font-size: 1.5em;
-        }
-
-        .contact-title {
-            font-size: 1.8em;
-        }
-
-        .contact-container p i {
-            font-size: .9em;
-        }
-
-        .contact-publishing-img {
-            width: 170px;
-        }
+    .about-bio-container-title {
+        font-size: 2.5em;
+        padding-top: 100px;
 
     }
 
-    /*MOBILE/EXTRA SMALL DEVICES*/
-    @media only screen and (max-width: 380px) {
-
-        .contact-container p i {
-            font-size: .8em;
-        }
+    .about-bio-body {
+        font-size: 1.2em;
+        padding: 0px;
     }
 
-    /*MOBILE/TINY DEVICES*/
-    @media only screen and (max-width: 320px) {
-
-        .contact-container p i {
-            font-size: .7em;
-        }
+    .books-title {
+        font-size: 1.9em;
+        margin-top: -50px;
     }
 
+    .carousel-3d {
+        padding-left: 0 !important;
+    }
+
+    .carousel-3d-slide {
+        width: 65% !important;
+        margin-left: 17% !important;
+    }
+
+    .books-container img {
+        width: 100% !important;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .books-container p {
+        font-size: 1.2em;
+    }
+
+    #modal-backdrop-img {
+        min-width: 100%;
+        height: 105%;
+    }
+
+    .modal-header-info img {
+        min-width: 25%;
+    }
+
+    #modal-books .modal-header-container .close {
+        font-size: 3em;
+    }
+
+    #modal-books .modal-title {
+        font-size: 1.5em;
+    }
+
+    .modal-order-btn {
+        width: 50%;
+    }
+
+    .modal-price {
+        font-size: 1.5em;
+        padding: 0;
+
+    }
+
+    #modal-books {
+        height: 400px;
+    }
+
+    #modal-books .modal-desc {
+        padding-top: 20px;
+        font-size: 1.2em;
+    }
+
+    .modal-title li a {
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        color: #fff;
+        font-weight: 700;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .cal-event-title {
+        font-size: 1.5em;
+    }
+
+    #modal-event-photos .close {
+        font-size: 2.5em;
+    }
+
+    #modal-event-photos {
+        height: 500px;
+    }
+
+    #owl .item img {
+        height: 430px;
+    }
+
+    /*.owl-carousel  {width:90%; margin: 0 auto;}*/
+    /*.owl-carousel img{width:100%;height:auto;}*/
+    .email-subscribe-title {
+        font-size: 1.5em;
+    }
+
+    .contact-title {
+        font-size: 1.8em;
+    }
+
+    .contact-container p i {
+        font-size: .9em;
+    }
+
+    .contact-publishing-img {
+        width: 170px;
+    }
+
+}
+
+/*MOBILE/EXTRA SMALL DEVICES*/
+
+@media only screen and (max-width: 380px) {
+
+    .author-name-top {
+        font-size: 3em;
+    }
+
+    .author-name-bottom {
+        font-size: 4em;
+        margin-top: -30px;
+    }
+
+    .author-tags {
+        font-size: 1em;
+    }
+
+    .social-media-icons {
+        width: 20px;
+    }
+
+    .contact-container p i {
+        font-size: .8em;
+    }
+}
+
+/*MOBILE/TINY DEVICES*/
+
+@media only screen and (max-width: 320px) {
+
+    .contact-container p i {
+        font-size: .7em;
+    }
+}

@@ -9,7 +9,26 @@ let openEventModal = function() {
         '<div id="owl" class="owl-carousel owl-theme">';
 
         for(let i = 0; i < photoUrlList.length; i++) {
-            html += '<div class="item"><img src="' + photoUrlList[i] + '" alt=""></div>';
+            if(photoUrlList[i].toString().includes('jpg') || photoUrlList[i].toString().includes('png') ||
+                photoUrlList[i].toString().includes('svg') || photoUrlList[i].toString().includes('jpeg')) {
+
+                html += '<div class="item"><img src="' + photoUrlList[i] + '" alt=""></div>';
+
+            }
+            else if(photoUrlList[i].toString().includes('mp4')){
+
+                html += '<video class="item" controls style="width: 100%; height: auto; margin:0 auto; frameborder:0;" ' +
+                    '<source src="https://www.youtube.com/embed/W26JgQW7Uss" type="video/mp4">' +
+                    '</video>';
+                // html += '<iframe class="item" src="' + photoUrlList[i] + '" allowfullscreen></iframe>';
+
+
+            // <video controls id="video1" style="width: 100%; height: auto; margin:0 auto; frameborder:0;">
+            //         <source src="https://archive.org/download/WebmVp8Vorbis/webmvp8_512kb.mp4" type="video/mp4">
+            //         Your browser doesn't support HTML5 video tag.
+            //     </video>
+                console.log(photoUrlList[i]);
+            }
         }
 
         html += '</div>'+

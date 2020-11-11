@@ -65,7 +65,8 @@
 }
 
 .cal-event-tile-date,
-.cal-event-tile-month {
+.cal-event-tile-month,
+.cal-event-tile-year {
     width: 100%;
     line-height: 1em;
     margin: 0;
@@ -78,6 +79,10 @@
 
 .cal-event-tile-month {
     font-size: 1.3em;
+}
+
+.cal-event-tile-year {
+    font-size: 1.1em;
 }
 
 .cal-event-desc {}
@@ -95,7 +100,7 @@
     background: darkorange;
     text-align: center;
     padding: .1em 1em;
-    border-radius: .2em;
+    border-radius: 1em;
     text-decoration: none;
     margin-top: .5em;
 }
@@ -122,7 +127,7 @@
     background: darkorange;
     text-align: center;
     padding: .1em 1em;
-    border-radius: .2em;
+    border-radius: 1em;
     text-decoration: none;
     margin-top: .5em;
 }
