@@ -14,7 +14,7 @@
         // Remeber to put back to http.readyState === 4 
         //fdlefvdkln kjfejklnlnwflkenqlka
         //jbjk fjfwejklerkn
-        if (http.readyState === 4 && http.status === 200) {
+        if (http.readyState === 6 && http.status === 200) {
 
             html = '';
 
@@ -26,39 +26,37 @@
 
                         var attribute = products.AllProducts[allProductsIndex][product][attributeIndex];
 
-
-                        html += '<div class="product col-lg-4 col-md-5 col-sm-6 col-xs-12">' +
-                            '<div class="info-large"></div>' +
-                            '<div class="make3D">' +
-                            '<div class="product-front">' +
-                            '<div class="shadow"></div>' +
-                            '<img src="' + attribute.img + '" alt="" />' +
-                            '<div class="image_overlay"></div>' +
-                            '<div class="add_to_cart">Add to cart</div>' +
-                            '<div class="view_gallery">View gallery</div>' +
-                            '<div class="stats">' +
-                            '<div class="stats-container">' +
-                            '<span class="product_name col-lg-12 col-md-12 col-sm-12 col-xs-12">' + attribute.name + '</span>' +
-                            '<span class="product_price col-lg-12 col-md-12 col-sm-12 col-xs-12">' + attribute.price + '</span>' +
-                            '<p>' + attribute.desc + '</p>' +
-                            '<div class="product-options">' +
-                            //                            '<strong>SIZES</strong>' +
-                            //                            '<span>XS, S, M, L, XL, XXL</span>' +
-                            '<strong>COLORS</strong>' +
-                            '<div class="colors">' +
-                            '<div class="c-blue"><span></span></div>' +
-                            '<div class="c-red"><span></span></div>' +
-                            '<div class="c-white"><span></span></div>' +
-                            '<div class="c-green"><span></span></div>' +
-                            '</div>' +
-                            '</div>' +
-                            '</div>' +
-                            '</div>' +
-                            '</div>' +
-                            '</div>' +
-                            '</div>';
-
-
+                        if (attribute.isActive === true) {
+                            html += '<div class="product col-lg-3 col-md-4 col-sm-6 col-xs-6">' +
+                                '<div class="make3D">' +
+                                '<div class="product-front">' +
+                                '<div class="shadow"></div>' +
+                                '<img src="' + attribute.img + '" alt="" />' +
+                                '<div class="image_overlay"></div>' +
+                                '<div class="add_to_cart">Add to cart</div>' +
+                                '<div class="view_gallery">View gallery</div>' +
+                                '<div class="stats">' +
+                                '<div class="stats-container col-lg-12 col-md-12 col-sm-12 col-xs-12">' +
+                                '<span class="product_name col-lg-12 col-md-12 col-sm-12 col-xs-12">' + attribute.name + '</span>' +
+                                '<span class="product_price col-lg-12 col-md-12 col-sm-12 col-xs-12">' + attribute.price + '</span>' +
+                                '<p>' + attribute.desc + '</p>' +
+                                '<div class="product-options">' +
+                                //                            '<strong>SIZES</strong>' +
+                                //                            '<span>XS, S, M, L, XL, XXL</span>' +
+                                '<strong>COLORS</strong>' +
+                                '<div class="colors">' +
+                                '<div class="c-blue"><span></span></div>' +
+                                '<div class="c-red"><span></span></div>' +
+                                '<div class="c-white"><span></span></div>' +
+                                '<div class="c-green"><span></span></div>' +
+                                '</div>' +
+                                '</div>' +
+                                '</div>' +
+                                '</div>' +
+                                '</div>' +
+                                '</div>' +
+                                '</div>';
+                        }
                     }
                 }
             }
@@ -85,8 +83,64 @@
 
                     var attribute = products.AllProducts[allProductsIndex][product][attributeIndex];
 
-                    html += '<div class="product col-lg-4 col-md-5 col-sm-6 col-xs-12">' +
-                        '<div class="info-large"></div>' +
+                    if (attribute.isActive === true) {
+
+                        html += '<div class="product col-lg-2 col-md-2 col-sm-2 col-xs-6">' +
+                            '<div class="make3D">' +
+                            '<div class="product-front">' +
+                            '<div class="shadow"></div>' +
+                            '<img src="' + attribute.img + '" alt="" />' +
+                            '<div class="image_overlay"></div>' +
+                            '<div class="add_to_cart">Add to cart</div>' +
+                            '<div class="view_gallery">View gallery</div>' +
+                            '<div class="stats">' +
+                            '<div class="stats-container">' +
+                            '<span class="product_price">' + attribute.price + '</span>' +
+                            '<span class="product_name">' + attribute.name + '</span>' +
+                            '<p>' + attribute.desc + '</p>' +
+                            '<div class="product-options">' +
+                            '<strong>SIZES</strong>' +
+                            '<span>XS, S, M, L, XL, XXL</span>' +
+                            '<strong>COLORS</strong>' +
+                            '<div class="colors">' +
+                            '<div class="c-blue"><span></span></div>' +
+                            '<div class="c-red"><span></span></div>' +
+                            '<div class="c-white"><span></span></div>' +
+                            '<div class="c-green"><span></span></div>' +
+                            '</div>' +
+                            '</div>' +
+                            '</div>' +
+                            '</div>' +
+                            '</div>' +
+                            '</div>' +
+                            '</div>';
+                    }
+                }
+            }
+        }
+
+        $(html).appendTo(".product-container");
+    });
+
+
+    // Sanitizers
+    $('.sanitizer').on('click', function (event) {
+        event.preventDefault();
+
+        setActiveDiv(this);
+        $(".product").remove();
+        $(this).scrollTop();
+        html = '';
+
+        for (var allProductsIndex in products.AllProducts) {
+
+            for (var sanitizerIndex in products.AllProducts[allProductsIndex].Sanitizers) {
+
+                var attribute = products.AllProducts[allProductsIndex].Sanitizers[sanitizerIndex];
+
+                if (attribute.isActive === true) {
+
+                    html += '<div class="product col-lg-2 col-md-2 col-sm-2 col-xs-6">' +
                         '<div class="make3D">' +
                         '<div class="product-front">' +
                         '<div class="shadow"></div>' +
@@ -118,58 +172,6 @@
                 }
             }
         }
-
-        $(html).appendTo(".product-container");
-    });
-
-
-    // Sanitizers
-    $('.sanitizer').on('click', function (event) {
-        event.preventDefault();
-
-        setActiveDiv(this);
-        $(".product").remove();
-        $(this).scrollTop();
-        html = '';
-
-        for (var allProductsIndex in products.AllProducts) {
-
-            for (var sanitizerIndex in products.AllProducts[allProductsIndex].Sanitizers) {
-
-                var attribute = products.AllProducts[allProductsIndex].Sanitizers[sanitizerIndex];
-
-                html += '<div class="product col-lg-4 col-md-5 col-sm-6 col-xs-12">' +
-                    '<div class="info-large"></div>' +
-                    '<div class="make3D">' +
-                    '<div class="product-front">' +
-                    '<div class="shadow"></div>' +
-                    '<img src="' + attribute.img + '" alt="" />' +
-                    '<div class="image_overlay"></div>' +
-                    '<div class="add_to_cart">Add to cart</div>' +
-                    '<div class="view_gallery">View gallery</div>' +
-                    '<div class="stats">' +
-                    '<div class="stats-container">' +
-                    '<span class="product_price">' + attribute.price + '</span>' +
-                    '<span class="product_name">' + attribute.name + '</span>' +
-                    '<p>' + attribute.desc + '</p>' +
-                    '<div class="product-options">' +
-                    '<strong>SIZES</strong>' +
-                    '<span>XS, S, M, L, XL, XXL</span>' +
-                    '<strong>COLORS</strong>' +
-                    '<div class="colors">' +
-                    '<div class="c-blue"><span></span></div>' +
-                    '<div class="c-red"><span></span></div>' +
-                    '<div class="c-white"><span></span></div>' +
-                    '<div class="c-green"><span></span></div>' +
-                    '</div>' +
-                    '</div>' +
-                    '</div>' +
-                    '</div>' +
-                    '</div>' +
-                    '</div>' +
-                    '</div>';
-            }
-        }
         $(html).appendTo(".product-container");
     });
 
@@ -189,36 +191,38 @@
 
                 var attribute = products.AllProducts[allProductsIndex].FaceMasks[faceMaskIndex];
 
-                html += '<div class="product col-lg-4 col-md-5 col-sm-6 col-xs-12">' +
-                    '<div class="info-large"></div>' +
-                    '<div class="make3D">' +
-                    '<div class="product-front">' +
-                    '<div class="shadow"></div>' +
-                    '<img src="' + attribute.img + '" alt="" />' +
-                    '<div class="image_overlay"></div>' +
-                    '<div class="add_to_cart">Add to cart</div>' +
-                    '<div class="view_gallery">View gallery</div>' +
-                    '<div class="stats">' +
-                    '<div class="stats-container">' +
-                    '<span class="product_price">' + attribute.price + '</span>' +
-                    '<span class="product_name">' + attribute.name + '</span>' +
-                    '<p>' + attribute.desc + '</p>' +
-                    '<div class="product-options">' +
-                    '<strong>SIZES</strong>' +
-                    '<span>XS, S, M, L, XL, XXL</span>' +
-                    '<strong>COLORS</strong>' +
-                    '<div class="colors">' +
-                    '<div class="c-blue"><span></span></div>' +
-                    '<div class="c-red"><span></span></div>' +
-                    '<div class="c-white"><span></span></div>' +
-                    '<div class="c-green"><span></span></div>' +
-                    '</div>' +
-                    '</div>' +
-                    '</div>' +
-                    '</div>' +
-                    '</div>' +
-                    '</div>' +
-                    '</div>';
+                if (attribute.isActive === true) {
+
+                    html += '<div class="product col-lg-2 col-md-2 col-sm-2 col-xs-6">' +
+                        '<div class="make3D">' +
+                        '<div class="product-front">' +
+                        '<div class="shadow"></div>' +
+                        '<img src="' + attribute.img + '" alt="" />' +
+                        '<div class="image_overlay"></div>' +
+                        '<div class="add_to_cart">Add to cart</div>' +
+                        '<div class="view_gallery">View gallery</div>' +
+                        '<div class="stats">' +
+                        '<div class="stats-container">' +
+                        '<span class="product_price">' + attribute.price + '</span>' +
+                        '<span class="product_name">' + attribute.name + '</span>' +
+                        '<p>' + attribute.desc + '</p>' +
+                        '<div class="product-options">' +
+                        '<strong>SIZES</strong>' +
+                        '<span>XS, S, M, L, XL, XXL</span>' +
+                        '<strong>COLORS</strong>' +
+                        '<div class="colors">' +
+                        '<div class="c-blue"><span></span></div>' +
+                        '<div class="c-red"><span></span></div>' +
+                        '<div class="c-white"><span></span></div>' +
+                        '<div class="c-green"><span></span></div>' +
+                        '</div>' +
+                        '</div>' +
+                        '</div>' +
+                        '</div>' +
+                        '</div>' +
+                        '</div>' +
+                        '</div>';
+                }
             }
         }
         $(html).appendTo(".product-container");
@@ -240,36 +244,38 @@
 
                 var attribute = products.AllProducts[allProductsIndex].BookBags[bookBagIndex];
 
-                html += '<div class="product col-lg-4 col-md-5 col-sm-6 col-xs-12">' +
-                    '<div class="info-large"></div>' +
-                    '<div class="make3D">' +
-                    '<div class="product-front">' +
-                    '<div class="shadow"></div>' +
-                    '<img src="' + attribute.img + '" alt="" />' +
-                    '<div class="image_overlay"></div>' +
-                    '<div class="add_to_cart">Add to cart</div>' +
-                    '<div class="view_gallery">View gallery</div>' +
-                    '<div class="stats">' +
-                    '<div class="stats-container">' +
-                    '<span class="product_price">' + attribute.price + '</span>' +
-                    '<span class="product_name">' + attribute.name + '</span>' +
-                    '<p>' + attribute.desc + '</p>' +
-                    '<div class="product-options">' +
-                    '<strong>SIZES</strong>' +
-                    '<span>XS, S, M, L, XL, XXL</span>' +
-                    '<strong>COLORS</strong>' +
-                    '<div class="colors">' +
-                    '<div class="c-blue"><span></span></div>' +
-                    '<div class="c-red"><span></span></div>' +
-                    '<div class="c-white"><span></span></div>' +
-                    '<div class="c-green"><span></span></div>' +
-                    '</div>' +
-                    '</div>' +
-                    '</div>' +
-                    '</div>' +
-                    '</div>' +
-                    '</div>' +
-                    '</div>';
+                if (attribute.isActive === true) {
+
+                    html += '<div class="product col-lg-2 col-md-2 col-sm-2 col-xs-6">' +
+                        '<div class="make3D">' +
+                        '<div class="product-front">' +
+                        '<div class="shadow"></div>' +
+                        '<img src="' + attribute.img + '" alt="" />' +
+                        '<div class="image_overlay"></div>' +
+                        '<div class="add_to_cart">Add to cart</div>' +
+                        '<div class="view_gallery">View gallery</div>' +
+                        '<div class="stats">' +
+                        '<div class="stats-container">' +
+                        '<span class="product_price">' + attribute.price + '</span>' +
+                        '<span class="product_name">' + attribute.name + '</span>' +
+                        '<p>' + attribute.desc + '</p>' +
+                        '<div class="product-options">' +
+                        '<strong>SIZES</strong>' +
+                        '<span>XS, S, M, L, XL, XXL</span>' +
+                        '<strong>COLORS</strong>' +
+                        '<div class="colors">' +
+                        '<div class="c-blue"><span></span></div>' +
+                        '<div class="c-red"><span></span></div>' +
+                        '<div class="c-white"><span></span></div>' +
+                        '<div class="c-green"><span></span></div>' +
+                        '</div>' +
+                        '</div>' +
+                        '</div>' +
+                        '</div>' +
+                        '</div>' +
+                        '</div>' +
+                        '</div>';
+                }
             }
         }
         $(html).appendTo(".product-container");
@@ -291,36 +297,38 @@
 
                 var attribute = products.AllProducts[allProductsIndex].BedSets[bedSetIndex];
 
-                html += '<div class="product col-lg-4 col-md-3 col-sm-6 col-xs-12">' +
-                    '<div class="info-large"></div>' +
-                    '<div class="make3D">' +
-                    '<div class="product-front">' +
-                    '<div class="shadow"></div>' +
-                    '<img src="' + attribute.img + '" alt="" />' +
-                    '<div class="image_overlay"></div>' +
-                    '<div class="add_to_cart">Add to cart</div>' +
-                    '<div class="view_gallery">View gallery</div>' +
-                    '<div class="stats">' +
-                    '<div class="stats-container">' +
-                    '<span class="product_price">' + attribute.price + '</span>' +
-                    '<span class="product_name">' + attribute.name + '</span>' +
-                    '<p>' + attribute.desc + '</p>' +
-                    '<div class="product-options">' +
-                    '<strong>SIZES</strong>' +
-                    '<span>XS, S, M, L, XL, XXL</span>' +
-                    '<strong>COLORS</strong>' +
-                    '<div class="colors">' +
-                    '<div class="c-blue"><span></span></div>' +
-                    '<div class="c-red"><span></span></div>' +
-                    '<div class="c-white"><span></span></div>' +
-                    '<div class="c-green"><span></span></div>' +
-                    '</div>' +
-                    '</div>' +
-                    '</div>' +
-                    '</div>' +
-                    '</div>' +
-                    '</div>' +
-                    '</div>';
+                if (attribute.isActive === true) {
+
+                    html += '<div class="product col-lg-2 col-md-2 col-sm-2 col-xs-6">' +
+                        '<div class="make3D">' +
+                        '<div class="product-front">' +
+                        '<div class="shadow"></div>' +
+                        '<img src="' + attribute.img + '" alt="" />' +
+                        '<div class="image_overlay"></div>' +
+                        '<div class="add_to_cart">Add to cart</div>' +
+                        '<div class="view_gallery">View gallery</div>' +
+                        '<div class="stats">' +
+                        '<div class="stats-container">' +
+                        '<span class="product_price">' + attribute.price + '</span>' +
+                        '<span class="product_name">' + attribute.name + '</span>' +
+                        '<p>' + attribute.desc + '</p>' +
+                        '<div class="product-options">' +
+                        '<strong>SIZES</strong>' +
+                        '<span>XS, S, M, L, XL, XXL</span>' +
+                        '<strong>COLORS</strong>' +
+                        '<div class="colors">' +
+                        '<div class="c-blue"><span></span></div>' +
+                        '<div class="c-red"><span></span></div>' +
+                        '<div class="c-white"><span></span></div>' +
+                        '<div class="c-green"><span></span></div>' +
+                        '</div>' +
+                        '</div>' +
+                        '</div>' +
+                        '</div>' +
+                        '</div>' +
+                        '</div>' +
+                        '</div>';
+                }
             }
         }
         $(html).appendTo(".product-container");

@@ -1,3 +1,12 @@
+#grid {
+    background-color: #f9f9f9;
+    position: absolute;
+    height: inherit;
+    overflow-x: hidden;
+    margin-left: -15px;
+    /*    background-color: green;*/
+}
+
 .colors ul,
 .sizes ul {
     float: left;
@@ -25,15 +34,21 @@
     margin-left: -21px;
 }
 
+#sidebar img {
+    margin-top: 6px;
+}
 
-.product-container {}
+.product-container {
+    width: inherit;
+    height: inherit;
+}
 
 .product {
     position: relative;
-    height: 300px;
+    perspective: 800px;
+    height: 471px;
     transform-style: preserve-3d;
     transition: transform 5s;
-    margin-bottom: 250px;
     -webkit-transition: width 500ms ease-in-out;
     -moz-transition: width 500ms ease-in-out;
     -ms-transition: width 500ms ease-in-out;
@@ -43,11 +58,16 @@
 
 .product-front img {
     width: 100%;
-    height: 100%;
+    max-width: 300px;
+    max-height: 350px;
+    margin: 0 auto;
+    display: block;
 }
 
-.product-front {
-    height: auto;
+.product-front,
+.product-back {
+    width: inherit;
+    height: inherit;
     background: #fff;
     position: absolute;
     left: -5px;
@@ -58,10 +78,25 @@
     transition: all 100ms ease-out;
 }
 
+.product-back {
+    display: none;
+    transform: rotateY(180deg);
+}
+
+.make3D.animate .product-back,
+.make3D.animate .product-front,
+div.large .product-back {
+    top: 0px;
+    left: 0px;
+    -webkit-transition: all 100ms ease-out;
+    -moz-transition: all 100ms ease-out;
+    -o-transition: all 100ms ease-out;
+    transition: all 100ms ease-out;
+}
 
 .make3D {
-    width: 305px;
-    height: 470px;
+    width: 100%;
+    height: inherit;
     position: absolute;
     top: 10px;
     left: 10px;
@@ -73,31 +108,59 @@
     transition: 100ms ease-out;
 }
 
-
-div.large .make3D {
-    top: 0;
-    left: 0;
-    width: 315px;
-    height: 480px;
-    -webkit-transition: 300ms ease-out;
-    -moz-transition: 300ms ease-out;
-    -o-transition: 300ms ease-out;
-    transition: 300ms ease-out;
+div.make3D.flip-10 {
+    -webkit-transform: rotateY(-10deg);
+    -moz-transform: rotateY(-10deg);
+    -o-transform: rotateY(-10deg);
+    transform: rotateY(-10deg);
+    transition: 50ms ease-out;
 }
 
-.large div.make3D {
-    box-shadow: 0px 5px 31px -1px rgba(0, 0, 0, 0);
+div.make3D.flip90 {
+    -webkit-transform: rotateY(90deg);
+    -moz-transform: rotateY(90deg);
+    -o-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+    transition: 100ms ease-in;
 }
+
+div.make3D.flip190 {
+    -webkit-transform: rotateY(190deg);
+    -moz-transform: rotateY(190deg);
+    -o-transform: rotateY(190deg);
+    transform: rotateY(190deg);
+    transition: 100ms ease-out;
+}
+
+div.make3D.flip180 {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    transition: 150ms ease-out;
+}
+
+.make3D.animate {
+    top: 5px;
+    left: 5px;
+    width: 100%;
+    height: inherit;
+    box-shadow: 0px 5px 31px -1px rgba(0, 0, 0, 0.15);
+    -webkit-transition: 100ms ease-out;
+    -moz-transition: 100ms ease-out;
+    -o-transition: 100ms ease-out;
+    transition: 100ms ease-out;
+}
+
 
 .stats-container {
     background: #fff;
     position: absolute;
-    top: 370px;
+    top: 390px;
     left: 0;
-    width: auto;
-    height: 220px;
-    margin-top: 0px;
-    padding: 24px 0px 35px 32px;
+    width: 100%;
+    height: 310px;
+    padding: 24px 40px 35px 32px;
     -webkit-transition: all 200ms ease-out;
     -moz-transition: all 200ms ease-out;
     -o-transition: all 200ms ease-out;
@@ -105,7 +168,7 @@ div.large .make3D {
 }
 
 .make3D.animate .stats-container {
-    top: 265px;
+    top: 43%;
     -webkit-transition: all 200ms ease-out;
     -moz-transition: all 200ms ease-out;
     -o-transition: all 200ms ease-out;
@@ -113,23 +176,24 @@ div.large .make3D {
 }
 
 .stats-container .product_name {
-    font-size: 1.3em;
+    font-size: 20px;
     color: #393c45;
     font-weight: 700;
-    text-align: left;
+    text-align: center;
 }
 
 .stats-container p {
     font-size: 15px;
     color: #b1b1b3;
-    padding: 2px 0 20px 0;
+    padding: 2px 0 2px 0;
 }
 
 .stats-container .product_price {
     float: right;
-    color: #5ff7d2;
+    color: #35E865;
     font-size: 22px;
     font-weight: 600;
+    text-align: center;
 }
 
 .image_overlay {
@@ -164,7 +228,7 @@ div.large .make3D {
     color: #969699;
     font-size: 14px;
     display: block;
-    margin-bottom: 8px;
+    padding-bottom: 10px;
 }
 
 .add_to_cart {
@@ -223,9 +287,10 @@ div.large .make3D {
 }
 
 .view_gallery:hover {
-    background: #fff;
-    color: #5ff7d2;
-    cursor: pointer;
+    /*    background: #fff;*/
+    /*    color: #5ff7d2;*/
+    /*    cursor: pointer;*/
+    pointer-events: none;
 
 }
 
@@ -256,6 +321,10 @@ div.colors div span:hover {
     width: 17px;
     height: 17px;
     margin: -1px 0 0 -1px;
+}
+
+div.c-black span {
+    background: #000000;
 }
 
 div.c-blue span {
@@ -301,8 +370,138 @@ div.shadow {
     background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1));
 }
 
+.flip-back {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
 
+.cx,
+.cy {
+    background: #d2d5dc;
+    position: absolute;
+    width: 0px;
+    top: 15px;
+    right: 15px;
+    height: 3px;
+    -webkit-transition: all 250ms ease-in-out;
+    -moz-transition: all 250ms ease-in-out;
+    -ms-transition: all 250ms ease-in-out;
+    -o-transition: all 250ms ease-in-out;
+    transition: all 250ms ease-in-out;
+}
 
+.flip-back:hover .cx,
+.flip-back:hover .cy {
+    background: #979ca7;
+    -webkit-transition: all 250ms ease-in-out;
+    -moz-transition: all 250ms ease-in-out;
+    -ms-transition: all 250ms ease-in-out;
+    -o-transition: all 250ms ease-in-out;
+    transition: all 250ms ease-in-out;
+}
+
+.cx.s1,
+.cy.s1 {
+    right: 0;
+    width: 30px;
+    -webkit-transition: all 100ms ease-out;
+    -moz-transition: all 100ms ease-out;
+    -ms-transition: all 100ms ease-out;
+    -o-transition: all 100ms ease-out;
+    transition: all 100ms ease-out;
+}
+
+.cy.s2 {
+    -ms-transform: rotate(50deg);
+    -webkit-transform: rotate(50deg);
+    transform: rotate(50deg);
+    -webkit-transition: all 100ms ease-out;
+    -moz-transition: all 100ms ease-out;
+    -ms-transition: all 100ms ease-out;
+    -o-transition: all 100ms ease-out;
+    transition: all 100ms ease-out;
+}
+
+.cy.s3 {
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transition: all 100ms ease-out;
+    -moz-transition: all 100ms ease-out;
+    -ms-transition: all 100ms ease-out;
+    -o-transition: all 100ms ease-out;
+    transition: all 100ms ease-out;
+}
+
+.cx.s1 {
+    right: 0;
+    width: 30px;
+    -webkit-transition: all 100ms ease-out;
+    -moz-transition: all 100ms ease-out;
+    -ms-transition: all 100ms ease-out;
+    -o-transition: all 100ms ease-out;
+    transition: all 100ms ease-out;
+}
+
+.cx.s2 {
+    -ms-transform: rotate(140deg);
+    -webkit-transform: rotate(140deg);
+    transform: rotate(140deg);
+    -webkit-transition: all 100ms ease-out;
+    -moz-transition: all 100ms ease-out;
+    -ms-transition: all 100ease-out;
+    -o-transition: all 100ms ease-out;
+    transition: all 100ms ease-out;
+}
+
+.cx.s3 {
+    -ms-transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+    -webkit-transition: all 100ease-out;
+    -moz-transition: all 100ms ease-out;
+    -ms-transition: all 100ms ease-out;
+    -o-transition: all 100ms ease-out;
+    transition: all 100ms ease-out;
+}
+
+/*
+.carousel {
+    width: 300px;
+    max-width: 300px;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    top: 10%;
+}
+
+.carousel-container {
+}
+
+.carousel ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.carousel li {
+    width: 320px;
+    height: 500px;
+    float: left;
+    overflow: hidden;
+    margin-left: -3.7%;
+}
+
+.carousel img {
+    width: 300px;
+    max-width: 300px;
+}
 
 .arrows-perspective {
     width: 315px;
@@ -314,21 +513,95 @@ div.shadow {
     perspective: 335px;
 }
 
-
-div.floating-cart {
+.carouselPrev,
+.carouselNext {
+    width: 50px;
+    height: 55px;
+    background: #ccc;
     position: absolute;
     top: 0;
-    left: 0;
-    width: 315px;
-    height: 480px;
-    background: #fff;
-    z-index: 200;
-    overflow: hidden;
-    box-shadow: 0px 5px 31px -1px rgba(0, 0, 0, 0.15);
-    display: none;
+    transition: all 200ms ease-out;
+    opacity: 0.9;
+    cursor: pointer;
 }
 
+.carouselNext {
+    top: 0;
+    right: -26px;
+    -webkit-transform: rotateY(-117deg);
+    -moz-transform: rotateY(-117deg);
+    -o-transform: rotateY(-117deg);
+    transform: rotateY(-117deg);
+    transition: all 200ms ease-out;
 
+}
+
+.carouselNext.visible {
+    right: 0;
+    opacity: 0.8;
+    background: #fff;
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    transition: all 200ms ease-out;
+}
+
+.carouselPrev {
+    left: -26px;
+    top: 0;
+    -webkit-transform: rotateY(117deg);
+    -moz-transform: rotateY(117deg);
+    -o-transform: rotateY(117deg);
+    transform: rotateY(117deg);
+    transition: all 200ms ease-out;
+
+}
+
+.carouselPrev.visible {
+    left: 0;
+    opacity: 0.8;
+    background: #fff;
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    transition: all 200ms ease-out;
+}
+
+.carousel .x,
+.carousel .y {
+    height: 2px;
+    width: 15px;
+    background: #5ff7d2;
+    position: absolute;
+    top: 31px;
+    left: 17px;
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.carousel .x {
+    -ms-transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+    top: 21px;
+}
+
+.carousel .carouselNext .x {
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.carousel .carouselNext .y {
+    -ms-transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+*/
 #info {
     position: absolute;
     top: 20px;
@@ -348,17 +621,6 @@ div.floating-cart {
     text-decoration: none;
 }
 
-#checkout {
-    border: 2px solid #5ff7d2;
-    font-size: 13px;
-    font-weight: 700;
-    padding: 3px 9px;
-    position: absolute;
-    top: 137px;
-    left: 181px;
-    color: #5ff7d2;
-    display: none;
-}
 
 .product.large {
     width: 639px;
@@ -375,7 +637,6 @@ div.floating-cart {
 
 
 /* ---------------- */
-
 .floating-image-large {
     position: absolute;
     top: 0;
@@ -388,6 +649,7 @@ div.floating-cart {
     position: absolute;
     top: 0;
     left: 0px;
+    padding: 42px;
     width: 245px;
     height: 395px;
     -webkit-transition: all 500ms ease-out;
@@ -406,6 +668,24 @@ div.floating-cart {
     transition: all 300ms ease-out;
 }
 
+.info-large h4 {
+    text-transform: uppercase;
+    font-size: 28px;
+    color: #000;
+    font-weight: 400;
+    padding: 0;
+}
+
+div.sku {
+    font-weight: 700;
+    color: #d0d0d0;
+    font-size: 12px;
+    padding-top: 11px;
+}
+
+div.sku strong {
+    color: #000;
+}
 
 .price-big {
     font-size: 34px;
@@ -446,6 +726,17 @@ div.floating-cart {
     -o-transition: all 200ms ease-out;
     transition: all 200ms ease-out;
     cursor: pointer;
+}
+
+.info-large h3 {
+    letter-spacing: 1px;
+    color: #262626;
+    text-transform: uppercase;
+    font-size: 14px;
+    clear: left;
+    margin-top: 20px;
+    font-weight: 700;
+    margin-bottom: 3px;
 }
 
 
@@ -492,21 +783,7 @@ div.floating-cart {
     box-shadow: 0px 5px 31px -1px rgba(0, 0, 0, 0.15);
 }
 
-@media (max-width: 1200px) {
-    .product-container {
-        /*        margin-left: 20%;*/
-    }
-}
 
-@media (max-width: 1000px) {
-    .product-container {
-        /*        margin-left: 30%;*/
-    }
-}
+@media (max-width: 1100px) {}
 
-
-@media (max-width: 800px) {
-    .product-container {
-        /*        margin-left: 15%;*/
-    }
-}
+@media (max-width: 767px) {}

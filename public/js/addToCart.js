@@ -108,7 +108,6 @@ $(document).ready(function () {
 
         });
 
-        makeCarousel(el);
     });
 
     $('.add-cart-large').each(function (i, el) {
@@ -163,61 +162,7 @@ $(document).ready(function () {
         });
     })
 
-    /* ----  Image Gallery Carousel   ---- */
-    function makeCarousel(el) {
 
-
-        var carousel = $(el).find('.carousel ul');
-        var carouselSlideWidth = 315;
-        var carouselWidth = 0;
-        var isAnimating = false;
-        var currSlide = 0;
-        $(carousel).attr('rel', currSlide);
-
-        // building the width of the casousel
-        $(carousel).find('li').each(function () {
-            carouselWidth += carouselSlideWidth;
-        });
-        $(carousel).css('width', carouselWidth);
-
-        // Load Next Image
-        $(el).find('div.carouselNext').on('click', function () {
-            var currentLeft = Math.abs(parseInt($(carousel).css("left")));
-            var newLeft = currentLeft + carouselSlideWidth;
-            if (newLeft == carouselWidth || isAnimating === true) {
-                return;
-            }
-            $(carousel).css({
-                'left': "-" + newLeft + "px",
-                "transition": "300ms ease-out"
-            });
-            isAnimating = true;
-            currSlide++;
-            $(carousel).attr('rel', currSlide);
-            setTimeout(function () {
-                isAnimating = false;
-            }, 300);
-        });
-
-        // Load Previous Image
-        $(el).find('div.carouselPrev').on('click', function () {
-            var currentLeft = Math.abs(parseInt($(carousel).css("left")));
-            var newLeft = currentLeft - carouselSlideWidth;
-            if (newLeft < 0 || isAnimating === true) {
-                return;
-            }
-            $(carousel).css({
-                'left': "-" + newLeft + "px",
-                "transition": "300ms ease-out"
-            });
-            isAnimating = true;
-            currSlide--;
-            $(carousel).attr('rel', currSlide);
-            setTimeout(function () {
-                isAnimating = false;
-            }, 300);
-        });
-    }
 
     $('.sizes a span, .categories a span').each(function (i, el) {
         $(el).append('<span class="x"></span><span class="y"></span>');
@@ -242,47 +187,6 @@ $(document).ready(function () {
     });
 
     $('.add_to_cart').click(function () {
-        var productCard = $(this).parent();
-        var position = productCard.offset();
-        var productImage = $(productCard).find('img').get(0).src;
-        var productName = $(productCard).find('.product_name').get(0).innerHTML;
 
-        $("body").append('<div class="floating-cart"></div>');
-        var cart = $('div.floating-cart');
-        productCard.clone().appendTo(cart);
-        $(cart).css({
-            'top': position.top + 'px',
-            "left": position.left + 'px'
-        }).fadeIn("slow").addClass('moveToCart');
-        setTimeout(function () {
-            $("body").addClass("MakeFloatingCart");
-        }, 800);
-        setTimeout(function () {
-            $('div.floating-cart').remove();
-            $("body").removeClass("MakeFloatingCart");
-
-
-            var cartItem = "<div class='cart-item'><div class='img-wrap'><img src='" + productImage + "' alt='' /></div><span>" + productName + "</span><strong>$39</strong><div class='cart-item-border'></div><div class='delete-item'></div></div>";
-
-            $("#cart .empty").hide();
-            $("#cart").append(cartItem);
-            $("#checkout").fadeIn(500);
-
-            $("#cart .cart-item").last()
-                .addClass("flash")
-                .find(".delete-item").click(function () {
-                    $(this).parent().fadeOut(300, function () {
-                        $(this).remove();
-                        if ($("#cart .cart-item").size() == 0) {
-                            $("#cart .empty").fadeIn(500);
-                            $("#checkout").fadeOut(500);
-                        }
-                    })
-                });
-            setTimeout(function () {
-                $("#cart .cart-item").last().removeClass("flash");
-            }, 10);
-
-        }, 1000);
     });
 });

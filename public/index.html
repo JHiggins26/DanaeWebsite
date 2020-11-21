@@ -33,6 +33,7 @@
 
     <link rel="stylesheet" type="text/css" href="css/book_selection.css">
     <link rel="stylesheet" type="text/css" href="css/addToCart.css">
+    <link rel="stylesheet" type="text/css" href="css/slider.css">
     <link rel="stylesheet" type="text/css" href="css/reviews.css">
     <link rel="stylesheet" type="text/css" href="css/review_modal.css">
 
@@ -132,7 +133,7 @@
                     </nav>
 
 
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 order-btn-container">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-9 col-lg-offset-4 col-md-offset-4 col-sm-offset-3 col-xs-offset-2 order-btn-container">
 
                         <!--Free Shipping Button-->
                         <!--<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7PAG2JE2KWFZS" target="_blank"><img class="order-btn" src="Style/img/Buy-Now-Btn.png" ></a>-->
@@ -185,11 +186,11 @@
     <!--    </div>-->
 
 
+    <div class="books-title col-lg-12 col-md-12 col-sm-12 col-xs-12 col-lg-offset-4 col-md-offset-4 col-sm-offset-4 col-xs-offset-4">BOOKS</div>
+
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="booksId"></div>
 
-    <div class="books-title col-lg-3 col-md-4 col-sm-5 col-xs-6 col-lg-offset-4 col-md-offset-4 col-sm-offset-4 col-xs-offset-4">BOOKS</div>
-
-    <div class="book-store">
+    <div class="book-store col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <div class="book-slide">
             <div class="book js-flickity" data-flickity-options='{ "wrapAround": true }'>
                 <div class="book-cell col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -204,7 +205,7 @@
                         <div class="stars">
                             <form class="book_form" method="POST" action="/submitReview" id="submitReviewFormId" name="submitReviewForm">
                                 <input type="hidden" class="book_form_label" name="bookName" value="Little Black Girl" />
-                                <div class="stars-row rating gold pulse col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="stars-row rating gold pulse col-lg-6 col-md-6 col-sm-7 col-xs-12">
 
                                     <input class="star star-5 " id="star-5-1" type="radio" name="starRating" oninput="" value="5" />
                                     <label class="star star-5" for="star-5-1"></label>
@@ -224,7 +225,7 @@
                                 </div>
 
 
-                                <div><a class="book-reviews col-lg-6 col-md-6 col-sm-6 col-xs-7" data-modal-title="Little Black Girl">Reviews</a></div>
+                                <div><a class="book-reviews col-lg-6 col-md-6 col-sm-5 col-xs-7" data-modal-title="Little Black Girl">Reviews</a></div>
 
                                 <div class="rev-box">
 
@@ -458,22 +459,215 @@
 
 
 
-        <div class="main-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <div class="book-scroll-container col-xs-offset-1">
-                <div class="main-menu">
-                    <div class="product-types">
-                        <a href="/AllProducts" class="product-type allProducts active"> All Products</a>
-                        <a href="/Sanitizers" class="product-type sanitizer"> Sanitizers</a>
-                        <a href="/FaceMasks" class="product-type faceMask"> Face Masks</a>
-                        <a href="/BookBags" class="product-type bookBag"> Book Bags</a>
-                        <a href="/BedSets" class="product-type bedSet"> Bed Sets</a>
+        <div class="main-menu container-fluid">
+            <div class="product-types">
+                <a href="/AllProducts" class="product-type allProducts active"> All Products</a>
+                <a href="#" class="product-type sanitizer"> Sanitizers</a>
+                <a href="#" class="product-type faceMask"> Face Masks</a>
+                <a href="#" class="product-type bookBag"> Book Bags</a>
+                <a href="#" class="product-type bedSet"> Bed Sets</a>
+            </div>
+        </div>
+
+        <div class=" main-wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+            <div class="book-scroll-container ">
+
+                <div class="product-container ">
+
+                    <div id="grid" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                        <div class="product col-lg-4 col-md-5 col-sm-6 col-xs-12">
+
+                            <div class="make3D">
+                                <div class="product-front">
+                                    <div class="shadow"></div>
+                                    <img src="img/LBG_BookBag.jpg" alt="" />
+                                    <div class="image_overlay"></div>
+                                    <div class="add_to_cart">Add to cart</div>
+                                    <div class="view_gallery">View gallery</div>
+                                    <div class="stats">
+                                        <div class="stats-container col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                                            <span class="product_name col-lg-12 col-md-12 col-sm-12 col-xs-12">Little Black Girl Book Bag</span>
+                                            <span class="product_price col-lg-12 col-md-12 col-sm-12 col-xs-12">$29.99</span>
+                                            <p>Mutli-colored universe Little Black Girl Book Bag. Durable bond stitching, making it secure to safely transport your important essentials like books and laptops.</p>
+
+                                            <div class="product-options">
+                                                <strong>SIZES</strong>
+                                                <span>M</span>
+                                                <strong>COLORS</strong>
+                                                <div class="colors">
+                                                    <div class="c-black"><span></span></div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-back ">
+                                    <div class="shadow"></div>
+                                    <!-- Carousel-->
+                                    <div>
+                                        <div class="carousel" id="carousel-2">
+                                            <ul class="slides">
+                                                <input type="radio" name="radio-buttons" id="img-1" checked />
+                                                <li class="slide-container">
+                                                    <div class="slide-image">
+                                                        <img src="img/LBG_BookBag_showcase1.jpg">
+                                                    </div>
+                                                    <div class="carousel-controls">
+                                                        <label for="img-3" class="prev-slide">
+                                                            <span>&lsaquo;</span>
+                                                        </label>
+                                                        <label for="img-2" class="next-slide">
+                                                            <span>&rsaquo;</span>
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <input type="radio" name="radio-buttons" id="img-2" />
+                                                <li class="slide-container">
+                                                    <div class="slide-image">
+                                                        <img src="img/LBG_BookBag_showcase2.jpg">
+                                                    </div>
+                                                    <div class="carousel-controls">
+                                                        <label for="img-1" class="prev-slide">
+                                                            <span>&lsaquo;</span>
+                                                        </label>
+                                                        <label for="img-3" class="next-slide">
+                                                            <span>&rsaquo;</span>
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <input type="radio" name="radio-buttons" id="img-3" />
+                                                <li class="slide-container">
+                                                    <div class="slide-image">
+                                                        <img src="img/LBG_BookBag_showcase3.jpg">
+                                                    </div>
+                                                    <div class="carousel-controls">
+                                                        <label for="img-2" class="prev-slide">
+                                                            <span>&lsaquo;</span>
+                                                        </label>
+                                                        <label for="img-1" class="next-slide">
+                                                            <span>&rsaquo;</span>
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="flip-back">
+                                        <div class="cy"></div>
+                                        <div class="cx"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="product col-lg-4 col-md-5 col-sm-6 col-xs-12">
+
+                            <div class="make3D">
+                                <div class="product-front">
+                                    <div class="shadow"></div>
+                                    <img src="img/LBB_BookBag.jpg" alt="" />
+                                    <div class="image_overlay"></div>
+                                    <div class="add_to_cart">Add to cart</div>
+                                    <div class="view_gallery">View gallery</div>
+                                    <div class="stats">
+                                        <div class="stats-container col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                                            <span class="product_name col-lg-12 col-md-12 col-sm-12 col-xs-12">Little Black Boy Book Bag</span>
+                                            <span class="product_price col-lg-12 col-md-12 col-sm-12 col-xs-12">$29.99</span>
+                                            <p>Mutli-colored universe Little Black Boy Book Bag. Durable bond stitching, making it secure to safely transport your important essentials like books and laptops.</p>
+                                            <div class="product-options">
+                                                <strong>SIZES</strong>
+                                                <span>M</span>
+                                                <strong>COLORS</strong>
+                                                <div class="colors">
+                                                    <div class="c-black"><span></span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-back ">
+                                    <div class="shadow"></div>
+                                    <!-- Carousel-->
+                                    <div>
+                                        <div class="carousel" id="carousel-2">
+                                            <ul class="slides">
+                                                <input type="radio" name="radio-buttons" id="img-1" checked />
+                                                <li class="slide-container">
+                                                    <div class="slide-image">
+                                                        <img src="img/LBG_BookBag_showcase1.jpg">
+                                                    </div>
+                                                    <div class="carousel-controls">
+                                                        <label for="img-3" class="prev-slide">
+                                                            <span>&lsaquo;</span>
+                                                        </label>
+                                                        <label for="img-2" class="next-slide">
+                                                            <span>&rsaquo;</span>
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <input type="radio" name="radio-buttons" id="img-2" />
+                                                <li class="slide-container">
+                                                    <div class="slide-image">
+                                                        <img src="img/LBG_BookBag_showcase2.jpg">
+                                                    </div>
+                                                    <div class="carousel-controls">
+                                                        <label for="img-1" class="prev-slide">
+                                                            <span>&lsaquo;</span>
+                                                        </label>
+                                                        <label for="img-3" class="next-slide">
+                                                            <span>&rsaquo;</span>
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <input type="radio" name="radio-buttons" id="img-3" />
+                                                <li class="slide-container">
+                                                    <div class="slide-image">
+                                                        <img src="img/LBG_BookBag_showcase3.jpg">
+                                                    </div>
+                                                    <div class="carousel-controls">
+                                                        <label for="img-2" class="prev-slide">
+                                                            <span>&lsaquo;</span>
+                                                        </label>
+                                                        <label for="img-1" class="next-slide">
+                                                            <span>&rsaquo;</span>
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="flip-back">
+                                        <div class="cy"></div>
+                                        <div class="cx"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
                     </div>
                 </div>
 
-                <div class="product-container"></div>
+
+
+
+
             </div>
         </div>
     </div>
+
+
 
 
 
@@ -535,9 +729,10 @@
 -->
 
 
+    <div class="contact-title  col-lg-12 col-md-12 col-sm-12 col-xs-12 col-lg-offset-4 col-md-offset-4 col-sm-offset-4 col-xs-offset-4">REACH OUT</div>
+
 
     <div class="contact-container col-lg-12 col-md-12 col-sm-12 col-xs-12" id="contactId">
-        <div class="contact-title  col-lg-12 col-md-12 col-sm-12 col-xs-12 col-lg-offset-4 col-md-offset-4 col-sm-offset-4 col-xs-offset-4">REACH OUT</div>
 
         <p class="">Do you have a story?</p>
 
@@ -654,9 +849,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js"></script>
 
 
-    <!--    <script src="js/book_slideshow.js"></script>-->
-    <script src="js/productActionService.js"></script>
+
+    <!--    <script src="js/book_slideshow.js"></script>
+        -->
+    <!--    <script src="js/productActionService.js"></script>-->
     <script src="js/addToCart.js"></script>
+    <script src="js/slider.js"></script>
 
 
     <script src="js/reviewActionService.js"></script>

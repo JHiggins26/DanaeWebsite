@@ -31,7 +31,7 @@
                         "orange": "yes",
                         "pink": "yes"
                     },
-                    "isActive": true
+                    "isActive": false
                 },
                 {
                     "img": "./img/LBG_Sanitizer.jpg",
@@ -42,7 +42,7 @@
                         "orange": "yes",
                         "pink": "yes"
                     },
-                    "isActive": true
+                    "isActive": false
                 },
                 {
                     "img": "./img/LBG_Sanitizer.jpg",
@@ -53,7 +53,7 @@
                         "orange": "yes",
                         "pink": "yes"
                     },
-                    "isActive": true
+                    "isActive": false
                 }
             ]
     },
@@ -89,7 +89,7 @@
                         "orange": "yes",
                         "pink": "yes"
                     },
-                    "isActive": true
+                    "isActive": false
                 },
                 {
                     "img": "./img/LBB_Mask.jpg",
@@ -100,7 +100,7 @@
                         "orange": "yes",
                         "pink": "yes"
                     },
-                    "isActive": true
+                    "isActive": false
                 },
                 {
                     "img": "./img/LBB_Mask.jpg",
@@ -111,7 +111,7 @@
                         "orange": "yes",
                         "pink": "yes"
                     },
-                    "isActive": true
+                    "isActive": false
                 }
             ]
     },
@@ -147,7 +147,7 @@
                         "orange": "yes",
                         "pink": "yes"
                     },
-                    "isActive": true
+                    "isActive": false
                 },
                 {
                     "img": "./img/LBG_BookBag.jpg",
@@ -158,7 +158,7 @@
                         "orange": "yes",
                         "pink": "yes"
                     },
-                    "isActive": true
+                    "isActive": false
                 },
                 {
                     "img": "./img/LBB_BookBag.jpg",
@@ -169,7 +169,7 @@
                         "orange": "yes",
                         "pink": "yes"
                     },
-                    "isActive": true
+                    "isActive": false
                 }
             ]
     },
@@ -205,7 +205,7 @@
                         "orange": "yes",
                         "pink": "yes"
                     },
-                    "isActive": true
+                    "isActive": false
                 },
                 {
                     "img": "./img/LBG_BedSet.jpg",
@@ -216,7 +216,7 @@
                         "orange": "yes",
                         "pink": "yes"
                     },
-                    "isActive": true
+                    "isActive": false
                 },
                 {
                     "img": "./img/LBG_BedSet.jpg",
@@ -227,7 +227,7 @@
                         "orange": "yes",
                         "pink": "yes"
                     },
-                    "isActive": true
+                    "isActive": false
                 }
             ]
     }]

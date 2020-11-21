@@ -25,10 +25,7 @@ div.stars {
 
 }
 
-.stars-row {
-
-    /*    background-color: red;*/
-}
+.stars-row {}
 
 input.star {
     display: none;
@@ -217,18 +214,28 @@ textarea.reviewName {
         margin-left: -50%;
     }
 
-    .book-reviews {}
+    .book-reviews {
+        margin-bottom: 5%;
+    }
 }
 
 @media (max-width: 470px) {
 
-    .stars-row {
-        /*        margin-left: 0%;*/
+    .close-review {
+        top: -60%;
     }
+
+    .stars-row {}
 
     label.star {
         font-size: 13px;
 
+    }
+
+    .submit-review-btn {
+        text-align: center;
+        width: 100%;
+        font-size: 0.75em;
     }
 }
 
@@ -236,6 +243,11 @@ textarea.reviewName {
 
     .stars-row {
         margin-left: -5%;
+    }
+
+    .submit-review-btn {
+
+        font-size: 0.60em;
     }
 
 }

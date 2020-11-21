@@ -25,16 +25,16 @@ $(document).ready(function () {
 
             '<div class="reviewHeader col-lg-12 col-md-12 col-sm-12 col-xs-12">' +
 
-            '<div class="reviewsTitle col-lg-10 col-md-10 col-sm-10 col-xs-10">' +
-            '<h1>Customer Reviews</h1>' +
+            '<div class="reviewsTitle col-lg-11 col-md-11 col-sm-11 col-xs-11">' +
+            '<h1 class="custReviewTitle">Customer Reviews</h1>' +
             '</div>' +
 
-            '<button type="button" class="closeReviews col-lg-2 col-md-2 col-sm-2 col-xs-2" id="closeId" data-dismiss="modal" data-backdrop="false" aria-label="Close"><span aria-hidden="true">×</span></button>' +
+            '<button type="button" class="closeReviews col-lg-1 col-md-1 col-sm-1 col-xs-1" id="closeId" data-dismiss="modal" data-backdrop="false" aria-label="Close"><span aria-hidden="true">×</span></button>' +
 
             '<div class="reviewSubHeader col-lg-12 col-md-12 col-sm-12 col-xs-12">' +
 
             '<h2 class="bookNameReviewTitle"></h2>' +
-            '<img class="starRatingAvgImg col-lg-3 col-md-3 col-sm-3 col-xs-3 col-lg-offset-4 col-md-offset-4 col-sm-offset-0 col-xs-offset-0" src="" />' +
+            '<img class="starRatingAvgImg col-lg-3 col-md-3 col-sm-4 col-xs-5 col-lg-offset-4 col-md-offset-4 col-sm-offset-3 col-xs-offset-2" src="" />' +
             '<h2 class="numberOfReviews"></h2>' +
 
 
@@ -105,12 +105,12 @@ $(document).ready(function () {
                     } else if (review.rating === 4) {
                         starRatingImg = '/img/4-star-rating.png';
                     } else {
-                        starRatingImg = '/img/5-star-rating.png';
+                        starRatingImg = '/img/5-star-rating.jpg';
                     }
 
 
                     cells += '<div class="reviewerCell col-lg-12 col-md-12 col-sm-12 col-xs-12">' +
-                        '<div class="reviewerName col-lg-4 col-md-4 col-sm-4 col-xs-4">' + review.reviewer_name + '</div>' +
+                        '<div class="reviewerName col-lg-4 col-md-5 col-sm-12 col-xs-12">' + review.reviewer_name + '</div>' +
                         '<div class="col-lg-4 col-md-4 col-sm-9 col-xs-9">' +
                         '<img class="reviewerStarRating" src="' + starRatingImg + '" />' +
                         '</div>' +
@@ -136,11 +136,12 @@ $(document).ready(function () {
                 } else if (averageRating === 4) {
                     overallStarRatingImg = '/img/4-star-rating.png';
                 } else if (averageRating === 5) {
-                    overallStarRatingImg = '/img/5-star-rating.png';
+                    overallStarRatingImg = '/img/5-star-rating.jpg';
                 } else {
                     overallStarRatingImg = '';
                 }
 
+                console.log('avg' + averageRating);
                 $('.starRatingAvgImg').attr("src", overallStarRatingImg);
                 $('.numberOfReviews').html(numberOfReviews + ' Reviews');
 

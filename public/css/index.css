@@ -404,8 +404,8 @@ a:focus {
 
 .books-title {
     font-size: 3em;
-    position: absolute;
-    margin-top: 470px;
+    position: relative;
+    margin-top: 450px;
     z-index: 1;
     left: 17% !important;
     transform: translate(-50%, 0);
@@ -645,7 +645,6 @@ a:focus {
 /* END of Event book selection modal image gallery */
 
 .contact-container {
-    margin-top: 80px;
     text-align: center;
     background-image: url(../img/Orange-BG.jpg);
     padding: 50px 0px 50px 0px;
@@ -662,11 +661,7 @@ a:focus {
 
 .contact-title {
     font-size: 3em;
-    position: absolute;
-    margin-top: -135px;
-    z-index: 1;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    position: relative;
     left: 17% !important;
     transform: translate(-50%, 0);
     text-align: center;
@@ -714,6 +709,8 @@ a:focus {
     font-weight: bold;
     text-align: center;
     margin-left: 0px;
+    margin-top: 10px;
+
 }
 
 .footer-links li:hover {
