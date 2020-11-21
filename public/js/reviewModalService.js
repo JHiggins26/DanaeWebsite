@@ -141,9 +141,14 @@ $(document).ready(function () {
                     overallStarRatingImg = '';
                 }
 
-                console.log('avg' + averageRating);
                 $('.starRatingAvgImg').attr("src", overallStarRatingImg);
-                $('.numberOfReviews').html(numberOfReviews + ' Reviews');
+
+                if (numberOfReviews > 0) {
+                    $('.numberOfReviews').html(numberOfReviews + ' Reviews');
+                } else {
+                    $('.numberOfReviews').html('');
+
+                }
 
 
 

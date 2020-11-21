@@ -38,7 +38,7 @@ $(document).ready(function () {
             '<h3 class="modal-price" id="price"></h3>' +
             //            '<h3 class="modal-price"><span style="color: white;"> + 15% off</span></h3>' +
 
-            '<h3 class="modal-date" id="dateId"></h3>' +
+            '<h3 class="modal-date" id="buyNowId"></h3>' +
 
             '</div></div>' +
 
@@ -65,7 +65,7 @@ $(document).ready(function () {
 
             document.getElementsByClassName('modal-backdrop-img').src = "/img/SNSS-Book-Cover.jpg";
             document.getElementById('imgId').src = "/img/SNSS-Book-Cover.jpg";
-            document.getElementById('dateId').innerHTML = "Coming Soon";
+            document.getElementById('buyNowId').innerHTML = "Coming Soon";
             document.getElementById('price').innerHTML = "";
 
 
@@ -76,15 +76,21 @@ $(document).ready(function () {
             document.getElementById('price').innerHTML = "$16.99";
 
             // PAID SHIPPING
-            document.getElementById('dateId').innerHTML = '<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PK27P4KZA2CN2" target="_blank">' +
-                '<img class="modal-order-btn" src="/img/Buy-Now-Btn.png" ></a>';
+            //            document.getElementById('buyNowId').innerHTML = '<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PK27P4KZA2CN2" target="_blank">' +
+            //                '<img class="modal-order-btn" src="/img/Buy-Now-Btn.png" ></a>';
+
+            document.getElementById('buyNowId').innerHTML = '<div class="page-wrapper">' +
+                '<a id="addtocart" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PK27P4KZA2CN2"><img class="modal-order-btn" src="img/Buy-Now-Btn.png">' +
+                '<span class="cart-item"></span>' +
+                '</a>' +
+                '</div>';
 
 
         } else if (bookModalTitle === 'Universal Goddess') {
 
             document.getElementsByClassName('modal-backdrop-img').src = "/img/coming_soon_book_cover-spotlight.jpg";
             document.getElementById('imgId').src = "/img/coming_soon_book_cover.jpg";
-            document.getElementById('dateId').innerHTML = 'Coming Soon';
+            document.getElementById('buyNowId').innerHTML = 'Coming Soon';
             document.getElementById('price').innerHTML = "";
 
         } else if (bookModalTitle === 'Little Black Girl') {
@@ -99,21 +105,28 @@ $(document).ready(function () {
             document.getElementById('price').innerHTML = "$14.99";
 
             // FREE SHIPPING
-            /*document.getElementById('dateId').innerHTML = '<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7PAG2JE2KWFZS" target="_blank">' +
+            /*document.getElementById('buyNowId').innerHTML = '<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7PAG2JE2KWFZS" target="_blank">' +
                 '<img class="modal-order-btn" src="Style/img/Buy-Now-Btn.png" ></a>';*/
 
             // PAID SHIPPING
-            document.getElementById('dateId').innerHTML = '<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=J7Y4EZX764KTL" target="_blank">' +
-                '<img class="modal-order-btn" src="/img/Buy-Now-Btn.png" ></a>';
+            document.getElementById('buyNowId').innerHTML = '<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=J7Y4EZX764KTL" target="_blank">' + '<img class="modal-order-btn" src="/img/Buy-Now-Btn.png" ></a>';
+
+
+            document.getElementById('buyNowId').innerHTML = '<div class="page-wrapper">' +
+                '<a id="addtocart" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=J7Y4EZX764KTL"><img class="modal-order-btn" src="img/Buy-Now-Btn.png">' +
+                '<span class="cart-item"></span>' +
+                '</a>' +
+                '</div>';
+
 
             // Discount
-            /*document.getElementById('dateId').innerHTML = '<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=VMKMC2D84T4F2" target="_blank">' +
+            /*document.getElementById('buyNowId').innerHTML = '<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=VMKMC2D84T4F2" target="_blank">' +
                 '<img class="modal-order-btn" src="Style/img/Buy-Now-Btn.png" ></a>';*/
 
         } else {
             document.getElementsByClassName('modal-backdrop-img').src = "/img/coming_soon_book_cover-spotlight.jpg";
             document.getElementById('imgId').src = "/img/coming_soon_book_cover.jpg";
-            document.getElementById('dateId').innerHTML = 'Coming Soon';
+            document.getElementById('buyNowId').innerHTML = 'Coming Soon';
             document.getElementById('price').innerHTML = "";
         }
 
@@ -126,4 +139,36 @@ $(document).ready(function () {
 
 
     });
+
+
+
+
+
+
+
+    $('#addtocart').on('click', function () {
+
+        var button = $(this);
+        var cart = $('#cart');
+
+        console.log(cart);
+        var cartTotal = cart.attr('data-totalitems');
+        var newCartTotal = parseInt(cartTotal) + 1;
+
+        button.addClass('sendtocart');
+        setTimeout(function () {
+
+            button.removeClass('sendtocart');
+
+            cart.addClass('shake').attr('data-totalitems', newCartTotal);
+
+            setTimeout(function () {
+                cart.removeClass('shake');
+            }, 500)
+        }, 1000)
+    });
+
+
+
+
 });

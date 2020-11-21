@@ -90,11 +90,6 @@ a:focus {
     letter-spacing: 2px;
 }
 
-.cart {
-    float: right;
-    width: 40px;
-    margin-top: -15%;
-}
 
 .author-name-section {
     color: rgba(255, 255, 255, 1);

@@ -36,6 +36,7 @@
     <link rel="stylesheet" type="text/css" href="css/slider.css">
     <link rel="stylesheet" type="text/css" href="css/reviews.css">
     <link rel="stylesheet" type="text/css" href="css/review_modal.css">
+    <link rel="stylesheet" type="text/css" href="css/cartHandler.css">
 
     <link rel="stylesheet" type="text/css" href="css/sweetalert2.css">
 
@@ -76,7 +77,11 @@
                 <div class="author-name-section col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
                     <!--Shopping Cart-->
-                    <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_cart&business=WIOPLLC%40yahoo%2ecom&display=1" target="_blank"><img class="cart" src="img/shopping_cart.png"></a>
+                    <!--                    <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_cart&business=WIOPLLC%40yahoo%2ecom&display=1" target="_blank"><img class="cart" src="img/shopping_cart.png"></a>-->
+
+                    <div id="cart" class="cart" data-totalitems="0">
+                        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_cart&business=WIOPLLC%40yahoo%2ecom&display=1" target="_blank" style="color: black"><i class="fa fa-shopping-cart"></i></a>
+                    </div>
 
 
                     <h1 class="author-name-top col-lg-12 col-md-12 col-sm-12 col-xs-12">Vetta Jibade</h1>
@@ -149,6 +154,14 @@
         </div>
     </header>
     <!--header end-->
+
+
+    <div class="page-wrapper">
+        <button id="addtocart"><img class="order-btn" src="img/Buy-Now-Btn.png" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PK27P4KZA2CN2">
+            <span class="cart-item"></span>
+        </button>
+    </div>
+
 
     <!--
     <div class="container-fluid" id="bioId">
@@ -833,6 +846,7 @@
     <script src="js/event_photo_modal.js"></script>
 
     <script src="js/scroll.js"></script>
+    <script src="js/cartHandler.js"></script>
 
 
     <!--<script src="js/angular-animate.js"></script>-->
