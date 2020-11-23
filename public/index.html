@@ -211,9 +211,8 @@
                             <div class="book-title">Little Black Girl</div>
                             <div class="book-author">by Vetta Jibade</div>
 
-
                             <div class="stars">
-                                <form class="book_form" method="POST" action="/" id="submitReviewFormId" name="submitReviewForm">
+                                <form class="book_form" method="POST" action="/submitReview" id="submitReviewFormId" name="submitReviewForm" target="uploader_iframe">
                                     <input type="hidden" class="book_form_label" name="bookName" value="Little Black Girl" />
                                     <div class="stars-row rating gold pulse col-lg-6 col-md-6 col-sm-7 col-xs-12">
 
@@ -243,13 +242,14 @@
 
                                         <button type="button" class="close-review" id="closeId" aria-label="Close"><span aria-hidden="true">×</span></button>
 
-
                                         <textarea class="review" maxlength="500" placeholder="Write a review" col="30" rows="2" name="reviewInfo" align="left" wrap="cwrap" onclick="this.select()"></textarea>
 
-                                        <input class="submit-review-btn" id="submitReviewButton" type="submit" value="Submit Review" onclick="submitReview(this);">
+                                        <input class="submit-review-btn" id="submitReviewButton" type="submit" value="Submit Review">
 
                                     </div>
                                 </form>
+
+                                <iframe id="uploader_iframe" name="uploader_iframe" style="display: none;"></iframe>
                             </div>
 
 
@@ -268,7 +268,7 @@
                             <div class="book-title">Little Black Boy</div>
                             <div class="book-author">by Vetta Jibade</div>
                             <div class="stars">
-                                <form class="book_form" method="POST" action="/submitReview" id="submitReviewFormId" name="submitReviewForm">
+                                <form class="book_form" method="POST" action="/submitReview" id="submitReviewFormId" name="submitReviewForm" target="uploader_iframe">
                                     <input type="hidden" class="book_form_label" name="bookName" value="Little Black Boy" />
                                     <div class="stars-row rating gold pulse col-lg-6 col-md-6 col-sm-6 col-xs-12">
 
@@ -300,10 +300,12 @@
 
                                         <textarea class="review" maxlength="500" placeholder="Write a review" col="30" rows="2" name="reviewInfo" align="left" wrap="cwrap" onclick="this.select()"></textarea>
 
-                                        <input class="submit-review-btn" id="submitReviewButton" type="button" value="Submit Review" onclick="">
+                                        <input class="submit-review-btn" id="submitReviewButton" type="submit" value="Submit Review">
 
                                     </div>
                                 </form>
+                                <iframe id="uploader_iframe" name="uploader_iframe" style="display: none;"></iframe>
+
                             </div>
                             <div class="book-desc-btn-container">
                                 <div class="book-sum">What you think, you become. What you feel, you attract. What you imagine, you create.<br><br></div>
@@ -319,7 +321,7 @@
                             <div class="book-title">Sunny North To Sunny South</div>
                             <div class="book-author">by Vetta Jibade</div>
                             <div class="stars">
-                                <form class="book_form" method="POST" action="/submitReview" id="submitReviewFormId" name="submitReviewForm">
+                                <form class="book_form" method="POST" action="/submitReview" id="submitReviewFormId" name="submitReviewForm" target="uploader_iframe">
                                     <input type="hidden" class="book_form_label" name="bookName" value="Sunny North To Sunny South" />
                                     <div class="stars-row rating gold pulse col-lg-6 col-md-6 col-sm-6 col-xs-12">
 
@@ -351,10 +353,12 @@
 
                                         <textarea class="review" maxlength="500" placeholder="Write a review" col="30" rows="2" name="reviewInfo" align="left" wrap="cwrap" onclick="this.select()"></textarea>
 
-                                        <input class="submit-review-btn" id="submitReviewButton" type="button" value="Submit Review" onclick="">
+                                        <input class="submit-review-btn" id="submitReviewButton" type="submit" value="Submit Review">
 
                                     </div>
                                 </form>
+                                <iframe id="uploader_iframe" name="uploader_iframe" style="display: none;"></iframe>
+
                             </div>
                             <div class="book-desc-btn-container">
                                 <div class="book-sum">The best teacher in life is life. Life in East Baltimore taught teenage Sunny how to do all the wrong things the right way. Learning life's lessons made Sunny too grown too fast...</div>
@@ -370,7 +374,7 @@
                             <div class="book-title">Universal Goddess</div>
                             <div class="book-author">by Vetta Jibade</div>
                             <div class="stars">
-                                <form class="book_form" method="POST" action="/submitReview" id="submitReviewFormId" name="submitReviewForm">
+                                <form class="book_form" method="POST" action="/submitReview" id="submitReviewFormId" name="submitReviewForm" target="uploader_iframe">
                                     <input type="hidden" class="book_form_label" name="bookName" value="Universal Goddess" />
                                     <div class="stars-row rating gold pulse col-lg-6 col-md-6 col-sm-6 col-xs-12">
 
@@ -402,10 +406,12 @@
 
                                         <textarea class="review" maxlength="500" placeholder="Write a review" col="30" rows="2" name="reviewInfo" align="left" wrap="cwrap" onclick="this.select()"></textarea>
 
-                                        <input class="submit-review-btn" id="submitReviewButton" type="button" value="Submit Review" onclick="">
+                                        <input class="submit-review-btn" id="submitReviewButton" type="submit" value="Submit Review">
 
                                     </div>
                                 </form>
+                                <iframe id="uploader_iframe" name="uploader_iframe" style="display: none;"></iframe>
+
                             </div>
                             <div class="book-desc-btn-container">
                                 <div class="book-sum">They've only had each other as friends. There was never a reason to depart, but branching out is a part of growth. They both grew up looking at the world the same...</div>
@@ -421,7 +427,7 @@
                             <div class="book-title">Mood Swings</div>
                             <div class="book-author">by Vetta Jibade</div>
                             <div class="stars">
-                                <form class="book_form" method="POST" action="/submitReview" id="submitReviewFormId" name="submitReviewForm">
+                                <form class="book_form" method="POST" action="/submitReview" id="submitReviewFormId" name="submitReviewForm" target="uploader_iframe">
                                     <input type="hidden" class="book_form_label" name="bookName" value="Mood Swings" />
                                     <div class="stars-row rating gold pulse col-lg-6 col-md-6 col-sm-6 col-xs-12">
 
@@ -453,10 +459,12 @@
 
                                         <textarea class="review" maxlength="500" placeholder="Write a review" col="30" rows="2" name="reviewInfo" align="left" wrap="cwrap" onclick="this.select()"></textarea>
 
-                                        <input class="submit-review-btn" id="submitReviewButton" type="button" value="Submit Review" onclick="">
+                                        <input class="submit-review-btn" id="submitReviewButton" type="submit" value="Submit Review">
 
                                     </div>
                                 </form>
+                                <iframe id="uploader_iframe" name="uploader_iframe" style="display: none;"></iframe>
+
                             </div>
                             <div class="book-desc-btn-container">
                                 <div class="book-sum">Mood Swings aren't crazy, they're beautiful. Take a look at the first collection of poetry by Vetta Jibade and various poets. Mood Swings is a collection of... </div>
@@ -470,11 +478,11 @@
 
             <div class="main-menu container-fluid">
                 <div class="product-types">
-                    <a href="/AllProducts" class="product-type allProducts active"> All Products</a>
-                    <a href="#" class="product-type sanitizer"> Sanitizers</a>
-                    <a href="#" class="product-type faceMask"> Face Masks</a>
-                    <a href="#" class="product-type bookBag"> Book Bags</a>
-                    <a href="#" class="product-type bedSet"> Bed Sets</a>
+                    <a href="" class="product-type allProducts active"> All Products</a>
+                    <a href="" class="product-type sanitizer"> Sanitizers</a>
+                    <a href="" class="product-type faceMask"> Face Masks</a>
+                    <a href="" class="product-type bookBag"> Book Bags</a>
+                    <a href="" class="product-type bedSet"> Bed Sets</a>
                 </div>
             </div>
 

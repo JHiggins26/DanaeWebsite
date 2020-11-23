@@ -55,7 +55,7 @@ const reviewRoutes = (app, fs) => {
 
 
     // Save Reviews in DB
-    app.post('/', (request, response) => {
+    app.post('/submitReview', (request, response) => {
 
         let connection = connectDB();
 

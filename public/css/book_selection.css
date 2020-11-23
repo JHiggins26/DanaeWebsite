@@ -254,6 +254,9 @@
     font-size: 1.5em;
     padding-left: 10px;
 
+
+    /*uncomment TODO*/
+    pointer-events: none;
 }
 
 .product-type {

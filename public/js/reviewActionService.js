@@ -30,8 +30,6 @@ $(document).ready(function () {
             rating.forEach(function (review) {
 
             });
-
-
         };
     }
 });
@@ -78,11 +76,9 @@ $('.close-review').on('click', function (e) {
 // Submit Button
 $('.submit-review-btn').on('click', function (e) {
 
-    e.preventDefault();
-
     if ($.trim($(this).siblings('.review').val()) && $.trim($(this).siblings('.reviewName').val())) {
 
-        //submitReview($(this)); // Submit Form
+        submitReview($(this)); // Submit Form
 
         $(this).closest('.stars').next().show(); // Book description
 
@@ -93,23 +89,9 @@ $('.submit-review-btn').on('click', function (e) {
         $(this).closest('.book-cell').css('height', '275px'); // Book Cell
 
         $(this).closest('.book-content').siblings('.book-img').find('.book-photo').css('height', '120%'); // Book image
-
     }
 
     return false;
-});
-
-$('.book_form').submit(function (e) {
-    e.preventDefault();
-
-    Swal.fire({
-        position: 'center',
-        type: 'success',
-        title: 'Nice, thanks for sharing! Your comment will be live shortly.',
-        width: 500
-    });
-
-    //    return false;
 });
 
 
@@ -117,19 +99,16 @@ $('.book_form').submit(function (e) {
 // Submit Review to Backend Server
 function submitReview(submitBtn) {
 
-    var form = submitBtn.closest('.book_form').submit();
-    submitBtn.closest('.book_form').reset();
-    //    form.trigger('submit'); // Submit the form
-    //    form.trigger('reset'); // Reset all form data including 'stars'
+    var form = submitBtn.closest('.book_form');
+    form.trigger('submit'); // Submit the form
+    form.trigger('reset'); // Reset all form data including 'stars'
 
-    //    Swal.fire({
-    //        position: 'center',
-    //        type: 'success',
-    //        title: 'Nice, thanks for sharing! Your comment will be live shortly.',
-    //        width: 500
-    //    });
-    //
-    //    return false;
+    Swal.fire({
+        position: 'center',
+        type: 'success',
+        title: 'Nice, thanks for sharing! Your comment will be live shortly.',
+        width: 500
+    });
 }
 
 
