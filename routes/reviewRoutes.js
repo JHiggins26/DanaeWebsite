@@ -7,11 +7,27 @@ const reviewRoutes = (app, fs) => {
 
     let HOST, USER, PASS, DB;
 
-
     exec("php config.php", function (error, stdout, stderr) {});
 
+    app.post('/protect', (request, response) => {
+        HOST = request.body.host;
+        USER = request.body.user;
+        PASS = request.body.password;
+        DB = request.body.database;
+    });
 
-    console.log('booting...')
+
+    function connectDB() {
+
+        let connection = mysql.createConnection({
+            host: decrypt(HOST),
+            user: decrypt(USER),
+            password: decrypt(PASS),
+            database: decrypt(DB)
+        });
+
+        return connection;
+    }
 
 
     // Get Reviews from DB
@@ -39,12 +55,10 @@ const reviewRoutes = (app, fs) => {
 
 
     // Save Reviews in DB
-    app.post('/submitReview', (request, response) => {
+    app.post('/', (request, response) => {
 
         let connection = connectDB();
 
-        console.log('Review is:' + request.body.reviewInfo);
-        console.log('Star is:' + request.body.starRating);
 
         let book = request.body.bookName;
         let cName = request.body.reviewName;
@@ -77,36 +91,6 @@ const reviewRoutes = (app, fs) => {
 
 
 
-function connectDB() {
-
-    //        HOST = request.body.host;
-    //        USER = request.body.user;
-    //        PASS = request.body.password;
-    //        DB = request.body.database;
-
-
-    let connection = mysql.createConnection({
-        host: '107.180.108.29',
-        user: 'jworklife',
-        password: 'Freshmen1#',
-        database: 'Writeitoutpublishingllc'
-
-        //            host: decrypt(HOST), // localhost - (Internal)  \  107.180.58.64 - (External)
-        //            user: decrypt(USER),
-        //            password: decrypt(PASS),
-        //            database: decrypt(DB)
-    });
-
-    //    connection.connect(function (error) {
-    //        if (error) {
-    //            console.log(error);
-    //        } else {
-    //            console.log('DB Connected!!');
-    //        }
-    //    });
-
-    return connection;
-}
 
 
 function decrypt(data) {

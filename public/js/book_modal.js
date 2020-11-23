@@ -76,12 +76,12 @@ $(document).ready(function () {
             document.getElementById('price').innerHTML = "$16.99";
 
             // PAID SHIPPING
-            //            document.getElementById('buyNowId').innerHTML = '<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PK27P4KZA2CN2" target="_blank">' +
-            //                '<img class="modal-order-btn" src="/img/Buy-Now-Btn.png" ></a>';
+            /*document.getElementById('buyNowId').innerHTML = '<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PK27P4KZA2CN2" target="_blank">' +
+                            '<img class="modal-order-btn" src="/img/Buy-Now-Btn.png" ></a>';*/
 
             document.getElementById('buyNowId').innerHTML = '<div class="page-wrapper">' +
-                '<a id="addtocart" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PK27P4KZA2CN2"><img class="modal-order-btn" src="img/Buy-Now-Btn.png">' +
-                '<span class="cart-item"></span>' +
+                '<a id="addtocart" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PK27P4KZA2CN2"><img class="modal-order-btn" src="img/addToCart-btn.png">' +
+                //                '<span class="cart-item"></span>' +
                 '</a>' +
                 '</div>';
 
@@ -109,12 +109,12 @@ $(document).ready(function () {
                 '<img class="modal-order-btn" src="Style/img/Buy-Now-Btn.png" ></a>';*/
 
             // PAID SHIPPING
-            document.getElementById('buyNowId').innerHTML = '<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=J7Y4EZX764KTL" target="_blank">' + '<img class="modal-order-btn" src="/img/Buy-Now-Btn.png" ></a>';
+            /*document.getElementById('buyNowId').innerHTML = '<a href="https: //www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=J7Y4EZX764KTL" target="_blank">' + '<img class="modal-order-btn" src="/img/Buy-Now-Btn.png" ></a>';*/
 
 
             document.getElementById('buyNowId').innerHTML = '<div class="page-wrapper">' +
-                '<a id="addtocart" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=J7Y4EZX764KTL"><img class="modal-order-btn" src="img/Buy-Now-Btn.png">' +
-                '<span class="cart-item"></span>' +
+                '<a id="addtocart" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=J7Y4EZX764KTL"><img class="modal-order-btn" src="img/addToCart-btn.png">' +
+                //                '<span class="cart-item"></span>' +
                 '</a>' +
                 '</div>';
 
@@ -139,36 +139,5 @@ $(document).ready(function () {
 
 
     });
-
-
-
-
-
-
-
-    $('#addtocart').on('click', function () {
-
-        var button = $(this);
-        var cart = $('#cart');
-
-        console.log(cart);
-        var cartTotal = cart.attr('data-totalitems');
-        var newCartTotal = parseInt(cartTotal) + 1;
-
-        button.addClass('sendtocart');
-        setTimeout(function () {
-
-            button.removeClass('sendtocart');
-
-            cart.addClass('shake').attr('data-totalitems', newCartTotal);
-
-            setTimeout(function () {
-                cart.removeClass('shake');
-            }, 500)
-        }, 1000)
-    });
-
-
-
 
 });

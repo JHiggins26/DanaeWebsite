@@ -2,14 +2,10 @@
 
 $(document).ready(function () {
 
-    //TODO calculate reviews rating stars then render average star rating
-
-
-
-
-
     var http = new XMLHttpRequest();
-    var url = 'http://localhost:3001/getRating/' + bookTitle; // TODO change URL
+    //    var url = 'http://localhost:3001/getRating/' + bookTitle; // TODO change URL
+    var url = 'http://writeitoutpublishingllc.com/getRating/' + bookTitle;
+
     http.open("GET", url, true);
     http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     //            http.send();
@@ -21,7 +17,7 @@ $(document).ready(function () {
 
             if (rating.length === 0 || rating === null || rating === undefined) {
 
-                var noRating = '';
+                var noReviews = '';
                 noReviews += '<div class="noReviews">' +
                     '<h2>No Reviews yet</h2>' +
                     '<h2>Rate to write a review.</h2>' +
@@ -86,7 +82,7 @@ $('.submit-review-btn').on('click', function (e) {
 
     if ($.trim($(this).siblings('.review').val()) && $.trim($(this).siblings('.reviewName').val())) {
 
-        submitReview($(this)); // Submit Form
+        //submitReview($(this)); // Submit Form
 
         $(this).closest('.stars').next().show(); // Book description
 
@@ -103,15 +99,8 @@ $('.submit-review-btn').on('click', function (e) {
     return false;
 });
 
-
-
-
-// Submit Review to Backend Server
-function submitReview(submitBtn) {
-
-    var form = submitBtn.closest('.book_form');
-    form.trigger('submit'); // Submit the form
-    form.trigger('reset'); // Reset all form data including 'stars'
+$('.book_form').submit(function (e) {
+    e.preventDefault();
 
     Swal.fire({
         position: 'center',
@@ -120,7 +109,27 @@ function submitReview(submitBtn) {
         width: 500
     });
 
-    return false;
+    //    return false;
+});
+
+
+
+// Submit Review to Backend Server
+function submitReview(submitBtn) {
+
+    var form = submitBtn.closest('.book_form').submit();
+    submitBtn.closest('.book_form').reset();
+    //    form.trigger('submit'); // Submit the form
+    //    form.trigger('reset'); // Reset all form data including 'stars'
+
+    //    Swal.fire({
+    //        position: 'center',
+    //        type: 'success',
+    //        title: 'Nice, thanks for sharing! Your comment will be live shortly.',
+    //        width: 500
+    //    });
+    //
+    //    return false;
 }
 
 

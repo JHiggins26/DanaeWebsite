@@ -117,6 +117,7 @@ textarea.reviewName {
     margin-bottom: 15px;
     line-height: 1.2em;
     position: relative;
+    overflow-y: hidden;
 }
 
 .close-review {

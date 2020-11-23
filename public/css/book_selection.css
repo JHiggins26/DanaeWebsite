@@ -26,7 +26,7 @@
 .book-cell {
     position: relative;
     display: flex;
-    padding: 25px 5px 5px 25px;
+    padding: 25px 0px 5px 15px;
     width: 45%;
     height: auto;
     text-align: left;
@@ -68,11 +68,11 @@
 }
 
 .flickity-prev-next-button.previous {
-    left: 15px;
+    left: 5px;
 }
 
 .flickity-prev-next-button.next {
-    right: 15px;
+    right: 5px;
 }
 
 .flickity-viewport {
@@ -210,7 +210,6 @@
 
 .main-wrapper {
     overflow: hidden;
-    background-color: blue;
     width: 100%;
     height: 500px;
 }
@@ -228,7 +227,8 @@
 .main-menu {
     margin-top: 8%;
     display: flex;
-    min-width: 100%;
+    min-width: 110%;
+    margin-left: -15px;
     width: inherit;
     align-items: center;
     white-space: nowrap;
@@ -240,12 +240,11 @@
     right: 0;
     /*    z-index: 2;*/
     background-color: #f8f8ff;
-
-
 }
 
 .product-types {
-    margin-left: auto;
+    /*    margin-left: auto;*/
+    margin: 0 auto;
     margin-top: 10px;
 }
 
@@ -462,6 +461,11 @@
         font-size: 1.3em;
     }
 
+    .product-type.active:before,
+    .product-type:hover:before {
+        width: 65px;
+    }
+
 }
 
 
@@ -472,9 +476,7 @@
     }
 
     .book-cell {
-        width: 100%;
-        /*        height: 320px;*/
-
+        width: 110%;
     }
 
     .book-title {
@@ -492,7 +494,6 @@
     .book-see {
         width: 120px;
         font-size: 13px;
-        /*        margin-top: 20%;*/
     }
 }
 
@@ -513,16 +514,9 @@
 /* Cell Phone */
 @media (max-width: 450px) {
 
-    .book-store {
-        /*        margin-top: 1px;*/
-    }
+    .book-store {}
 
-
-
-
-    .book-cell {
-        /*        height: 300px;*/
-    }
+    .book-cell {}
 
     .book-photo {
         width: 140px;
@@ -532,6 +526,43 @@
 
     .book-see {
         margin-top: 40%;
+    }
+
+    .product-types a {
+        font-size: .9em;
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .book-store {}
+
+    .product-types a {
+        font-size: .8em;
+    }
+
+    .product-type.active:before,
+    .product-type:hover:before {
+        width: 45px;
+    }
+
+    .book-cell {}
+
+    .book-photo {}
+
+    .flickity-prev-next-button.previous {
+        left: 0;
+    }
+
+    .flickity-prev-next-button.next {
+        right: 0;
+    }
+
+
+    .book-see {
+        margin-left: -2%;
     }
 
 

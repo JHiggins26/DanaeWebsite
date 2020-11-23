@@ -1,5 +1,7 @@
     const http = new XMLHttpRequest();
-    const url = 'http://localhost:3001/products'; // Need to change TODO
+    var url = 'http://localhost:3001/products'; // Need to change TODO
+    //    var url = 'http://writeitoutpublishingllc.com/products';
+
     http.open("GET", url);
     http.send();
 
@@ -11,9 +13,8 @@
         products = JSON.parse(http.responseText);
 
 
-        // Remeber to put back to http.readyState === 4 
-        //fdlefvdkln kjfejklnlnwflkenqlka
-        //jbjk fjfwejklerkn
+        // Remember to put back to http.readyState === 4 
+        //fdlefvdkln TODO
         if (http.readyState === 6 && http.status === 200) {
 
             html = '';

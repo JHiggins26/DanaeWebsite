@@ -2,14 +2,35 @@
 
 @media only screen and (max-width: 1199px) {
     /**/
+
+
 }
 
 /*MOBILE/SMALL DEVICES*/
 
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 995px) {
 
     .navbar-padding {
         padding: 0px 20px 0px 20px;
+    }
+
+    .author-name-section {
+        height: 500px;
+        padding-top: 180px;
+        padding-bottom: 0px;
+        background-position-y: 40%;
+    }
+
+    .author-name-top {
+        font-size: 5.5em;
+    }
+
+    .about-bio-container {
+        padding-bottom: 7%;
+    }
+
+    .about-bio-body {
+        font-size: 1.2em;
     }
 
     .books-container p {
@@ -32,10 +53,14 @@
     }
 
     .author-name-top {
-        margin-top: 80px;
+        margin-top: 160px;
         font-size: 4em;
     }
 
+
+    .author-tags {
+        font-size: 1.3em;
+    }
 
     .navbar-default .navbar-collapse,
     .navbar-default .navbar-form {
@@ -99,11 +124,12 @@
 
     .about-bio-container {
         margin-top: auto;
+        padding-bottom: 12%;
     }
 
     .about-bio-img {
-        width: 170px;
-        height: 170px;
+        width: 150px;
+        height: 150px;
     }
 
     .about-bio-container-title {
@@ -113,7 +139,7 @@
     }
 
     .about-bio-body {
-        font-size: 1.4em;
+        font-size: 1.2em;
         padding: 0px;
     }
 
@@ -166,7 +192,7 @@
     }
 
     .contact-container p {
-        font-size: 1.5em;
+        font-size: 1.3em;
     }
 
     .contact-container {}
@@ -192,8 +218,51 @@
 
 
 
-@media only screen and (max-width: 625px) {}
+@media only screen and (max-width: 625px) {
 
+    .author-name-section {
+        height: 400px;
+    }
+
+    .author-name-top {
+        margin-top: 80px;
+        font-size: 2.5em;
+    }
+
+    .author-tags {
+        font-size: 1em;
+        letter-spacing: 5px;
+    }
+
+    .social-media-icons {
+        width: 25px;
+    }
+
+    .about-bio-container {
+        padding-bottom: 15%;
+    }
+
+    .about-bio-body {
+        font-size: 1em;
+    }
+
+}
+
+
+@media only screen and (max-width: 500px) {
+    .author-name-section {
+        height: 300px;
+    }
+
+    .author-name-top {
+        margin-top: 0px;
+        font-size: 2.3em;
+    }
+
+    .author-tags {
+        font-size: .9em;
+    }
+}
 
 
 /*MOBILE/SMALL DEVICES*/
@@ -205,24 +274,28 @@
     }
 
     .author-name-section {
-        padding-top: 0px;
+        /*        padding-top: 0px;*/
     }
 
     .author-name-top {
-        font-size: 3em;
+        /*        font-size: 3em;*/
     }
 
     .author-name-bottom {
+        /*
         font-size: 4em;
         margin-top: -30px;
+*/
     }
 
     .author-tags {
         font-size: 1em;
+        letter-spacing: 3px;
     }
 
-    .social-media-icons {
-        width: 20px;
+    .about-bio-container {
+        margin-top: -47px;
+        padding-bottom: 18%;
     }
 
     .book-container {
@@ -251,8 +324,8 @@
     }
 
     .about-bio-img {
-        width: 150px;
-        height: 150px;
+        width: 130px;
+        height: 130px;
     }
 
     .about-bio-container-title {
@@ -261,9 +334,22 @@
 
     }
 
-    .about-bio-body {
+    .arrow-down:before {
+        width: 30px;
+        height: 30px;
+    }
+
+    .arrow-down-caption {
         font-size: 1.2em;
-        padding: 0px;
+    }
+
+    .arrow-up:before {
+        width: 30px;
+        height: 30px;
+    }
+
+    .arrow-up-caption {
+        font-size: 1.2em;
     }
 
     .books-title {
@@ -361,7 +447,11 @@
     }
 
     .contact-container p i {
-        font-size: .9em;
+        font-size: 1em;
+    }
+
+    .contact-container p {
+        font-size: 1em;
     }
 
     .contact-publishing-img {
@@ -375,24 +465,30 @@
 @media only screen and (max-width: 380px) {
 
     .author-name-top {
-        font-size: 3em;
+        /*        font-size: 3em;*/
     }
 
     .author-name-bottom {
-        font-size: 4em;
-        margin-top: -30px;
+        /*        font-size: 4em;*/
+        /*        margin-top: -30px;*/
     }
 
     .author-tags {
-        font-size: 1em;
+        font-size: .85em;
+
+        letter-spacing: 3px;
     }
 
     .social-media-icons {
-        width: 20px;
+        /*        width: 20px;*/
+    }
+
+    .about-bio-container {
+        padding-bottom: 20%;
     }
 
     .contact-container p i {
-        font-size: .8em;
+        /*        font-sizexs: .8em;*/
     }
 }
 
@@ -401,6 +497,6 @@
 @media only screen and (max-width: 320px) {
 
     .contact-container p i {
-        font-size: .7em;
+        /*        font-size: .8em;*/
     }
 }

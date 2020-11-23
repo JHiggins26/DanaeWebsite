@@ -133,7 +133,6 @@ a:focus {
     text-transform: uppercase;
     font-weight: normal;
     letter-spacing: 8px;
-    /*    display: flex;*/
     justify-content: center;
 }
 
@@ -142,8 +141,8 @@ a:focus {
     color: white;
     position: relative;
     top: -3px;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 1px;
+    padding-right: 1px;
 
 }
 
@@ -241,7 +240,6 @@ a:focus {
     position: absolute;
     right: 0;
     z-index: 0;
-    margin-top: -24px;
 }
 
 
@@ -269,24 +267,23 @@ a:focus {
 }
 
 .about-bio-container {
-    margin-top: 50px;
-    padding-bottom: 10px;
+    margin-top: 480px;
     height: auto;
     position: relative;
     background-color: #e40007;
-    /*    background: url(../img/Purple-BG.jpg);*/
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    padding-bottom: 6%;
 }
 
 .about-bio-img {
     border-radius: 100px;
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     position: absolute;
-    margin-top: -100px;
+    margin-top: -50px;
     z-index: 1;
     left: 17% !important;
     transform: translate(-50%, 0);
@@ -303,30 +300,31 @@ a:focus {
 }
 
 .about-bio-body {
-    font-size: 1.5em;
+    font-size: 1.3em;
     color: #ffffff;
     font-family: 'PT Sans', sans-serif;
     text-align: left;
     padding: 30px;
+
 }
 
 .about-bio-headings {
-    font-size: 1.1em;
     color: black;
+    font-weight: bold;
 }
 
 .arrow-down {
     animation: arr 2s infinite;
     position: relative;
-    margin-top: -20px;
+    margin-top: -25px;
     text-align: center;
 }
 
 .arrow-down:before {
     content: "";
     position: absolute;
-    width: 60px;
-    height: 60px;
+    width: 35px;
+    height: 35px;
     border-top: 10px solid black;
     border-right: 10px solid black;
     transform: rotate(135deg);
@@ -335,11 +333,11 @@ a:focus {
 
 .arrow-down-caption {
     color: #000000;
-    font-size: 1.5em;
+    font-size: 1.3em;
     text-align: center;
     position: absolute;
-    margin-left: -15px;
-    margin-top: -10px;
+    margin-left: -25px;
+    margin-top: -20px;
 }
 
 .arrow-up {
@@ -352,8 +350,8 @@ a:focus {
 .arrow-up:before {
     content: "";
     position: absolute;
-    width: 60px;
-    height: 60px;
+    width: 35px;
+    height: 35px;
     border-top: 10px solid black;
     border-right: 10px solid black;
     transform: rotate(-45deg);
@@ -361,11 +359,11 @@ a:focus {
 
 .arrow-up-caption {
     color: #000000;
-    font-size: 1.5em;
+    font-size: 1.3em;
     text-align: center;
     position: absolute;
-    margin-left: -15px;
-    margin-top: 40px;
+    margin-left: -25px;
+    margin-top: 30px;
 }
 
 @keyframes arr {
@@ -400,7 +398,7 @@ a:focus {
 .books-title {
     font-size: 3em;
     position: relative;
-    margin-top: 450px;
+    margin-top: 0px;
     z-index: 1;
     left: 17% !important;
     transform: translate(-50%, 0);
@@ -450,9 +448,11 @@ a:focus {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #FEE3FF;
+    /*    background-color: #FEE3FF;*/
+    background-color: transparent;
     padding: 0px;
     border-radius: 15px;
+    border: solid 2px #F8F8FF;
 }
 
 
@@ -464,10 +464,21 @@ a:focus {
 
 .modal-content {
     width: auto;
-    background-color: #FEE3FF;
+    background-color: transparent;
+    background: rgba(215, 209, 232, 0.1);
     margin-top: -30px;
     border-radius: 15px;
     min-height: 490px;
+}
+
+
+
+.modal-open .blur {
+    -webkit-filter: blur(8px);
+    -moz-filter: blur(8px);
+    -o-filter: blur(8px);
+    -ms-filter: blur(8px);
+    filter: blur(8px);
 }
 
 .modal-header-container {
@@ -482,13 +493,11 @@ a:focus {
     min-width: 100%;
     height: 100%;
     border-radius: 15px;
-
     -webkit-filter: blur(5px);
     -moz-filter: blur(5px);
     -o-filter: blur(5px);
     -ms-filter: blur(5px);
     filter: blur(5px);
-    /*opacity: ;*/
 }
 
 .modal-header-info {
@@ -501,7 +510,7 @@ a:focus {
 }
 
 #modal-books .modal-header-container .close {
-    position: fixed;
+    position: sticky;
     top: 0px;
     right: 10px;
     font-size: 4em;
@@ -519,18 +528,20 @@ a:focus {
     padding-bottom: 20px;
     padding-top: 20px;
     font-size: 2em;
-    color: black;
+    color: white;
     font-weight: bold;
     border-radius: 15px;
 }
 
 .modal-price {
-    color: #35E865;
+    color: white;
+    font-weight: 600;
     padding-bottom: 0px;
 }
 
-.modal-order-btn {
-    width: 200px;
+.page-wrapper .modal-order-btn {
+    max-width: 250px;
+    min-width: 250px;
 }
 
 .modal-date {
@@ -544,7 +555,8 @@ a:focus {
     padding-right: 20px;
     padding-left: 20px;
     text-align: left;
-    font-size: 1.3em;
+    font-size: 1.5em;
+    color: white;
 }
 
 /* End of Book selection slide show */
@@ -576,11 +588,23 @@ a:focus {
     opacity: .5;
 }
 
-#owl .item img {
+
+/*
+.owl-carousel {
+    background-color: green;
+    min-width: inherit;
+    height: 100px;
     display: block;
-    width: 100%;
-    height: 630px;
+    margin: 0 auto;
 }
+
+.owl-carousel .item img {
+    display: block;
+    width: 200px;
+    height: 630px;
+    background-color: green;
+}
+*/
 
 .email-container {}
 

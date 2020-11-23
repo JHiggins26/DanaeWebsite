@@ -16,9 +16,8 @@ $(document).ready(function () {
 
 
         bookTitle = $(this).data("modal-title");
-        var url = 'http://localhost:3001/getReviews/' + bookTitle; // TODO change URL
-        // var url = 'http://writeitoutpublishingllc.com/getReviews/' + bookTitle;
-
+        //        var url = 'http://localhost:3001/getReviews/' + bookTitle; // TODO change URL
+        var url = 'http://writeitoutpublishingllc.com/getReviews/' + bookTitle;
 
         html += '<div class="modal fade col-lg-6 col-md-8 col-sm-8 col-xs-10" id="modal-reviews" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">' +
 

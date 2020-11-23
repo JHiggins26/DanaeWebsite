@@ -2,9 +2,9 @@
     background-color: #f9f9f9;
     position: absolute;
     height: inherit;
+    min-width: 110%;
     overflow-x: hidden;
-    margin-left: -15px;
-    /*    background-color: green;*/
+    margin-left: -30px;
 }
 
 .colors ul,
@@ -41,6 +41,7 @@
 .product-container {
     width: inherit;
     height: inherit;
+    margin-left: -15px;
 }
 
 .product {
@@ -287,10 +288,10 @@ div.make3D.flip180 {
 }
 
 .view_gallery:hover {
-    /*    background: #fff;*/
-    /*    color: #5ff7d2;*/
-    /*    cursor: pointer;*/
-    pointer-events: none;
+    background: #fff;
+    color: #5ff7d2;
+    cursor: pointer;
+    /*    pointer-events: none;*/
 
 }
 
@@ -362,12 +363,29 @@ div.shadow {
 }
 
 .product-back div.shadow {
-    z-index: 10;
+    z-index: 4;
     opacity: 1;
     background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1));
     background: -o-linear-gradient(right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1));
     background: -moz-linear-gradient(right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1));
     background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1));
+}
+
+
+
+.owl-carousel {
+    max-width: 300px;
+    min-width: 200px;
+    max-height: 300px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10%;
+}
+
+.owl-carousel img {
+    width: inherit;
+    max-height: inherit;
+
 }
 
 .flip-back {
@@ -469,139 +487,6 @@ div.shadow {
     transition: all 100ms ease-out;
 }
 
-/*
-.carousel {
-    width: 300px;
-    max-width: 300px;
-    height: 400px;
-    overflow: hidden;
-    position: relative;
-    display: block;
-    margin: 0 auto;
-    top: 10%;
-}
-
-.carousel-container {
-}
-
-.carousel ul {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.carousel li {
-    width: 320px;
-    height: 500px;
-    float: left;
-    overflow: hidden;
-    margin-left: -3.7%;
-}
-
-.carousel img {
-    width: 300px;
-    max-width: 300px;
-}
-
-.arrows-perspective {
-    width: 315px;
-    height: 55px;
-    position: absolute;
-    top: 218px;
-    transform-style: preserve-3d;
-    transition: transform 5s;
-    perspective: 335px;
-}
-
-.carouselPrev,
-.carouselNext {
-    width: 50px;
-    height: 55px;
-    background: #ccc;
-    position: absolute;
-    top: 0;
-    transition: all 200ms ease-out;
-    opacity: 0.9;
-    cursor: pointer;
-}
-
-.carouselNext {
-    top: 0;
-    right: -26px;
-    -webkit-transform: rotateY(-117deg);
-    -moz-transform: rotateY(-117deg);
-    -o-transform: rotateY(-117deg);
-    transform: rotateY(-117deg);
-    transition: all 200ms ease-out;
-
-}
-
-.carouselNext.visible {
-    right: 0;
-    opacity: 0.8;
-    background: #fff;
-    -webkit-transform: rotateY(0deg);
-    -moz-transform: rotateY(0deg);
-    -o-transform: rotateY(0deg);
-    transform: rotateY(0deg);
-    transition: all 200ms ease-out;
-}
-
-.carouselPrev {
-    left: -26px;
-    top: 0;
-    -webkit-transform: rotateY(117deg);
-    -moz-transform: rotateY(117deg);
-    -o-transform: rotateY(117deg);
-    transform: rotateY(117deg);
-    transition: all 200ms ease-out;
-
-}
-
-.carouselPrev.visible {
-    left: 0;
-    opacity: 0.8;
-    background: #fff;
-    -webkit-transform: rotateY(0deg);
-    -moz-transform: rotateY(0deg);
-    -o-transform: rotateY(0deg);
-    transform: rotateY(0deg);
-    transition: all 200ms ease-out;
-}
-
-.carousel .x,
-.carousel .y {
-    height: 2px;
-    width: 15px;
-    background: #5ff7d2;
-    position: absolute;
-    top: 31px;
-    left: 17px;
-    -ms-transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-}
-
-.carousel .x {
-    -ms-transform: rotate(135deg);
-    -webkit-transform: rotate(135deg);
-    transform: rotate(135deg);
-    top: 21px;
-}
-
-.carousel .carouselNext .x {
-    -ms-transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-}
-
-.carousel .carouselNext .y {
-    -ms-transform: rotate(135deg);
-    -webkit-transform: rotate(135deg);
-    transform: rotate(135deg);
-}
-
-*/
 #info {
     position: absolute;
     top: 20px;
@@ -786,4 +671,13 @@ div.sku strong {
 
 @media (max-width: 1100px) {}
 
-@media (max-width: 767px) {}
+@media (max-width: 767px) {
+
+    .product {
+        height: 471px;
+    }
+
+    .owl-carousel {
+        margin-top: 5%;
+    }
+}
