@@ -58,6 +58,7 @@ a.sendtocart .cart-item:before {
 }
 
 
+/*
 .cart:before {
     content: attr(data-totalitems);
     font-size: 12px;
@@ -76,6 +77,7 @@ a.sendtocart .cart-item:before {
     z-index: 5;
 
 }
+*/
 
 .cart.shake {
     animation: shakeCart .3s ease-in-out forwards;
@@ -135,7 +137,7 @@ a.sendtocart .cart-item:before {
         padding: 2px 6px 2px 6px;
         width: 40px;
         height: 40px;
-
+        top: 10px;
     }
 }
 
@@ -144,6 +146,7 @@ a.sendtocart .cart-item:before {
         padding: 2px 6px 2px 6px;
         width: 40px;
         height: 40px;
+        margin-right: 5%;
 
     }
 }

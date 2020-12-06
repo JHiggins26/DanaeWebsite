@@ -2,28 +2,15 @@ let mysql = require('mysql');
 const exec = require("child_process").exec;
 const crypto = require('crypto');
 
-
-const reviewRoutes = (app, fs) => {
-
-    let HOST, USER, PASS, DB;
-
-    exec("php config.php", function (error, stdout, stderr) {});
-
-    app.post('/protect', (request, response) => {
-        HOST = request.body.host;
-        USER = request.body.user;
-        PASS = request.body.password;
-        DB = request.body.database;
-    });
-
+const reviewRoutes = (app, fs, creds) => {
 
     function connectDB() {
 
         let connection = mysql.createConnection({
-            host: decrypt(HOST),
-            user: decrypt(USER),
-            password: decrypt(PASS),
-            database: decrypt(DB)
+            host: decrypt(creds.host),
+            user: decrypt(creds.user),
+            password: decrypt(creds.pass),
+            database: decrypt(creds.db)
         });
 
         return connection;

@@ -12,7 +12,6 @@ const app = express();
 // serving HTML
 app.use(express.static('public'));
 
-
 app.use(bodyParser.urlencoded({
     extended: true
 }));
@@ -22,6 +21,6 @@ app.use(redirectToHTTPS([/localhost:(\d{4})/], [/\/insecure/], 301));
 
 const routes = require('./routes/routes.js')(app, fs);
 
-app.listen(3001, () => {
-    console.log('Server - side code running');
+app.listen(3000, () => {
+    console.log('Server running...');
 });

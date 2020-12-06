@@ -19,10 +19,10 @@ function encrypt($textToEncrypt) {
 
 function sendData($cred) {
     $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, 'localhost:3001/protect');
+    curl_setopt($ch, CURLOPT_URL, 'localhost:3000/protect');
     curl_setopt($ch, CURLOPT_HEADER, 0);
     curl_setopt($ch, CURLOPT_HTTPHEADER, array('Expect:'));
-    curl_setopt($ch, CURLOPT_PORT, 3001);
+    curl_setopt($ch, CURLOPT_PORT, 3000);
     curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 2);
     curl_setopt($ch, CURLOPT_, true);
     curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($cred));

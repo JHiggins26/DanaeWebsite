@@ -55,6 +55,15 @@
     -ms-transition: width 500ms ease-in-out;
     -o-transition: width 500ms ease-in-out;
     transition: width 500ms ease-in-out;
+    padding-bottom: 15px;
+}
+
+.on_sale {
+    max-width: 100px;
+    max-height: 100px;
+    position: absolute;
+    top: 10px;
+    right: 4%;
 }
 
 .product-front img {
@@ -157,11 +166,12 @@ div.make3D.flip180 {
 .stats-container {
     background: #fff;
     position: absolute;
-    top: 390px;
+    top: 370px;
     left: 0;
-    width: 100%;
+    width: inherit;
+    overflow-y: scroll;
     height: 310px;
-    padding: 24px 40px 35px 32px;
+    padding: 24px 10px 35px 10px;
     -webkit-transition: all 200ms ease-out;
     -moz-transition: all 200ms ease-out;
     -o-transition: all 200ms ease-out;
@@ -190,11 +200,11 @@ div.make3D.flip180 {
 }
 
 .stats-container .product_price {
-    float: right;
-    color: #35E865;
+    /*    color: #35E865;*/
     font-size: 22px;
-    font-weight: 600;
+    font-weight: 500;
     text-align: center;
+    padding-bottom: 20px;
 }
 
 .image_overlay {
@@ -354,7 +364,7 @@ div.shadow {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 3;
+    /*    z-index: 3;*/
     display: none;
     background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2));
     background: -o-linear-gradient(right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2));
@@ -363,7 +373,7 @@ div.shadow {
 }
 
 .product-back div.shadow {
-    z-index: 4;
+    /*    z-index: 4;*/
     opacity: 1;
     background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1));
     background: -o-linear-gradient(right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1));
@@ -669,15 +679,45 @@ div.sku strong {
 }
 
 
-@media (max-width: 1100px) {}
+@media (max-width: 1100px) {
+
+    .stats-container .product_name {
+        font-size: 18px;
+    }
+}
 
 @media (max-width: 767px) {
 
     .product {
         height: 471px;
+        margin-left: 6px;
+    }
+
+    .stats-container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .on_sale {
+        max-width: 90px;
+        max-height: 90px;
+        top: 10px;
+        right: 8%;
     }
 
     .owl-carousel {
         margin-top: 5%;
     }
+}
+
+@media (max-width: 450px) {
+
+    .stats-container .product_name {
+        /*        font-size: 16px;*/
+    }
+
+    .stats-container .product_price {
+        font-size: 20px;
+    }
+
 }

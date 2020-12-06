@@ -1,6 +1,6 @@
     const http = new XMLHttpRequest();
-    var url = 'http://localhost:3001/products'; // Need to change TODO
-    //    var url = 'http://writeitoutpublishingllc.com/products';
+    var url = 'http://localhost:3000/products'; // Need to change TODO
+    //    var url = 'https://writeitoutpublishingllc.com/products';
 
     http.open("GET", url);
     http.send();

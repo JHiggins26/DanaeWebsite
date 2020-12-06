@@ -1,41 +1,5 @@
 // ----------------------------------Review  Section
 
-$(document).ready(function () {
-
-    var http = new XMLHttpRequest();
-    //    var url = 'http://localhost:3001/getRating/' + bookTitle; // TODO change URL
-    var url = 'http://writeitoutpublishingllc.com/getRating/' + bookTitle;
-
-    http.open("GET", url, true);
-    http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-    //            http.send();
-
-    http.onreadystatechange = function () {
-        if (this.readyState === 4 && this.status === 200) {
-
-            var rating = JSON.parse(http.responseText);
-
-            if (rating.length === 0 || rating === null || rating === undefined) {
-
-                var noReviews = '';
-                noReviews += '<div class="noReviews">' +
-                    '<h2>No Reviews yet</h2>' +
-                    '<h2>Rate to write a review.</h2>' +
-                    '</div>';
-
-                //  $(".reviews-container").append(noReviews);
-            }
-
-
-            rating.forEach(function (review) {
-
-            });
-        };
-    }
-});
-
-
-
 
 // Star Rating
 $('.stars-row').on('click', function (e) {

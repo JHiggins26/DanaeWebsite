@@ -10,7 +10,6 @@ const productRoutes = (app, fs) => {
 
             res.send(JSON.parse(data));
 
-            const products = JSON.parse(data);
         });
     });
 };

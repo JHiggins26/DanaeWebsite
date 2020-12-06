@@ -25,7 +25,11 @@ div.stars {
 
 }
 
-.stars-row {}
+.stars-row {
+    z-index: 33333333;
+    cursor: pointer;
+
+}
 
 input.star {
     display: none;

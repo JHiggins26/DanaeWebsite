@@ -37,10 +37,11 @@
     <link rel="stylesheet" type="text/css" href="css/reviews.css">
     <link rel="stylesheet" type="text/css" href="css/review_modal.css">
     <link rel="stylesheet" type="text/css" href="css/cartHandler.css">
+    <link rel="stylesheet" type="text/css" href="css/lightbox.css">
 
     <link rel="stylesheet" type="text/css" href="css/sweetalert2.css">
 
-    <title>WriteitoutpublishingLLC</title>
+    <title>WriteItOutPublishingLLC</title>
 
 </head>
 
@@ -48,43 +49,81 @@
     <header>
         <!--Header Section-->
 
+        <div id="content">
+
+            <a href="#subscribe" class="wiggle" style="display: none;">
+            </a>
+            <div class="lightbox-container short-animate " id="subscribe">
+
+                <div class="lightbox col-lg-12 col-md-12 col-sm-12 col-xs-12 col-lg-offset-3 col-md-offset-3 col-sm-offset-2">
+
+                    <div class="lightbox-content-container col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="title">
+                            <h1>subscribe</h1>
+                        </div>
+
+                        <div class="lightbox-img">
+                            <img src="img/Publishing-Logo.png">
+                        </div>
+
+                        <div class="subscribe col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <h1>Subscribe to get the latest <span>news &amp; updates</span>.</h1>
+
+                            <form method="POST" action="/submitSubscriber" id="subscribeFormId" target="uploader_iframe" name="subscribeForm" class="subscribeForm">
+
+                                <input class="lightbox-input " type="email" placeholder="Your email address" name="subscriber">
+                                <input class="lightbox-submit " type="submit" value="Subscribe">
+                            </form>
+                            <iframe id="uploader_iframe" name="uploader_iframe" style="display: none;"></iframe>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="lightbox-controls" class="short-animate">
+                <a id="close-lightbox" class="long-animate" href="#">Close Lightbox</a>
+            </div>
+        </div>
+
         <div class="container-fluid">
             <div class="row">
 
-                <!--
-<div class="banner">
-    <marquee class="marquee" behavior="scroll" scrollamount="1" direction="right" width="100%">
-        <div id="marqueeWords"></div>
+                <div class="banner">
+                    <marquee class="marquee" behavior="scroll" scrollamount="1" direction="right" width="100%">
+                        <div id="marqueeWords"></div>
 
-        <script type="text/javascript">
-            let littleBlackGirl = [];
-            let discount = [];
-            let freeShipping = [];
+                        <script type="text/javascript">
+                            let littleBlackGirl = [];
+                            let discount = [];
+                            let freeShipping = [];
 
-            for (let i = 0; i < 500; i++) {
-                littleBlackGirl[i] = 'ORDER Little Black Girl TODAY!!!' + '&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;';
+                            for (let i = 0; i < 500; i++) {
+                                //                                littleBlackGirl[i] = 'ORDER Little Black Girl TODAY!!!' + '&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;';
 
-                discount[i] = 'ORDER Little Black Girl TODAY - 15% OFF' + '&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;';
+                                discount[i] = 'FREE Shipping for Orders $60 and up!' + '&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;';
 
-                freeShipping[i] = 'FREE SHIPPING Now - Dec 18th' + '&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;';
-            }
-            //document.getElementById('marqueeWords').style.color = '#fff568';
-            document.getElementById('marqueeWords').innerHTML = discount.join("");
-        </script>
-    </marquee>
-</div>-->
+                                //                                freeShipping[i] = 'FREE SHIPPING Now - Dec 18th' + '&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;';
+                            }
+                            //document.getElementById('marqueeWords').style.color = '#fff568';
+                            document.getElementById('marqueeWords').innerHTML = discount.join("");
+
+                        </script>
+                    </marquee>
+                </div>
 
                 <div class="author-name-section col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
                     <!--Shopping Cart-->
                     <!--                    <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_cart&business=WIOPLLC%40yahoo%2ecom&display=1" target="_blank"><img class="cart" src="img/shopping_cart.png"></a>-->
 
+
                     <div id="cart" class="cart" data-totalitems="0">
                         <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_cart&business=WIOPLLC%40yahoo%2ecom&display=1" target="_blank" style="color: black"><i class="fa fa-shopping-cart"></i></a>
                     </div>
 
 
-                    <h1 class="author-name-top col-lg-12 col-md-12 col-sm-12 col-xs-12">Vetta Jibade</h1>
+                    <h1 class="author-name-top col-lg-12 col-md-12 col-sm-12 col-xs-12">Vetta Shantell</h1>
                     <p class="author-tags col-lg-12 col-md-12 col-sm-12 col-xs-12">Author<span class="author-star">&#9733;</span>Publisher<span class="author-star">&#9733;</span>Entrepreneur</p>
 
                     <div class="social-media-container col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -131,7 +170,7 @@
                             <ul class="nav navbar-nav">
                                 <li class="navbar-padding"><a class="scroll" data-speed="1000" href="#bioId" id="nav-list">MEET VETTA</a></li>
                                 <li class="navbar-padding"><a class="scroll" data-speed="1000" href="#booksId" id="nav-list">BOOKS</a>
-                                    <!--                                <li class="navbar-padding"><a class="scroll" data-speed="1000" href="#storeId" id="nav-list">STORE</a></li>-->
+                                <li class="navbar-padding"><a class="scroll" data-speed="1000" href="#shopId" id="nav-list">SHOP</a></li>
                                 <li class="navbar-padding"><a class="scroll" data-speed="1000" href="#contactId" id="nav-list">CONTACT</a></li>
                             </ul>
                         </div>
@@ -145,9 +184,12 @@
 
                         <!--Paid Shipping Button-->
                         <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PK27P4KZA2CN2" target="_blank"><img class="order-btn" src="img/Buy-Now-Btn.png"></a>
+                        <!--                        
+
 
                         <!--Discount Button-->
-                        <!--<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=VMKMC2D84T4F2" target="_blank"><img class="order-btn" src="Style/img/Buy-Now-Btn.png" ></a>-->
+                        <!--                        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8QE5E9XJMNSV2" target="_blank"><img class="order-btn" src="img/Buy-Now-Btn.png"></a>-->
+
                     </div>
                 </div>
             </div>
@@ -164,17 +206,19 @@
 
                 <img class="about-bio-img col-lg-offset-4 col-md-offset-4 col-sm-offset-4 col-xs-offset-4" src="img/Danae.jpg">
 
-                <p class="about-bio-container-title col-lg-12 col-md-12 col-sm-12 col-xs-12">Meet Vetta Jibade</p>
+                <p class="about-bio-container-title col-lg-12 col-md-12 col-sm-12 col-xs-12">Meet Vetta Shantell</p>
 
                 <div class="container">
                     <p class="about-bio-body col-lg-10 col-md-11 col-sm-12 col-xs-12 col-lg-offset- col-md-offset-1 col-sm-offset-0 col-xs-offset-0">
-                        Founder and CEO of Write It Out Publishing LLC est. 2017<br> <b class="about-bio-headings">Where are you from?</b><br> East Baltimore City
-
+                        Meet the author Vetta Shantell. Founder and CEO of Write It Out Publishing LLC est. 2017.
+                        Author Vetta Shantell puts her esoteric knowledge into words that are relatable to children, as well as adults. Her first project titled "Little Black Girl" sets a tone of Peace and Healing of oneself. Vetta loves creating books for all ages.
 
                         <br>
-                        <b class="about-bio-headings">Do you have a publishing company?</b><br> Yes, Write It Out Publishing LLC is a publishing company that I decided to create because I wanted to self-publish. In the mist of that, I started to grow more ideas and I wanted to be a stepping stone to create opportunities for others that wanted to write and illustrate.<br>
-                        <span class="about-bio-hide"><b class="about-bio-headings">Is it a children’s book?</b><br> It is for all ages. I like to say it’s a book for families that speaks on esoteric knowledge and spirituality.<br>
-                            <b class="about-bio-headings">Is there anything you would like to add?</b><br> Yes, I would like to give a special shout out to my illustrator, Alexis Nelson. Alexis did the cover to "Sunny North to Sunny South" and was able to bring "Little Black Girl" to life with the help of another amazing artist Jalia E. Also, a special shout-out to everyone who has supported me by giving me advice, encouraging words, motivation when I was ready to give up, those who let me cry on their shoulders, and those who’ve supported me by sharing my posts, buying books, and passing it on by word-of-mouth. I thank you all.
+
+                        <span class="about-bio-hide">
+                            <b class="about-bio-headings">Acknowledgment:</b><br>
+
+                            A special shout out to my illustrator, Alexis Nelson. Alexis did the cover to "Sunny North to Sunny South" and was able to bring "Little Black Girl" to life with the help of another amazing artist Jalia E.
                         </span>
                     </p>
                 </div>
@@ -203,13 +247,14 @@
         <div class="book-store col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="book-slide">
                 <div class="book js-flickity" data-flickity-options='{ "wrapAround": true }'>
+
                     <div class="book-cell col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="book-img">
                             <img src="img/LBG-Book-Cover.png" alt="" class="book-photo">
                         </div>
                         <div class="book-content">
                             <div class="book-title">Little Black Girl</div>
-                            <div class="book-author">by Vetta Jibade</div>
+                            <div class="book-author">by Vetta Shantell</div>
 
                             <div class="stars">
                                 <form class="book_form" method="POST" action="/submitReview" id="submitReviewFormId" name="submitReviewForm" target="uploader_iframe">
@@ -266,7 +311,7 @@
                         </div>
                         <div class="book-content">
                             <div class="book-title">Little Black Boy</div>
-                            <div class="book-author">by Vetta Jibade</div>
+                            <div class="book-author">by Vetta Shantell</div>
                             <div class="stars">
                                 <form class="book_form" method="POST" action="/submitReview" id="submitReviewFormId" name="submitReviewForm" target="uploader_iframe">
                                     <input type="hidden" class="book_form_label" name="bookName" value="Little Black Boy" />
@@ -319,7 +364,7 @@
                         </div>
                         <div class="book-content">
                             <div class="book-title">Sunny North To Sunny South</div>
-                            <div class="book-author">by Vetta Jibade</div>
+                            <div class="book-author">by Vetta Shantell</div>
                             <div class="stars">
                                 <form class="book_form" method="POST" action="/submitReview" id="submitReviewFormId" name="submitReviewForm" target="uploader_iframe">
                                     <input type="hidden" class="book_form_label" name="bookName" value="Sunny North To Sunny South" />
@@ -372,7 +417,7 @@
                         </div>
                         <div class="book-content">
                             <div class="book-title">Universal Goddess</div>
-                            <div class="book-author">by Vetta Jibade</div>
+                            <div class="book-author">by Vetta Shantell</div>
                             <div class="stars">
                                 <form class="book_form" method="POST" action="/submitReview" id="submitReviewFormId" name="submitReviewForm" target="uploader_iframe">
                                     <input type="hidden" class="book_form_label" name="bookName" value="Universal Goddess" />
@@ -425,7 +470,7 @@
                         </div>
                         <div class="book-content">
                             <div class="book-title">Mood Swings</div>
-                            <div class="book-author">by Vetta Jibade</div>
+                            <div class="book-author">by Vetta Shantell</div>
                             <div class="stars">
                                 <form class="book_form" method="POST" action="/submitReview" id="submitReviewFormId" name="submitReviewForm" target="uploader_iframe">
                                     <input type="hidden" class="book_form_label" name="bookName" value="Mood Swings" />
@@ -467,8 +512,8 @@
 
                             </div>
                             <div class="book-desc-btn-container">
-                                <div class="book-sum">Mood Swings aren't crazy, they're beautiful. Take a look at the first collection of poetry by Vetta Jibade and various poets. Mood Swings is a collection of... </div>
-                                <div class="book-see col-lg-12 col-md-12 col-sm-12 col-xs-12"><a class="book-info book-purple" data-modal-title="Mood Swings" data-modal-description="Mood Swings aren't crazy, they're beautiful. Take a look at the first collection of poetry by Vetta Jibade and various poets. Mood Swings is a collection of sensitive, wild, loving, free and unbiased poems. They call you <q>crazy</q> because you have a normal case of mood swings? Get a taste of these poets extreme and rapid change in mood through poetry.">See Book</a></div>
+                                <div class="book-sum">Mood Swings aren't crazy, they're beautiful. Take a look at the first collection of poetry by Vetta Shantell and various poets. Mood Swings is a collection of... </div>
+                                <div class="book-see col-lg-12 col-md-12 col-sm-12 col-xs-12"><a class="book-info book-purple" data-modal-title="Mood Swings" data-modal-description="Mood Swings aren't crazy, they're beautiful. Take a look at the first collection of poetry by Vetta Shantell and various poets. Mood Swings is a collection of sensitive, wild, loving, free and unbiased poems. They call you <q>crazy</q> because you have a normal case of mood swings? Get a taste of these poets extreme and rapid change in mood through poetry.">See Book</a></div>
                             </div>
                         </div>
                     </div>
@@ -476,17 +521,17 @@
             </div>
 
 
-            <div class="main-menu container-fluid">
+            <div class="main-menu container-fluid" id="shopId">
                 <div class="product-types">
                     <a href="" class="product-type allProducts active"> All Products</a>
-                    <a href="" class="product-type sanitizer"> Sanitizers</a>
-                    <a href="" class="product-type faceMask"> Face Masks</a>
+                    <a href="" class="product-type sanitizer"> Sanitizers<img class="coming_soon_banner" src="img/coming-soon-banner.png" /></a>
+                    <a href="" class="product-type faceMask"> Face Masks<img class="coming_soon_banner" src="img/coming-soon-banner.png" /></a>
                     <a href="" class="product-type bookBag"> Book Bags</a>
-                    <a href="" class="product-type bedSet"> Bed Sets</a>
+                    <a href="" class="product-type bedSet"> Bed Sets<img class="coming_soon_banner" src="img/coming-soon-banner.png" /></a>
                 </div>
             </div>
 
-            <div class=" main-wrapper container-fluid">
+            <div class=" main-wrapper container-fluid" id="shopId">
 
                 <div class="book-scroll-container ">
 
@@ -494,15 +539,17 @@
 
                         <div id="grid" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
-                            <div class="product col-lg-4 col-md-5 col-sm-6 col-xs-12">
+                            <div class="product col-lg-3 col-md-3 col-sm-5 col-xs-11 col-lg-offset-1 col-md-offset-1 col-xs-offset-1">
 
                                 <div class="make3D">
                                     <div class="product-front">
-                                        <div class="shadow"></div>
-                                        <img src="img/LBG_BookBag.jpg" alt="" />
+                                        <div class="on_sale">
+                                            <img src="img/special-offer-banner.png">
+                                        </div>
+                                        <img src="img/package-deal(LBG_BookBag).jpg" alt="" />
                                         <div class="image_overlay"></div>
 
-                                        <a id="addtocart" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GGAVTTWZS926S">
+                                        <a id="addtocart" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TF8M33AR993RL" target="_blank">
                                             <div class="add_to_cart">Add to cart</div>
                                         </a>
 
@@ -510,16 +557,26 @@
                                         <div class="stats">
                                             <div class="stats-container col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
-                                                <span class="product_name col-lg-12 col-md-12 col-sm-12 col-xs-12">Little Black Girl Book Bag</span>
-                                                <span class="product_price col-lg-12 col-md-12 col-sm-12 col-xs-12">$32.99</span>
-                                                <p>Mutli-colored universe Little Black Girl Book Bag. Durable bond stitching, making it secure to safely transport your important essentials like books and laptops.</p>
+                                                <span class="product_name col-lg-12 col-md-12 col-sm-12 col-xs-12"><span style="color: red">Package Deal:</span> LBG Book Bag + LBG &amp; LBB Book</span>
 
-                                                <div class="product-options">
-                                                    <strong>SIZES</strong>
-                                                    <span>M</span>
-                                                    <strong>COLORS</strong>
-                                                    <div class="colors">
-                                                        <div class="c-black"><span></span></div>
+                                                <div class="product_price col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                    <span class=" " style='color:black;text-decoration:line-through; text-decoration-color: red;'><span style='color:black'>$</span>98.00</span>
+                                                    <span class="" style=' color:black; text-decoration:none'><span style='color:black'>$</span>49.99</span>
+                                                </div>
+
+                                                <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12">Mutli-colored universe Little Black Girl Book Bag. Durable bond stitching, making it secure to safely transport your important essentials like books and laptops.</p>
+
+                                                <div class="product-options col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                                        <strong>SIZES</strong>
+                                                        <span>M</span>
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                                        <strong>COLORS</strong>
+                                                        <div class="colors">
+                                                            <div class="c-black"><span></span></div>
+                                                        </div>
                                                     </div>
                                                 </div>
 
@@ -537,9 +594,7 @@
                                         <script>
                                             $(document).ready(function() {
                                                 var photoUrls = [
-                                                    'img/LBG_BookBag_showcase1.jpg',
-                                                    'img/LBG_BookBag_showcase2.jpg',
-                                                    'img/LBG_BookBag_showcase3.jpg'
+                                                    'img/LBG_BookBag_showcase4.jpg'
                                                 ];
                                                 var id = '#owl-1';
                                                 populateSlides(photoUrls, id);
@@ -555,40 +610,50 @@
                                 </div>
                             </div>
 
-
-                            <div class="product col-lg-4 col-md-5 col-sm-6 col-xs-12">
+                            <div class="product col-lg-3 col-md-3 col-sm-5 col-xs-11">
 
                                 <div class="make3D">
                                     <div class="product-front">
-                                        <div class="shadow"></div>
-                                        <img src="img/LBB_BookBag.jpg" alt="" />
+                                        <div class="on_sale">
+                                            <img src="img/special-offer-banner.png">
+                                        </div>
+                                        <img src="img/package-deal(LBB_BookBag).jpg" alt="" />
                                         <div class="image_overlay"></div>
 
-                                        <a id="addtocart" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=SFYDURECAWNYE">
-
+                                        <a id="addtocart" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WX9HQEQY3D8L6" target="_blank">
                                             <div class="add_to_cart">Add to cart</div>
-
                                         </a>
 
                                         <div class="view_gallery">View gallery</div>
                                         <div class="stats">
                                             <div class="stats-container col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
-                                                <span class="product_name col-lg-12 col-md-12 col-sm-12 col-xs-12">Little Black Boy Book Bag</span>
-                                                <span class="product_price col-lg-12 col-md-12 col-sm-12 col-xs-12">$32.99</span>
-                                                <p>Mutli-colored universe Little Black Boy Book Bag. Durable bond stitching, making it secure to safely transport your important essentials like books and laptops.</p>
-                                                <div class="product-options">
-                                                    <strong>SIZES</strong>
-                                                    <span>M</span>
-                                                    <strong>COLORS</strong>
-                                                    <div class="colors">
-                                                        <div class="c-black"><span></span></div>
+                                                <span class="product_name col-lg-12 col-md-12 col-sm-12 col-xs-12"><span style="color: red">Package Deal:</span> LBB Book Bag + LBG &amp; LBB Book</span>
+
+                                                <div class="product_price col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                    <span class=" " style='color:black;text-decoration:line-through; text-decoration-color: red;'><span style='color:black'>$</span>98.00</span>
+                                                    <span class="" style=' color:black; text-decoration:none'><span style='color:black'>$</span>49.99</span>
+                                                </div>
+
+                                                <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12">Mutli-colored universe Little Black Girl Book Bag. Durable bond stitching, making it secure to safely transport your important essentials like books and laptops.</p>
+
+                                                <div class="product-options col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                                        <strong>SIZES</strong>
+                                                        <span>M</span>
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                                        <strong>COLORS</strong>
+                                                        <div class="colors">
+                                                            <div class="c-black"><span></span></div>
+                                                        </div>
                                                     </div>
                                                 </div>
+
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="product-back ">
+                                    <div class="product-back">
                                         <div class="shadow"></div>
 
                                         <div id="owl-2" class="owl-carousel owl-theme"></div>
@@ -599,10 +664,7 @@
                                         <script>
                                             $(document).ready(function() {
                                                 var photoUrls = [
-                                                    'img/LBB_BookBag_showcase1.jpg',
-                                                    'img/LBB_BookBag_showcase2.jpg',
-                                                    'img/LBB_BookBag_showcase3.jpg',
-                                                    'img/LBB_BookBag_showcase4.jpg'
+                                                    'img/LBB_BookBag_showcase5.jpg'
                                                 ];
                                                 var id = '#owl-2';
                                                 populateSlides(photoUrls, id);
@@ -618,19 +680,217 @@
                                 </div>
                             </div>
 
+                            <div class="product col-lg-3 col-md-3 col-sm-5 col-xs-11 col-lg-offset-0 col-md-offset-0 col-sm-offset-1 col-xs-offset-0">
+
+                                <div class="make3D">
+                                    <div class="product-front">
+                                        <div class="on_sale">
+                                            <img src="img/on-sale.png">
+                                        </div>
+                                        <img src="img/LBG_BookBag.jpg" alt="" />
+                                        <div class="image_overlay"></div>
+
+                                        <a id="addtocart" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GGAVTTWZS926S" target="_blank">
+                                            <div class="add_to_cart">Add to cart</div>
+                                        </a>
+
+                                        <div class="view_gallery">View gallery</div>
+                                        <div class="stats">
+                                            <div class="stats-container col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                                                <span class="product_name col-lg-12 col-md-12 col-sm-12 col-xs-12">Little Black Girl Book Bag</span>
+
+                                                <div class="product_price col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                    <span class=" " style='color:black;text-decoration:line-through; text-decoration-color: red;'><span style='color:black'>$</span>32.99</span>
+                                                    <span class="" style=' color:black; text-decoration:none'><span style='color:black'>$</span>28.99</span>
+                                                </div>
+
+                                                <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12">Mutli-colored universe Little Black Girl Book Bag. Durable bond stitching, making it secure to safely transport your important essentials like books and laptops.</p>
+
+                                                <div class="product-options col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                                        <strong>SIZES</strong>
+                                                        <span>M</span>
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                                        <strong>COLORS</strong>
+                                                        <div class="colors">
+                                                            <div class="c-black"><span></span></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-back">
+                                        <div class="shadow"></div>
+
+                                        <div id="owl-3" class="owl-carousel owl-theme"></div>
+
+                                        <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+                                        <script src="js/owl_slider.js"></script>
+
+                                        <script>
+                                            $(document).ready(function() {
+                                                var photoUrls = [
+                                                    'img/LBG_BookBag_showcase1.jpg',
+                                                    'img/LBG_BookBag_showcase2.jpg',
+                                                    'img/LBG_BookBag_showcase3.jpg',
+                                                    'img/LBG_BookBag_showcase4.jpg'
+                                                ];
+                                                var id = '#owl-3';
+                                                populateSlides(photoUrls, id);
+                                            });
+
+                                        </script>
+
+                                        <div class="flip-back">
+                                            <div class="cy"></div>
+                                            <div class="cx"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
 
+                            <div class="product col-lg-3 col-md-3 col-sm-5 col-xs-11 col-lg-offset-1 col-md-offset-1">
+
+                                <div class="make3D">
+                                    <div class="product-front">
+                                        <div class="on_sale">
+                                            <img src="img/on-sale.png">
+                                        </div> <img src="img/LBB_BookBag.jpg" alt="" />
+                                        <div class="image_overlay"></div>
+
+                                        <a id="addtocart" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=SFYDURECAWNYE" target="_blank">
+
+                                            <div class="add_to_cart">Add to cart</div>
+                                        </a>
+
+                                        <div class="view_gallery">View gallery</div>
+                                        <div class="stats">
+                                            <div class="stats-container col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                                                <span class="product_name col-lg-12 col-md-12 col-sm-12 col-xs-12">Little Black Boy Book Bag</span>
+                                                <div class="product_price col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                    <span class=" " style='color:black;text-decoration:line-through; text-decoration-color: red;'><span style='color:black'>$</span>32.99</span>
+                                                    <span class="" style=' color:black; text-decoration:none'><span style='color:black'>$</span>28.99</span>
+                                                </div>
+                                                <p>Mutli-colored universe Little Black Boy Book Bag. Durable bond stitching, making it secure to safely transport your important essentials like books and laptops.</p>
+                                                <div class="product-options">
+                                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                                        <strong>SIZES</strong>
+                                                        <span>M</span>
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                                        <strong>COLORS</strong>
+                                                        <div class="colors">
+                                                            <div class="c-black"><span></span></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-back ">
+                                        <div class="shadow"></div>
+
+                                        <div id="owl-4" class="owl-carousel owl-theme"></div>
+
+                                        <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+                                        <script src="js/owl_slider.js"></script>
+
+                                        <script>
+                                            $(document).ready(function() {
+                                                var photoUrls = [
+                                                    'img/LBB_BookBag_showcase1.jpg',
+                                                    'img/LBB_BookBag_showcase2.jpg',
+                                                    'img/LBB_BookBag_showcase3.jpg',
+                                                    'img/LBB_BookBag_showcase4.jpg',
+                                                    'img/LBB_BookBag_showcase5.jpg'
+                                                ];
+                                                var id = '#owl-4';
+                                                populateSlides(photoUrls, id);
+                                            });
+
+                                        </script>
+
+                                        <div class="flip-back">
+                                            <div class="cy"></div>
+                                            <div class="cx"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="product col-lg-3 col-md-3 col-sm-5 col-xs-11 col-lg-offset-0 col-md-offset-0 col-sm-offset-1 col-xs-offset-0">
+
+                                <div class="make3D">
+                                    <div class="product-front">
+                                        <div class="on_sale">
+                                            <img src="img/on-sale.png">
+                                        </div> <img src="img/LBG_LBB_Book_Bundle.jpg" alt="" />
+                                        <div class="image_overlay"></div>
+
+                                        <a id="addtocart" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QWHRRAMT28Z4Y" target="_blank">
+
+                                            <div class="add_to_cart">Add to cart</div>
+                                        </a>
+
+                                        <div class="view_gallery">View gallery</div>
+                                        <div class="stats">
+                                            <div class="stats-container col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                                                <span class="product_name col-lg-12 col-md-12 col-sm-12 col-xs-12">Little Black Girl &amp; Little Black Boy Book Bundle</span>
+                                                <div class="product_price col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                    <span class=" " style='color:black;text-decoration:line-through; text-decoration-color: red;'><span style='color:black'>$</span>31.98</span>
+                                                    <span class="" style=' color:black; text-decoration:none'><span style='color:black'>$</span>26.99</span>
+                                                </div>
+                                                <p>Little Black Girl &amp; Little Black Boy Book Bundle</p>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="product-back ">
+                                        <div class="shadow"></div>
+
+                                        <div id="owl-4" class="owl-carousel owl-theme"></div>
+
+                                        <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+                                        <script src="js/owl_slider.js"></script>
+
+                                        <script>
+                                            $(document).ready(function() {
+                                                var photoUrls = [
+                                                    'img/LBB_BookBag_showcase1.jpg',
+                                                    'img/LBB_BookBag_showcase2.jpg',
+                                                    'img/LBB_BookBag_showcase3.jpg',
+                                                    'img/LBB_BookBag_showcase4.jpg',
+                                                    'img/LBB_BookBag_showcase5.jpg'
+                                                ];
+                                                var id = '#owl-4';
+                                                populateSlides(photoUrls, id);
+                                            });
+
+                                        </script>
+
+                                        <div class="flip-back">
+                                            <div class="cy"></div>
+                                            <div class="cx"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
 
                 </div>
             </div>
         </div>
 
     </div>
-
-
 
 
 
@@ -700,6 +960,7 @@
 
         <div class="contact-container col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
+            <!--
             <p class="">Do you have a story?</p>
 
             <p class="">Do you want to get your work recognized?</p>
@@ -709,20 +970,22 @@
             <p class="">Are you an illustrator, writer, editor, photographer, or videographer?</p>
 
             <p class="">Let’s work! Feel Free to contact us at:</p>
+-->
 
             <a href="mailto:Writeitoutpublishingllc@yahoo.com" target="_blank">
                 <p class="col-xs-12"><img src="img/yahoo.png" class="social-media-icons ">
-                    <b><i>Writeitoutpublishingllc@yahoo.com</i></b>
+                    <b><i>WriteItOutPublishingLLC@yahoo.com</i></b>
                 </p>
             </a>
 
             <a href="https://www.instagram.com/writeitoutpublishingllc/" target="_blank">
                 <p class="col-xs-12"><img src="img/instagram.png" class="social-media-icons">
-                    <b><i>@Vettas_writeitoutpublishing</i></b>
+                    <b><i>@WriteItOutPublishingLLC
+                        </i></b>
                 </p>
             </a>
 
-            <p class="col-xs-12">Check out our upcoming events and see what’s next.</p>
+            <!--            <p class="col-xs-12">Check out our upcoming events and see what’s next.</p>-->
 
             <img class="contact-publishing-img" src="img/Publishing-Logo.png">
         </div>
@@ -750,11 +1013,9 @@
                         <a href="#">
                             <li class="scroll col-lg-2 col-md-2 col-sm-2 col-xs-11" data-speed="1000" href="#booksId">BOOKS</li>
                         </a>
-                        <!--
                         <a href="#">
-                            <li class="scroll col-lg-2 col-md-2 col-sm-2 col-xs-11" data-speed="1000" href="#storeId">STORE</li>
+                            <li class="scroll col-lg-2 col-md-2 col-sm-2 col-xs-11" data-speed="1000" href="#shopId">SHOP</li>
                         </a>
--->
                         <a href="#">
                             <li class="scroll col-lg-2 col-md-2 col-sm-2 col-xs-11" data-speed="1000" href="#contactId">CONTACT</li>
                         </a>
@@ -762,7 +1023,7 @@
 
                     <div class="col-xs-12"></div>
 
-                    <div class="copy-rights col-lg-3 col-md-3 col-sm-4 col-xs-12">&copy; 2020 Writeitoutpublishing.com</div>
+                    <div class="copy-rights col-lg-3 col-md-3 col-sm-4 col-xs-12">&copy; 2020 WriteItOutPublishingLLC.com</div>
 
                     <div class="web-designer col-lg-4 col-md-4 col-sm-6 col-xs-12 col-lg-offset-5 col-md-offset-5 col-sm-offset-2">
                         <a href="mailto:Jawanhiggins@gmail.com">Site Designed by Jawanhiggins@gmail.com</a>
@@ -798,7 +1059,6 @@
     <script src="js/event_photo_modal.js"></script>
 
     <script src="js/scroll.js"></script>
-    <script src="js/cartHandler.js"></script>
 
 
     <!--<script src="js/angular-animate.js"></script>-->
@@ -813,8 +1073,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js"></script>
 
-
-
     <!--    <script src="js/book_slideshow.js"></script>
         -->
     <!--    <script src="js/productActionService.js"></script>-->
@@ -825,6 +1083,11 @@
     <script src="js/reviewActionService.js"></script>
 
     <script src="js/sweetalert2.js"></script>
+
+    <script src="js/cartHandler.js"></script>
+
+    <script src="js/lightbox.js"></script>
+
 
 
     <!--Animated Hide & Show Icons for the Bio-->
