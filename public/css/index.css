@@ -624,8 +624,6 @@ a:focus {
 }
 */
 
-.email-container {}
-
 .email-subscribe-title {
     color: black;
     font-family: 'Convergence', sans-serif;
@@ -732,8 +730,6 @@ a:focus {
     padding-bottom: 10px;
     height: auto;
 }
-
-.social-media-footer-container {}
 
 .footer-links li {
     text-decoration: none;
