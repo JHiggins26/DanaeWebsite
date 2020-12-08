@@ -11,9 +11,13 @@ $('.stars-row').on('click', function (e) {
 
     $(this).siblings('.rev-box').addClass('rev-box-show'); // Review Container
 
-    $(this).closest('.book-cell').css('height', '350px'); // Book Cell
-
     $(this).closest('.book-content').siblings('.book-img').find('.book-photo').css('height', '100%'); // Book image
+
+    if ($(window).width() < 768) {
+        $(this).closest('.book-slide').next().next().css('margin-top', '23%');
+    } else {
+        $(this).closest('.book-slide').next().next().css('margin-top', '12%');
+    }
 
 });
 
@@ -30,9 +34,9 @@ $('.close-review').on('click', function (e) {
 
     $(this).closest('.book_form').trigger('reset'); // Book Form
 
-    $(this).closest('.book-cell').css('height', '275px'); // Book Cell
+    $(this).closest('.book-content').siblings('.book-img').find('.book-photo').css('height', '110%'); // Book image
 
-    $(this).closest('.book-content').siblings('.book-img').find('.book-photo').css('height', '120%'); // Book image
+    $(this).closest('.book-slide').next().next().css('margin-top', '5%');
 
 });
 
@@ -50,9 +54,10 @@ $('.submit-review-btn').on('click', function (e) {
 
         $(this).siblings('.review').val(''); // Review Box
 
-        $(this).closest('.book-cell').css('height', '275px'); // Book Cell
+        $(this).closest('.book-content').siblings('.book-img').find('.book-photo').css('height', '110%'); // Book image
 
-        $(this).closest('.book-content').siblings('.book-img').find('.book-photo').css('height', '120%'); // Book image
+        $(this).closest('.book-slide').next().next().css('margin-top', '5%');
+
     }
 
     return false;

@@ -81,6 +81,10 @@ a:focus {
 
 .banner {
     background-color: darkorange;
+    /*    background-color: rgba(255, 140, 0, 1);*/
+
+
+    /*    background-color: rgba(161, 4, 52, .5);*/
     color: white;
     height: 30px;
     text-align: center;
@@ -91,18 +95,20 @@ a:focus {
 
 
 .author-name-section {
-    color: rgba(255, 255, 255, 1);
+    /*    color: rgba(255, 255, 255, 1);*/
     height: 600;
     padding-top: 180px;
     padding-bottom: 0px;
+
     /*        background: linear-gradient(to bottom, transparent, black 100%), url("../img/DanaeJumboBanner-resized.jpg") no-repeat center;*/
 
-    background: linear-gradient(to bottom, transparent, black 100%),
+    background: linear-gradient(to bottom, transparent, black 90%),
         url("../img/Book Boutique Bookstore_1_1.jpg") no-repeat center;
+
+
     background-color: black;
     /*        background-size: 100% 100%;*/
     background-size: contain;
-
     background-position-y: 40%;
     text-align: center;
     z-index: 2;
@@ -167,6 +173,11 @@ a:focus {
     top: -10px;
 }
 
+
+.navbar-default {
+    height: auto;
+}
+
 .navbar .navbar-nav {
     display: inline-block;
     float: none;
@@ -178,11 +189,13 @@ a:focus {
 
 .navbar {
     border-color: transparent;
-    background-color: transparent;
+    background-color: white;
+    /*    background-color: transparent;*/
     width: 100%;
     left: 0;
     right: 0;
-    padding-top: 10px;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 
 .navbar-padding {
@@ -191,12 +204,14 @@ a:focus {
 
 #nav-list {
     font-size: 1.5em;
-    color: #f4a600;
+    /*    color: #f4a600;*/
+    color: black;
     font-weight: bold;
     text-decoration: none;
     z-index: 1;
     padding-bottom: 10px;
-    top: 20px;
+    top: 0px;
+    /*    top: 20px;*/
 }
 
 #nav-list:before {
@@ -221,17 +236,16 @@ a:focus {
 }
 
 #nav-list:hover {
-    color: white;
+    color: black;
 }
 
 #nav-list:focus {
-    color: white;
-    /*    background: none !important;*/
+    color: black;
 }
 
 #nav-list:focus::before {
     color: white;
-    /*    background: none !important;*/
+    background: none !important;
 }
 
 .book-container {
@@ -725,7 +739,7 @@ a:focus {
     text-decoration: none;
     list-style: none;
     font-size: 1.7em;
-    color: darkorange;
+    color: white;
     font-family: 'PT Sans', sans-serif;
     text-decoration: none;
     padding-bottom: 20px;

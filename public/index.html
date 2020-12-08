@@ -107,7 +107,6 @@
                             }
                             //document.getElementById('marqueeWords').style.color = '#fff568';
                             document.getElementById('marqueeWords').innerHTML = discount.join("");
-
                         </script>
                     </marquee>
                 </div>
@@ -244,7 +243,7 @@
 
         <div class="books-title col-lg-5 col-md-5 col-sm-5 col-xs-5 col-lg-offset-4 col-md-offset-4 col-sm-offset-4 col-xs-offset-4" id="booksId">BOOKS</div>
 
-        <div class="book-store col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="book-store col-lg-12 col-md-12 col-sm-12 col-xs-12" id="shopId">
             <div class="book-slide">
                 <div class="book js-flickity" data-flickity-options='{ "wrapAround": true }'>
 
@@ -520,8 +519,9 @@
                 </div>
             </div>
 
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"></div>
 
-            <div class="main-menu container-fluid" id="shopId">
+            <div class="main-menu container-fluid col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="product-types">
                     <a href="" class="product-type allProducts active"> All Products</a>
                     <a href="" class="product-type sanitizer"> Sanitizers<img class="coming_soon_banner" src="img/coming-soon-banner.png" /></a>
@@ -531,7 +531,7 @@
                 </div>
             </div>
 
-            <div class=" main-wrapper container-fluid" id="shopId">
+            <div class=" main-wrapper container-fluid">
 
                 <div class="book-scroll-container ">
 
@@ -599,7 +599,6 @@
                                                 var id = '#owl-1';
                                                 populateSlides(photoUrls, id);
                                             });
-
                                         </script>
 
                                         <div class="flip-back">
@@ -669,7 +668,6 @@
                                                 var id = '#owl-2';
                                                 populateSlides(photoUrls, id);
                                             });
-
                                         </script>
 
                                         <div class="flip-back">
@@ -742,7 +740,6 @@
                                                 var id = '#owl-3';
                                                 populateSlides(photoUrls, id);
                                             });
-
                                         </script>
 
                                         <div class="flip-back">
@@ -813,7 +810,6 @@
                                                 var id = '#owl-4';
                                                 populateSlides(photoUrls, id);
                                             });
-
                                         </script>
 
                                         <div class="flip-back">
@@ -856,25 +852,6 @@
                                     <div class="product-back ">
                                         <div class="shadow"></div>
 
-                                        <div id="owl-4" class="owl-carousel owl-theme"></div>
-
-                                        <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-                                        <script src="js/owl_slider.js"></script>
-
-                                        <script>
-                                            $(document).ready(function() {
-                                                var photoUrls = [
-                                                    'img/LBB_BookBag_showcase1.jpg',
-                                                    'img/LBB_BookBag_showcase2.jpg',
-                                                    'img/LBB_BookBag_showcase3.jpg',
-                                                    'img/LBB_BookBag_showcase4.jpg',
-                                                    'img/LBB_BookBag_showcase5.jpg'
-                                                ];
-                                                var id = '#owl-4';
-                                                populateSlides(photoUrls, id);
-                                            });
-
-                                        </script>
 
                                         <div class="flip-back">
                                             <div class="cy"></div>
@@ -1002,7 +979,6 @@
                 <div class="container">
                     <div class="social-media-footer-container col-lg-2 col-md-3 col-sm-2 col-xs-1">
                         <a href="https://www.instagram.com/writeitoutpublishingllc/" target="_blank"><img src="img/instagram.png" class="social-media-icons"></a>
-                        <!--<a href="https://twitter.com/danaebaby?lang=en" target="_blank"><img src="img/twitter.png" class="social-media-icons"></a>-->
                         <a href="mailto:Writeitoutpublishingllc@yahoo.com" target="_blank"><img src="img/yahoo.png" class="social-media-icons"></a>
                     </div>
 
@@ -1107,13 +1083,11 @@
             $('.arrow-down').show();
             $('.arrow-up').hide();
         });
-
     </script>
 
     <!--Starts Banner Marquee-->
     <script>
         $('marquee').marquee();
-
     </script>
 
     <!--Swipe finger Icon on Mobile when displaying Books-->
@@ -1133,9 +1107,6 @@
                 $(swipe).append(html);
             }
         });
-
     </script>
 
-</body>
-
-</html>
+</body></html>

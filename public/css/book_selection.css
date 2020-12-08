@@ -81,8 +81,7 @@
 
 .book-photo {
     width: 180px;
-    /*    height: 320px;*/
-    height: 120%;
+    height: 110%;
     flex-shrink: 0;
     bottom: -35px;
     left: 35px;
@@ -225,7 +224,7 @@
 }
 
 .main-menu {
-    margin-top: 8%;
+    margin-top: 5%;
     display: flex;
     min-width: 110%;
     margin-left: -15px;
@@ -233,12 +232,10 @@
     align-items: center;
     white-space: nowrap;
     padding-bottom: 15px;
-    /*    padding-right: 15px;*/
     border-bottom: 1px solid #dcddde;
     position: sticky;
     top: 0;
     right: 0;
-    /*    z-index: 2;*/
     background-color: #f8f8ff;
 }
 
