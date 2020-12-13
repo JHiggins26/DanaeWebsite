@@ -19,33 +19,25 @@ app.use(bodyParser.json());
 
 app.use(redirectToHTTPS([/localhost:(\d{4})/], [/\/insecure/], 301));
 
-
-// app.use(function(req, res, next) {
-//       res.header("Access-Control-Allow-Origin", '*');
-//       res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-//       next();
-// });
-    
-app.use(function(req, res, next) {
-    // if ((req.get('X-Forwarded-Proto') !== 'https')) {
+app.use(function (req, res, next) {
 
     if (!req.secure) {
-        console.log('Request isSecure: ' +  req.secure);
-        console.log('Request HOST: ' +  req.get('Host'));
-        console.log('Request URL Path: ' +  req.url);
+        console.log('Request isSecure: ' + req.secure);
+        console.log('Request HOST: ' + req.get('Host'));
+        console.log('Request URL Path: ' + req.url);
         console.log(1);
 
-      return res.redirect('https://' + req.get('Host') + req.url);
+        return res.redirect('https://' + req.get('Host') + req.url);
 
     } else
-    
-    console.log('Request isSecure: ' +  req.secure);
-    console.log('Request HOST: ' +  req.get('Host'));
-    console.log('Request URL Path: ' +  req.url);
+
+        console.log('Request isSecure: ' + req.secure);
+    console.log('Request HOST: ' + req.get('Host'));
+    console.log('Request URL Path: ' + req.url);
     console.log(2);
 
-      next();  
-  });
+    next();
+});
 
 const routes = require('./routes/routes.js')(app, fs);
 
