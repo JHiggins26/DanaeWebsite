@@ -44,37 +44,31 @@
 }
 
 .lightbox {
-    width: 650px;
-    height: auto;
-    padding: 40px 60px 40px 60px;
+    background-color: green;
+    height: 510px;
+    padding: 20px 20px 20px 20px;
     background-image: url("../img/Lightbox-background.png");
     background-repeat: no-repeat;
-    margin-top: 10%;
-}
-
-@media (max-width: 800px) {
-    .lightbox {
-        width: 600px;
-    }
+    background-size: 100% 100%;
+    top: 20%;
+    -webkit-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	-o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+    
 }
 
 @media (max-width: 768px) {
     .lightbox {
-        width: 100%;
-        padding: 40px 20px 40px 20px;
-        margin-top: 20%;
-
+       top: 10%;
     }
 }
 
 
 .lightbox-content-container {
-
-    width: auto;
-    height: auto;
-    background-color: white;
+    height: 100%;
     background: rgba(255, 255, 255, .8);
-    padding: 0px 15px 20px 15px;
+    padding: 0px 15px 20px 5px;
     margin: 0 auto;
     display: block;
 }

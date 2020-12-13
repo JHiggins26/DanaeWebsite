@@ -1,6 +1,7 @@
 let mysql = require('mysql');
 const exec = require("child_process").exec;
 const crypto = require('crypto');
+const cors = require('cors');
 
 const reviewRoutes = (app, fs, creds) => {
 
@@ -11,14 +12,19 @@ const reviewRoutes = (app, fs, creds) => {
             user: decrypt(creds.user),
             password: decrypt(creds.pass),
             database: decrypt(creds.db)
-        });
+        }); 
 
         return connection;
     }
 
+    var corsOptions = {
+        origin: 'https://www.writeitoutpublishingllc.com',
+        optionsSuccessStatus: 200
+      }
+ 
 
     // Get Reviews from DB
-    app.get('/getReviews/:bookTitle', (request, response) => {
+    app.get('/getReviews/:bookTitle', cors(corsOptions), (request, response) => {
 
         let connection = connectDB();
 

@@ -69,8 +69,11 @@
     #nav-list {
         color: white;
         opacity: 1;
+    }
 
-
+    #nav-list:focus {
+        color: white;
+        background: none !important;
     }
 
     .navbar-default .navbar-collapse,

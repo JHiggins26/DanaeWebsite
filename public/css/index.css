@@ -757,8 +757,8 @@ a:focus {
 
 }
 
-.web-designer a {
-    color: darkgrey;
+.web-designer span {
+    color: rgb(214, 202, 202);
     font-size: 1em;
     padding: 10px;
 }

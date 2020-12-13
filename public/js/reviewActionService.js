@@ -34,9 +34,13 @@ $('.close-review').on('click', function (e) {
 
     $(this).closest('.book_form').trigger('reset'); // Book Form
 
-    $(this).closest('.book-content').siblings('.book-img').find('.book-photo').css('height', '110%'); // Book image
-
     $(this).closest('.book-slide').next().next().css('margin-top', '5%');
+
+    if ($(window).width() < 768) {
+        $(this).closest('.book-content').siblings('.book-img').find('.book-photo').css('height', '100%'); // Book image
+    } else {
+        $(this).closest('.book-content').siblings('.book-img').find('.book-photo').css('height', '110%'); // Book image
+    }
 
 });
 
@@ -54,9 +58,13 @@ $('.submit-review-btn').on('click', function (e) {
 
         $(this).siblings('.review').val(''); // Review Box
 
-        $(this).closest('.book-content').siblings('.book-img').find('.book-photo').css('height', '110%'); // Book image
-
         $(this).closest('.book-slide').next().next().css('margin-top', '5%');
+
+        if ($(window).width() < 768) {
+            $(this).closest('.book-content').siblings('.book-img').find('.book-photo').css('height', '100%'); // Book image
+        } else {
+            $(this).closest('.book-content').siblings('.book-img').find('.book-photo').css('height', '110%'); // Book image
+        }
 
     }
 

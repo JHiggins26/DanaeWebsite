@@ -36,10 +36,12 @@ input.star {
 }
 
 label.star {
+    cursor: pointer;
+
     float: right;
     padding: 3px;
     font-size: 18px;
-    color: #444;
+    color: #f1c40f;
     transition: all .2s;
 }
 

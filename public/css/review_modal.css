@@ -28,7 +28,6 @@
 
 
 .bookNameReviewTitle {
-    margin-top: -15px;
     text-align: center;
 }
 
@@ -52,10 +51,12 @@
     opacity: 1;
     float: right;
     border: none;
-    background-color: inherit;
+    background-color: transparent;
     position: sticky;
-    top: 0;
+    top: 10;
+    margin-left: -2%;
     z-index: 2;
+    position: absolute;
 }
 
 .closeReviews:hover {
@@ -140,7 +141,7 @@
 
     .closeReviews {
         font-size: 4em;
-
+        margin-left: -5%;
     }
 
     .custReviewTitle {
@@ -150,11 +151,15 @@
     .bookNameReviewTitle {
         font-size: 1.7em;
     }
+
+    .noReviews {
+        font-size: 1.2em;
+    }
 }
 
 @media (max-width: 467px) {
-
     .closeReviews {
-        margin-top: -50%;
-
+        margin-left: -7%;
     }
+
+}
